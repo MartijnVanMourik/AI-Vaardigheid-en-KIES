@@ -11,9 +11,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
         :root {
-            --trinitas-blue: #003056;
-            --trinitas-orange: #f39200;
-            --trinitas-light-blue: #005696;
+            --trinitas-blue: #004d91;
+            --trinitas-green: #8cc63f;
+            --trinitas-light-blue: #0072bc;
         }
 
         body {
@@ -29,16 +29,16 @@
             color: var(--trinitas-blue);
         }
 
-        .bg-trinitas-orange {
-            background-color: var(--trinitas-orange);
+        .bg-trinitas-green {
+            background-color: var(--trinitas-green);
         }
 
-        .text-trinitas-orange {
-            color: var(--trinitas-orange);
+        .text-trinitas-green {
+            color: var(--trinitas-green);
         }
 
-        .border-trinitas-orange {
-            border-color: var(--trinitas-orange);
+        .border-trinitas-green {
+            border-color: var(--trinitas-green);
         }
 
         .card-gradient {
@@ -46,13 +46,36 @@
         }
 
         .nav-link:hover {
-            color: var(--trinitas-orange);
+            color: var(--trinitas-green);
             transition: 0.3s;
         }
 
-        .hero-pattern {
-            background-color: var(--trinitas-blue);
-            background-image: url("data:image/svg+xml,%0A%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/hero-hf.avif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo-blob {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 0 0 100px 100px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .wavy-underline {
+            position: relative;
+        }
+
+        .wavy-underline::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' fill='none' stroke='%238cc63f' stroke-width='3'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
         }
     </style>
 </head>
@@ -60,31 +83,30 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Navigatie -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md border-b-4 border-trinitas-orange">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center space-x-3">
-                    <div class="bg-trinitas-blue p-2 rounded">
-                        <i class="fas fa-brain text-white text-2xl"></i>
-                    </div>
-                    <div>
-                        <span class="text-trinitas-blue font-bold text-xl block">Han Fortmann</span>
-                        <span class="text-xs uppercase tracking-widest text-gray-500 font-semibold">AI-Vaardigheid
-                            Hub</span>
+    <nav class="sticky top-0 z-50 bg-white shadow-md border-b-4 border-trinitas-green">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <div class="logo-blob flex items-center space-x-3 -mt-4">
+                    <img src="assets/logo-hf.svg" alt="Han Fortmann Logo" class="h-10">
+                    <div class="flex flex-col justify-center -space-y-1">
+                        <span class="text-gray-500 font-bold text-xs uppercase tracking-tight">AI-Vaardigheid</span>
+                        <span class="text-gray-500 font-black text-xs uppercase tracking-tight">Hub</span>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8 font-semibold">
-                    <a href="#home" class="nav-link text-trinitas-blue">Home</a>
-                    <a href="#kies" class="nav-link text-trinitas-blue">KIES-Model</a>
-                    <a href="#leerlingen" class="nav-link text-trinitas-blue">Voor Leerlingen</a>
-                    <a href="#docenten" class="nav-link text-trinitas-blue">Voor Docenten</a>
-                    <a href="#spelregels" class="nav-link text-trinitas-blue">Spelregels</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-trinitas-blue text-2xl">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 font-semibold">
+                <a href="#home" class="nav-link text-trinitas-blue text-sm uppercase">Home</a>
+                <a href="#kies" class="nav-link text-trinitas-blue text-sm uppercase">KIES-Model</a>
+                <a href="#leerlingen" class="nav-link text-trinitas-blue text-sm uppercase">Leerlingen</a>
+                <a href="#docenten" class="nav-link text-trinitas-blue text-sm uppercase">Docenten</a>
+                <a href="#spelregels" class="nav-link text-trinitas-blue text-sm uppercase">Spelregels</a>
+            </div>
+            <div class="flex items-center">
+                <button id="mobile-menu-button"
+                    class="bg-trinitas-blue text-white px-4 py-2 rounded-md flex items-center space-x-2 text-sm font-bold shadow-md hover:bg-blue-800 transition">
+                    <i class="fas fa-bars"></i>
+                    <span>Menu</span>
+                </button>
             </div>
         </div>
         <!-- Mobile Menu -->
@@ -98,25 +120,38 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-pattern py-20 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="home" class="hero-section py-32 text-white relative">
+        <div class="absolute inset-0 bg-trinitas-blue/40"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
-                Niet bang zijn, <span class="text-trinitas-orange">gewoon doen!</span>
+                Niet bang zijn, <span class="text-trinitas-green">gewoon doen!</span>
             </h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-200">
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-16 text-gray-100 font-semibold drop-shadow-md">
                 Op het Han Fortmann leiden we leerlingen op tot AI-vaardige burgers. Geen passieve consumenten, maar
                 bewuste regisseurs van technologie.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#kies"
-                    class="bg-trinitas-orange hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105 shadow-lg">
-                    Ontdek de KIES-methode
-                </a>
-                <a href="#spelregels"
-                    class="bg-white text-trinitas-blue hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition shadow-lg">
-                    Onze afspraken
-                </a>
+            <div class="flex flex-wrap justify-center gap-12">
+                <div class="wavy-underline">
+                    <a href="#kies"
+                        class="bg-trinitas-green hover:bg-green-600 text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105 shadow-lg">
+                        Ontdek de KIES-methode
+                    </a>
+                </div>
+                <div class="wavy-underline">
+                    <a href="#spelregels"
+                        class="bg-white text-trinitas-blue hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition shadow-lg">
+                        Onze afspraken
+                    </a>
+                </div>
             </div>
+        </div>
+        <!-- Bottom Wave -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none line-height-0">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-24 fill-white">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.17,105.78,131.74,103,193.31,86.42,213.78,80.89,235.13,73,255.67,64.29S301.11,60.19,321.39,56.44Z">
+                </path>
+            </svg>
         </div>
     </section>
 
@@ -134,32 +169,32 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- K -->
                 <div
-                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-orange shadow-sm hover:shadow-xl transition">
-                    <div class="text-trinitas-orange text-4xl font-black mb-4">K</div>
+                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-green shadow-sm hover:shadow-xl transition">
+                    <div class="text-trinitas-green text-4xl font-black mb-4">K</div>
                     <h3 class="text-xl font-bold mb-2">Kiezen</h3>
                     <p class="text-gray-600 text-sm">Welke deeltaken doe ik zelf en welke besteed ik uit? Word ik hier
                         beter van, of gaat het alleen sneller?</p>
                 </div>
                 <!-- I -->
                 <div
-                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-orange shadow-sm hover:shadow-xl transition">
-                    <div class="text-trinitas-orange text-4xl font-black mb-4">I</div>
+                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-green shadow-sm hover:shadow-xl transition">
+                    <div class="text-trinitas-green text-4xl font-black mb-4">I</div>
                     <h3 class="text-xl font-bold mb-2">Instructie</h3>
                     <p class="text-gray-600 text-sm">Hoe stuur ik de AI technisch goed aan? Leer de kunst van het
                         'prompten' om de output te krijgen die jij nodig hebt.</p>
                 </div>
                 <!-- E -->
                 <div
-                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-orange shadow-sm hover:shadow-xl transition">
-                    <div class="text-trinitas-orange text-4xl font-black mb-4">E</div>
+                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-green shadow-sm hover:shadow-xl transition">
+                    <div class="text-trinitas-green text-4xl font-black mb-4">E</div>
                     <h3 class="text-xl font-bold mb-2">Evalueer</h3>
                     <p class="text-gray-600 text-sm">Het Mens-Machine-Mens principe. Is de output kritisch gecontroleerd
                         en écht van jou geworden?</p>
                 </div>
                 <!-- S -->
                 <div
-                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-orange shadow-sm hover:shadow-xl transition">
-                    <div class="text-trinitas-orange text-4xl font-black mb-4">S</div>
+                    class="card-gradient p-8 rounded-2xl border-b-4 border-trinitas-green shadow-sm hover:shadow-xl transition">
+                    <div class="text-trinitas-green text-4xl font-black mb-4">S</div>
                     <h3 class="text-xl font-bold mb-2">Spelregels</h3>
                     <p class="text-gray-600 text-sm">Wat zijn de kaders? Denk aan privacy, ecologische impact en ons
                         schoolbeleid rondom AI.</p>
@@ -167,12 +202,9 @@
             </div>
 
             <!-- Infographic Placeholder 1 -->
-            <div
-                class="mt-20 bg-gray-100 rounded-3xl p-10 flex flex-col items-center border-2 border-dashed border-gray-300">
-                <i class="fas fa-image text-gray-400 text-5xl mb-4"></i>
-                <p class="text-gray-500 font-bold">INFOGRAPHIC: DE KIES-METHODE IN BEELD</p>
-                <p class="text-gray-400 text-sm text-center max-w-md mt-2">[Voeg hier pagina 3 van 'Analyse KIES model'
-                    in: De visuele stappen van de methode]</p>
+            <div class="mt-20 flex flex-col items-center">
+                <img src="assets/kies-method.jpg" alt="De KIES-methode in beeld"
+                    class="rounded-3xl shadow-2xl max-w-full h-auto border-8 border-white">
             </div>
         </div>
     </section>
@@ -189,35 +221,35 @@
                     </p>
                     <ul class="space-y-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-orange mt-1 mr-3"></i>
+                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
                             <span><strong>Mens-Machine-Mens:</strong> Start altijd met je eigen denkwerk. Laat AI de
                                 assistent zijn, niet de baas.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-orange mt-1 mr-3"></i>
+                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
                             <span><strong>Transparantie:</strong> Wees eerlijk over je AI-gebruik. Vermeld in je
                                 bronlijst waarvoor je AI hebt ingezet.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-orange mt-1 mr-3"></i>
+                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
                             <span><strong>Factchecken:</strong> Gebruik AI als laatste stap, niet als eerste bron.
                                 Vertrouw de machine nooit blind.</span>
                         </li>
                     </ul>
                 </div>
                 <div class="lg:w-1/2 bg-trinitas-blue text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-trinitas-orange rounded-bl-full opacity-20"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-trinitas-green rounded-bl-full opacity-20"></div>
                     <h3 class="text-2xl font-bold mb-4">Voorbeeld: Essay over Napoleon</h3>
                     <div class="space-y-4 text-sm leading-relaxed">
-                        <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-orange">
+                        <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
                             <strong>1. Kiezen:</strong> Je gebruikt AI om te brainstormen over invalshoeken voor
                             Napoleon, maar je schrijft de hoofdtekst zelf om je schrijfstijl te trainen.
                         </p>
-                        <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-orange">
+                        <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
                             <strong>2. Instructie:</strong> "Geef me 5 onbekende feiten over Napoleon's veldtocht naar
                             Rusland vanuit het oogpunt van een historicus."
                         </p>
-                        <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-orange">
+                        <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
                             <strong>3. Evalueer:</strong> Je checkt in je geschiedenisboek of deze feiten kloppen (geen
                             hallucinaties!) en verwerkt ze in je eigen woorden.
                         </p>
@@ -232,14 +264,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-trinitas-blue mb-4">AI als Assistent in de Klas</h2>
-                <div class="h-1 w-24 bg-trinitas-orange mx-auto"></div>
+                <div class="h-1 w-24 bg-trinitas-green mx-auto"></div>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12">
                 <div class="space-y-8">
-                    <div class="bg-orange-50 p-8 rounded-3xl">
+                    <div class="bg-green-50 p-8 rounded-3xl">
                         <h3 class="text-xl font-bold text-trinitas-blue mb-4 flex items-center">
-                            <i class="fas fa-graduation-cap mr-3 text-trinitas-orange"></i>
+                            <i class="fas fa-graduation-cap mr-3 text-trinitas-green"></i>
                             De Shift in Toetsing
                         </h3>
                         <p class="text-gray-700 leading-relaxed mb-4">
@@ -276,13 +308,13 @@
                     <h3 class="text-2xl font-bold text-trinitas-blue">Verlaag je werkdruk</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                         <div class="p-6 border rounded-2xl hover:bg-gray-50 transition">
-                            <i class="fas fa-file-invoice text-2xl text-trinitas-orange mb-3"></i>
+                            <i class="fas fa-file-invoice text-2xl text-trinitas-green mb-3"></i>
                             <h4 class="font-bold mb-2">Feedback Analyse</h4>
                             <p>Gebruik AI om patronen te vinden in grote hoeveelheden leerling-beoordelingen en pas je
                                 lessenreeks aan.</p>
                         </div>
                         <div class="p-6 border rounded-2xl hover:bg-gray-50 transition">
-                            <i class="fas fa-chalkboard-teacher text-2xl text-trinitas-orange mb-3"></i>
+                            <i class="fas fa-chalkboard-teacher text-2xl text-trinitas-green mb-3"></i>
                             <h4 class="font-bold mb-2">Lesvoorbereiding</h4>
                             <p>Genereer in seconden instructiekaarten of lesplannen op basis van je eigen PDF's via
                                 NotebookLM.</p>
@@ -290,12 +322,8 @@
                     </div>
 
                     <!-- Infographic Placeholder 2 -->
-                    <div class="bg-gray-100 rounded-3xl p-6 flex items-center border-2 border-dashed border-gray-300">
-                        <i class="fas fa-image text-gray-400 text-3xl mr-4"></i>
-                        <div>
-                            <p class="text-gray-500 font-bold text-xs uppercase">Infographic Placeholder</p>
-                            <p class="text-gray-400 text-xs">[KIES model: Meer dan Geletterdheid - pagina 1]</p>
-                        </div>
+                    <div class="mt-8">
+                        <img src="assets/kies-detail.jpg" alt="KIES model detail" class="rounded-2xl shadow-xl w-full">
                     </div>
                 </div>
             </div>
@@ -312,7 +340,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                    <i class="fas fa-shield-alt text-trinitas-orange text-3xl mb-6"></i>
+                    <i class="fas fa-shield-alt text-trinitas-green text-3xl mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">Privacy & Data</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
                         Deel nooit persoonlijke gegevens of beelden van medeleerlingen/docenten in AI-tools. Jouw input
@@ -320,7 +348,7 @@
                     </p>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                    <i class="fas fa-gavel text-trinitas-orange text-3xl mb-6"></i>
+                    <i class="fas fa-gavel text-trinitas-green text-3xl mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">Plagiaat & Fraude</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
                         Klakkeloos kopiëren zonder de 'E' van evaluatie wordt gezien als fraude. We controleren op
@@ -328,7 +356,7 @@
                     </p>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                    <i class="fas fa-user-secret text-trinitas-orange text-3xl mb-6"></i>
+                    <i class="fas fa-user-secret text-trinitas-green text-3xl mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">Deepfakes & Ethiek</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
                         Het creëren van schadelijke of racistische content (bijv. via Grok) leidt tot directe schorsing.
