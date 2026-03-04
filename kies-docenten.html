@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIES-model voor Docenten | AI-Vaardigheid Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --trinitas-blue: #004d91;
+            --trinitas-green: #8cc63f;
+            --trinitas-light-blue: #0072bc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            scroll-behavior: smooth;
+        }
+
+        .document-container {
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-top: 8px solid var(--trinitas-blue);
+        }
+
+        .header-line {
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-number {
+            background-color: var(--trinitas-green);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body class="py-8 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-4xl mx-auto mb-6">
+        <a href="index.html"
+            class="inline-flex items-center text-sm font-semibold text-gray-500 hover:text-[var(--trinitas-blue)] transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i> Terug naar home
+        </a>
+    </div>
+
+    <main class="max-w-4xl mx-auto document-container rounded-xl overflow-hidden p-8 sm:p-12">
+
+        <div class="logo-container">
+            <img src="assets/logo-hf.svg" alt="Han Fortmann Logo" class="h-16">
+            <div class="flex flex-col justify-center -space-y-1">
+                <span class="text-gray-500 font-bold text-sm uppercase tracking-tight">AI-Vaardigheid</span>
+                <span class="text-gray-500 font-black text-sm uppercase tracking-tight">Hub</span>
+            </div>
+        </div>
+
+        <div class="header-line text-center">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#004d91] tracking-tight mb-4">KIES-model voor Docenten
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Verantwoord AI-gebruik in de lesvoorbereiding en de klas.
+            </p>
+        </div>
+
+        <div class="space-y-12">
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">1</span>
+                    Kiezen <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Bepaal bewust wanneer
+                        je AI wel of niet inzet)</span>
+                </h2>
+
+                <div class="grid gap-6">
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                        <h3 class="font-bold text-lg mb-2 text-[#004d91] flex items-center">
+                            <i class="fas fa-clock text-[#8cc63f] mr-3"></i> Werkdrukverlichting en lesvoorbereiding
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-3 text-sm">Gebruik AI voor efficiëntie bij
+                            tijdrovende klussen.</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm ml-2">
+                            <li>Met de app <strong>Quick Quiz</strong> maak je in 30 seconden een quiz uit een PDF.</li>
+                            <li>Met <strong>Gamma.app</strong> genereer je snel visuele presentaties.</li>
+                            <li>De <strong>Handboek Generator</strong> helpt bij het opzetten van gepersonaliseerd
+                                lesmateriaal.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                        <h3 class="font-bold text-lg mb-2 text-[#004d91] flex items-center">
+                            <i class="fas fa-users text-[#8cc63f] mr-3"></i> Interactie en klasmanagement
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-3 text-sm">Kies apps die de les verrijken.</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm ml-2">
+                            <li><strong>Didactisch Ganzenbord:</strong> leerlingen oefenen spelenderwijs de stof (via
+                                Gemini).</li>
+                            <li><strong><a href="https://snap-ik-het-appje.vercel.app/" target="_blank"
+                                        class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Snap
+                                        ik het nog-app</a>:</strong> voor live anonieme feedback tijdens hoorcolleges.
+                            </li>
+                            <li><strong>Decibelmeter:</strong> voor klassenmanagement.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                        <h3 class="font-bold text-lg mb-2 text-[#004d91] flex items-center">
+                            <i class="fas fa-graduation-cap text-[#8cc63f] mr-3"></i> Curriculum en toetsing
+                        </h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm ml-2">
+                            <li>Gebruik de <strong>AI-integratie brainstorm chatbot</strong> met je team om te bepalen
+                                waar AI past in het curriculum en waar het een risico vormt.</li>
+                            <li>Ontwerp toetsen die 'AI-ready' zijn in plaats van 'AI-proof' met behulp van de
+                                specifieke <strong>toetscanvas-chatbot</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">2</span>
+                    Instrueren <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Geef AI duidelijke
+                        context en gedragsrichtlijnen)</span>
+                </h2>
+
+                <div class="bg-white border rounded-xl overflow-hidden shadow-sm">
+                    <div class="p-6 border-b border-gray-100 hover:bg-gray-50/50 transition duration-150">
+                        <h3 class="font-bold text-[#004d91] mb-2 flex items-center"><i
+                                class="fas fa-terminal text-[#8cc63f] w-6"></i> System Prompts en Custom Instructions
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">AI is standaard geprogrammeerd om behulpzaam
+                            antwoord te geven, wat didactisch niet altijd handig is. Geef de chatbot een specifieke
+                            rol.<br><br><em
+                                class="text-gray-500 bg-gray-50 p-3 rounded block mt-2 border border-gray-100">Zet
+                                bijvoorbeeld in de instellingen: "Je bent een Socratische chatbot die geen antwoorden
+                                geeft, maar de gebruiker aanzet tot zelf nadenken".</em></p>
+                    </div>
+
+                    <div class="p-6 border-b border-gray-100 hover:bg-gray-50/50 transition duration-150">
+                        <h3 class="font-bold text-[#004d91] mb-2 flex items-center"><i
+                                class="fas fa-magic text-[#8cc63f] w-6"></i> Prompts optimaliseren</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Laat AI je helpen met instrueren. Vraag de
+                            chatbot simpelweg om je eigen prompt te herschrijven voor een beter resultaat. Je kunt ook
+                            je prompt twee keer achter elkaar plakken in je bericht; AI-modellen blijken de instructie
+                            dan beter te begrijpen.</p>
+                    </div>
+
+                    <div class="p-6 border-b border-gray-100 hover:bg-gray-50/50 transition duration-150">
+                        <h3 class="font-bold text-[#004d91] mb-2 flex items-center"><i
+                                class="fas fa-microphone text-[#8cc63f] w-6"></i> Spreek je context in</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Gebruik de dicteerfunctie (microfoontje) om
+                            snel lange, gedetailleerde context en didactische instructies te geven in plaats van alles
+                            te typen.</p>
+                    </div>
+
+                    <div class="p-6 hover:bg-gray-50/50 transition duration-150">
+                        <h3 class="font-bold text-[#004d91] mb-2 flex items-center"><i
+                                class="fas fa-chalkboard-teacher text-[#8cc63f] w-6"></i> Didactisch instrueren</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Als je visueel materiaal genereert via de
+                            Infographic generator, laat de AI dan de prompt baseren op didactische principes zoals
+                            Bloom's taxonomie of conceptuele vergelijkingen, in plaats van alleen een mooi plaatje te
+                            vragen.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">3</span>
+                    Evalueren <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Beoordeel AI-output
+                        kritisch op kwaliteit)</span>
+                </h2>
+
+                <div class="space-y-6">
+                    <div class="bg-orange-50/50 border border-orange-100 p-6 rounded-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <i class="fas fa-list-ol text-6xl text-orange-500"></i>
+                        </div>
+                        <h3 class="font-bold text-[#004d91] mb-3 relative z-10 text-lg">De 3-stappen workflow voor
+                            lesplannen</h3>
+                        <p class="text-sm text-gray-700 mb-4 relative z-10">Laat AI niet in één keer een lesplan
+                            uitspuwen. De best practice is:</p>
+                        <ol
+                            class="list-decimal list-inside space-y-3 text-sm text-gray-700 font-medium relative z-10 ml-2 bg-white/50 p-4 rounded-lg border border-orange-100">
+                            <li>Laat AI de les simuleren (inclusief mogelijke fouten van leerlingen).</li>
+                            <li>Laat AI reflecteren op wat er misging in die simulatie.</li>
+                            <li>Pas op basis daarvan (samen) het plan aan.</li>
+                        </ol>
+                        <p class="text-xs text-orange-800 mt-4 font-bold relative z-10 uppercase tracking-wide"><i
+                                class="fas fa-lightbulb mr-1"></i> Zie de AI als denkpartner, niet als waarheid.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="font-bold text-[#004d91] mb-2"><i
+                                    class="fas fa-user-check text-[#8cc63f] mr-2"></i> Mens-AI-Mens principe</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">Als je AI het grote werk laat doen, zoals
+                                literatuuronderzoek via de <em>Diepgaand onderzoeken</em> functie, zie dit dan altijd
+                                als een startpunt. Controleer de output en bronnen <strong>altijd zelf</strong>.</p>
+                        </div>
+                        <div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="font-bold text-[#004d91] mb-2"><i class="fas fa-robot text-[#8cc63f] mr-2"></i>
+                                Test AI met AI</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">Als je een AI-tutor bouwt, laat de AI dan
+                                systematisch antwoorden genereren (goed, matig, slecht) om de kwaliteit van zijn eigen
+                                feedback te testen en een verbeterrapport te schrijven.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">4</span>
+                    Spelregels <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Pas ethische en
+                        juridische kaders toe)</span>
+                </h2>
+
+                <div class="bg-[#004d91] text-white rounded-xl p-8 sm:p-10 relative overflow-hidden shadow-lg">
+                    <div class="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+                        <i class="fas fa-balance-scale text-[12rem]"></i>
+                    </div>
+
+                    <div class="grid gap-8 relative z-10">
+                        <div class="flex gap-4">
+                            <div class="mt-1">
+                                <i class="fas fa-exclamation-triangle text-[#8cc63f] text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Let op onbewuste bias</h3>
+                                <p class="text-blue-100 text-sm leading-relaxed">
+                                    Onderzoek toont aan dat ChatGPT bij uitleg over techniek onbewust stereotypeert
+                                    (meisjes krijgen voorbeelden met sprookjes, jongens met robots). <br><br><span
+                                        class="bg-blue-800 px-2 py-1 rounded inline-block mt-1 font-semibold text-white">Verwijder
+                                        daarom namen en gendermarkers van leerlingen voordat je hun werk uploadt.</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 border-t border-blue-800 pt-6">
+                            <div class="mt-1">
+                                <i class="fas fa-comments text-[#8cc63f] text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Ga het gesprek aan</h3>
+                                <p class="text-blue-100 text-sm leading-relaxed">
+                                    Organiseer sessies waarbij docenten én studenten gezamenlijk casussen uitwerken en
+                                    discussiëren over de impact en de grenzen van AI. Dit creëert een open cultuur.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 border-t border-blue-800 pt-6">
+                            <div class="mt-1">
+                                <i class="fas fa-shield-alt text-[#8cc63f] text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Pas op met autonome systemen</h3>
+                                <p class="text-blue-100 text-sm leading-relaxed">
+                                    Geef tools zoals <em>OpenClaw</em> of <em>Prism</em> nog geen blinde toegang tot
+                                    gevoelige studentendata, aangezien er beveiligingsrisico's kunnen zijn en deze
+                                    'agents' zelfstandig handelen in jouw naam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <div class="max-w-4xl mx-auto mt-8 mb-12 text-center">
+        <a href="index.html"
+            class="inline-flex items-center text-sm font-semibold text-gray-500 hover:text-[var(--trinitas-blue)] transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i> Terug naar home
+        </a>
+    </div>
+
+</body>
+
+</html>

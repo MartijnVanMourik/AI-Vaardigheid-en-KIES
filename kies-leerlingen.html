@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIES-model voor Leerlingen | AI-Vaardigheid Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --trinitas-blue: #004d91;
+            --trinitas-green: #8cc63f;
+            --trinitas-light-blue: #0072bc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            scroll-behavior: smooth;
+        }
+
+        .document-container {
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-top: 8px solid var(--trinitas-green);
+        }
+
+        .header-line {
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-number {
+            background-color: var(--trinitas-blue);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body class="py-8 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-4xl mx-auto mb-6">
+        <a href="index.html"
+            class="inline-flex items-center text-sm font-semibold text-gray-500 hover:text-[var(--trinitas-blue)] transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i> Terug naar home
+        </a>
+    </div>
+
+    <main class="max-w-4xl mx-auto document-container rounded-xl overflow-hidden p-8 sm:p-12">
+
+        <div class="logo-container">
+            <img src="assets/logo-hf.svg" alt="Han Fortmann Logo" class="h-16">
+            <div class="flex flex-col justify-center -space-y-1">
+                <span class="text-gray-500 font-bold text-sm uppercase tracking-tight">AI-Vaardigheid</span>
+                <span class="text-gray-500 font-black text-sm uppercase tracking-tight">Hub</span>
+            </div>
+        </div>
+
+        <div class="header-line text-center">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#004d91] tracking-tight mb-4">KIES-model voor
+                Leerlingen</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Hoe je als leerling AI slim, legaal en effectief inzet
+                voor je studie.</p>
+        </div>
+
+        <!-- NotebookLM Video Intro -->
+        <div class="mb-12 rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-white">
+            <div class="p-4 bg-blue-50/50 border-b border-blue-100">
+                <h3 class="font-bold text-[#004d91] flex items-center text-sm md:text-base">
+                    <i class="fas fa-play-circle text-[#8cc63f] mr-2 text-xl"></i> Introductie: Word een AI-regisseur
+                    (via NotebookLM)
+                </h3>
+            </div>
+            <video controls preload="metadata" class="w-full h-auto aspect-video bg-black">
+                <source src="assets/Word_een_AI-regisseur.mp4" type="video/mp4">
+                Je browser ondersteunt deze video helaas niet.
+            </video>
+        </div>
+
+        <div class="space-y-12">
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">1</span>
+                    Kiezen <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Bepaal bewust wanneer
+                        je AI wel of niet inzet)</span>
+                </h2>
+
+                <div class="grid gap-6">
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100 flex gap-4">
+                        <div class="text-[#8cc63f] mt-1 hidden sm:block"><i class="fas fa-brain text-2xl"></i></div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-[#004d91]">Voorkom metacognitieve luiheid</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">Gebruik AI <strong>niet</strong> om je
+                                eindproduct te maken (dat is een 'shortcut' waarbij je niets leert). Gebruik AI juist
+                                als middel via didactische tools die je aan het denken zetten.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100 flex gap-4">
+                        <div class="text-[#8cc63f] mt-1 hidden sm:block"><i class="fas fa-dumbbell text-2xl"></i></div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-[#004d91]">Oefenen met een AI-tutor</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-2">Zet tools in van <a
+                                    href="https://aivoorleerlingen.nl/" target="_blank"
+                                    class="text-trinitas-blue hover:text-trinitas-green font-bold transition-colors underline">AI
+                                    voor Leerlingen</a> om te oefenen met gerichte AI-docenten en examenhulp. Enkele
+                                voorbeelden:</p>
+                            <ul class="list-disc list-inside text-gray-700 text-sm leading-relaxed space-y-1 ml-2 mb-2">
+                                <li><strong>Wiskunde:</strong> <em><a
+                                            href="https://mathwithmennoandaitutortom.vercel.app/" target="_blank"
+                                            class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Math
+                                            with Menno & AI-tutor Tom</a></em></li>
+                                <li><strong>Talen:</strong> <em><a href="https://taalexamensoefenen.vercel.app/"
+                                            target="_blank"
+                                            class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Talen
+                                            Examentraining</a></em></li>
+                                <li><strong>Economie:</strong> <em><a
+                                            href="https://economiemetjosenaitutortom.vercel.app/" target="_blank"
+                                            class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Economie
+                                            met Jos</a></em></li>
+                                <li><strong>AISHA Examentrainer:</strong> <em><a
+                                            href="https://aisha-examentrainer.onrender.com/select" target="_blank"
+                                            class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Oefenen
+                                            per domein</a></em></li>
+                                <li><strong>AISHA AI-docenten:</strong> <em><a
+                                            href="https://aivoorleerlingen.nl/ai-docent-havo/" target="_blank"
+                                            class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">HAVO</a>
+                                        / <a href="https://aivoorleerlingen.nl/ai-docent-vwo/" target="_blank"
+                                            class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">VWO</a></em>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700 text-sm leading-relaxed">Hiermee kun je eindeloos oefenen met
+                                gepersonaliseerde, rijke feedback in plaats van alleen een statisch nakijkmodel te
+                                lezen.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-base mb-2 text-[#004d91] flex items-center"><i
+                                    class="fas fa-walking text-[#8cc63f] mr-2"></i> 'Wandelend leren'</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">Upload een taai artikel in de ChatGPT-app,
+                                laat er een podcast-script van maken, en luister of spreek (via spraakmodus) met de AI
+                                over de stof terwijl je buiten wandelt.</p>
+                        </div>
+                        <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-base mb-2 text-[#004d91] flex items-center"><i
+                                    class="fas fa-headphones text-[#8cc63f] mr-2"></i> Audio transcriberen</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">Neem een les op (met toestemming), upload
+                                de audio in <a href="https://notebooklm.google.com/" target="_blank"
+                                    class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">NotebookLM</a>
+                                om het te transcriberen, en gebruik dit als interactief
+                                studie-notebook om vragen over te stellen.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">2</span>
+                    Instrueren <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Geef AI duidelijke
+                        context en gedragsrichtlijnen)</span>
+                </h2>
+
+                <div class="space-y-6">
+                    <div class="p-6 border rounded-xl shadow-sm bg-white">
+                        <h3 class="font-bold text-lg text-[#004d91] mb-3"><i
+                                class="fas fa-comment-dots text-[#8cc63f] mr-2"></i> Ontwikkel feedbackgeletterdheid
+                        </h3>
+                        <p class="text-sm text-gray-700 mb-4">Leer specifieke vragen stellen. Een AI is zo goed als je
+                            instructie.</p>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="bg-red-50 p-4 rounded border border-red-100 relative overflow-hidden">
+                                <div class="absolute right-0 bottom-0 opacity-10 p-2"><i
+                                        class="fas fa-thumbs-down text-4xl text-red-500"></i></div>
+                                <span class="text-red-600 font-bold block mb-1 text-xs uppercase relative z-10"><i
+                                        class="fas fa-times mr-1"></i> Zwakke prompt</span>
+                                <span class="text-sm text-gray-800 italic relative z-10">"Geef feedback op mijn
+                                    tekst"</span>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded border border-green-100 relative overflow-hidden">
+                                <div class="absolute right-0 bottom-0 opacity-10 p-2"><i
+                                        class="fas fa-thumbs-up text-4xl text-green-500"></i></div>
+                                <span class="text-green-600 font-bold block mb-1 text-xs uppercase relative z-10"><i
+                                        class="fas fa-check mr-1"></i> Sterke prompt</span>
+                                <span class="text-sm text-gray-800 italic relative z-10">"Beoordeel mijn argumentatie
+                                    als een kritische debatleider op
+                                    basis van criterium X en vertel me waar ik gaten laat vallen."</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6 mt-6">
+                    <div class="p-6 border rounded-xl shadow-sm bg-white hover:shadow-md transition">
+                        <h3 class="font-bold text-[#004d91] mb-2"><i class="fas fa-comments text-[#8cc63f] mr-2"></i>
+                            Begeleiding bij reflectie</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Gebruik specifieke chatbots zoals de
+                            <em>STARR-reflectiehulp</em> (beschikbaar voor <a
+                                href="https://chatgpt.com/g/g-6928631c30088191b41c8da0c68b17ef-starr-begeleider"
+                                target="_blank"
+                                class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">ChatGPT</a>
+                            en <a href="https://gemini.google.com/gem/155f81c7b491?usp=sharing" target="_blank"
+                                class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Gemini</a>).
+                            Deze is zo geïnstrueerd dat hij bij oppervlakkige antwoorden
+                            doorvraagt ("Wat bedoel je precies?"), zodat je écht zelf moet nadenken over je handelen.
+                        </p>
+                    </div>
+                    <div class="p-6 border rounded-xl shadow-sm bg-white hover:shadow-md transition">
+                        <h3 class="font-bold text-[#004d91] mb-2"><i
+                                class="fas fa-hands-helping text-[#8cc63f] mr-2"></i> Werk samen in Canvas</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-3">Gebruik de <strong>Canvas-functie</strong>
+                            (via het '+'-icoon in ChatGPT of de werkruimte in Gemini). Je krijgt een aparte werkruimte
+                            naast de chat om samen aan één document te werken.</p>
+                        <ul class="space-y-2 mt-4 text-left">
+                            <li class="flex items-start text-sm text-gray-600 leading-relaxed">
+                                <i
+                                    class="fas fa-sync-alt text-[#8cc63f] mt-1 mr-3 w-5 shrink-0 text-center text-[0.85rem]"></i>
+                                <span><strong>Iteratief:</strong> Selecteer specifieke tekst om delen te herschrijven of
+                                    aan te scherpen.</span>
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 leading-relaxed">
+                                <i
+                                    class="fas fa-code text-[#8cc63f] mt-1 mr-3 w-5 shrink-0 text-center text-[0.85rem]"></i>
+                                <span><strong>Vibecoden:</strong> Laat werkende apps bouwen door simpelweg in het
+                                    Nederlands te typen wat je wilt.</span>
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 leading-relaxed">
+                                <i
+                                    class="fas fa-file-download text-[#8cc63f] mt-1 mr-3 w-5 shrink-0 text-center text-[0.85rem]"></i>
+                                <span><strong>Downloads:</strong> Vraag om kant-en-klare, downloadbare bestanden (zoals
+                                    een opgemaakt Word-document) van je resultaat.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">3</span>
+                    Evalueren <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Beoordeel AI-output
+                        kritisch op kwaliteit)</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6 items-start">
+                    <div class="space-y-6">
+                        <div class="bg-orange-50/50 border border-orange-100 p-6 rounded-xl">
+                            <div class="text-orange-500 mb-4 opacity-70"><i class="fas fa-brain text-4xl"></i></div>
+                            <h3 class="font-bold text-[#004d91] mb-2">Waak voor 'Belief Offloading'</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed">Besteed niet ongemerkt je eigen mening uit
+                                aan
+                                AI. Als een chatbot een bepaalde overtuiging of methode voorstelt, accepteer deze dan
+                                niet
+                                blindelings. Blijf tegen-denken en vorm altijd je eigen oordeel.</p>
+                        </div>
+
+                        <div class="bg-orange-50/50 border border-orange-100 p-6 rounded-xl">
+                            <div class="text-orange-500 mb-4 opacity-70"><i class="fas fa-lightbulb text-4xl"></i></div>
+                            <h3 class="font-bold text-[#004d91] mb-2">Cognitieve fixatie bij creativiteit</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed">Als je zelf ideeën moet bedenken (bijv.
+                                brainstormen), wees je er dan van bewust dat zodra je ideeën van AI ziet, je zélf
+                                moeilijker
+                                iets nieuws bedenkt. Gebruik AI liever om jóuw ideeën te evalueren.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50/50 border border-orange-100 p-6 rounded-xl h-full">
+                        <div class="text-orange-500 mb-4 opacity-70"><i class="fas fa-check-double text-4xl"></i></div>
+                        <h3 class="font-bold text-[#004d91] mb-2">Zelfcorrectie via AI</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">Gebruik de <em>APA-verbeteraar</em>
+                            chatbot (voor <a
+                                href="https://chatgpt.com/g/g-698e2a4b8b448191a1fc404037192906-apa-verbeteraar"
+                                target="_blank"
+                                class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">ChatGPT</a>
+                            of <a href="https://gemini.google.com/gem/730f292ff291?usp=sharing" target="_blank"
+                                class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Gemini</a>)
+                            om moeiteloos een perfecte APA 7 bronnenlijst te maken.</p>
+                        <ul class="space-y-2 mt-4 text-left">
+                            <li class="flex items-start text-sm text-gray-700 leading-relaxed">
+                                <i
+                                    class="fas fa-search text-orange-500 mt-1 mr-3 w-5 shrink-0 text-center text-[0.85rem]"></i>
+                                <span><strong>Extraheren:</strong> Plak je tekst, de bot haalt alle verwijzingen eruit
+                                    en checkt of ze ook echt in je bronnenlijst staan (en andersom).</span>
+                            </li>
+                            <li class="flex items-start text-sm text-gray-700 leading-relaxed">
+                                <i
+                                    class="fas fa-magic text-orange-500 mt-1 mr-3 w-5 shrink-0 text-center text-[0.85rem]"></i>
+                                <span><strong>Aanvullen:</strong> De bot zoekt bronnen online op en vult o.a.
+                                    ontbrekende jaartallen, auteurs en DOI-links aan, of geeft een waarschuwing!</span>
+                            </li>
+                            <li class="flex items-start text-sm text-gray-700 leading-relaxed">
+                                <i
+                                    class="fas fa-list text-orange-500 mt-1 mr-3 w-5 shrink-0 text-center text-[0.85rem]"></i>
+                                <span><strong>Opmaak:</strong> Je krijgt een foutloze lijst terug: alfabetisch, correct
+                                    gecursiveerd en met de juiste inspringing.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#004d91] mb-6 flex items-center">
+                    <span class="step-number">4</span>
+                    Spelregels <span class="text-gray-400 font-normal text-lg ml-2 hidden sm:inline">(Pas ethische en
+                        juridische kaders toe)</span>
+                </h2>
+
+                <div class="bg-[#004d91] text-white rounded-xl p-8 relative overflow-hidden shadow-lg">
+                    <div class="absolute right-0 bottom-0 opacity-10 p-8 pointer-events-none">
+                        <i class="fas fa-user-shield text-[10rem]"></i>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                        <div>
+                            <div class="mb-4">
+                                <i class="fas fa-user-slash text-[#8cc63f] text-3xl"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-3">Behoud authenticiteit</h3>
+                            <p class="text-blue-100 text-sm leading-relaxed">
+                                Blijf ver weg van 'agent'-apps (zoals Einstein) die automatisch inloggen in je
+                                leeromgeving, opdrachten namaken, reageren op forums en huiswerk voor je
+                                inleveren.<br><br>Dit is in strijd met elke vorm van academische integriteit en
+                                ondermijnt je leerproces volledig. Het leidt direct tot een fraudemelding.
+                            </p>
+                        </div>
+
+                        <div class="border-t md:border-t-0 md:border-l border-blue-800 pt-6 md:pt-0 md:pl-8">
+                            <div class="mb-4">
+                                <i class="fas fa-eye text-[#8cc63f] text-3xl"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-3">Transparantie en privacy</h3>
+                            <p class="text-blue-100 text-sm leading-relaxed mb-4">
+                                Deel altijd eerlijk hoe je met AI tot een resultaat bent gekomen (via de deelfunctie in
+                                chats). Zo is je leerproces inzichtelijk voor de docent en voorkom je fraude-vermoedens.
+                            </p>
+                            <div class="bg-blue-800/50 p-4 rounded-lg text-sm border border-blue-700">
+                                <strong class="text-[#8cc63f]"><i class="fas fa-lightbulb mr-1"></i> Tip:</strong>
+                                Gebruik privacyvriendelijke en anonieme apps (zoals <em><a
+                                        href="https://snap-ik-het-appje.vercel.app/" target="_blank"
+                                        class="text-trinitas-blue hover:text-trinitas-green underline transition-colors">Snap
+                                        ik het nog</a></em>) zonder
+                                accounts of persoonsgegevens te delen.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <div class="max-w-4xl mx-auto mt-8 mb-12 text-center">
+        <a href="index.html"
+            class="inline-flex items-center text-sm font-semibold text-gray-500 hover:text-[var(--trinitas-blue)] transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i> Terug naar home
+        </a>
+    </div>
+
+</body>
+
+</html>
