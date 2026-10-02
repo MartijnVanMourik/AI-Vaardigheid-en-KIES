@@ -116,7 +116,7 @@
           : ''
       }
       ${b.letop ? `<p class="text-xs text-amber-900 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mb-3 flex gap-2"><i class="fas fa-circle-exclamation mt-0.5" aria-hidden="true"></i><span>${esc(b.letop)}</span></p>` : ''}
-      ${b.links && b.links.length ? `<div class="flex flex-wrap gap-2 mb-4">${b.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener" class="inline-flex items-center text-xs font-bold text-trinitas-blue bg-blue-50 border border-blue-200 rounded-full px-3 py-1 hover:bg-blue-100">${esc(l.label)}<i class="fas fa-arrow-up-right-from-square text-[10px] ml-1.5" aria-hidden="true"></i></a>`).join('')}</div>` : ''}
+      ${b.links && b.links.length ? `<div class="flex flex-wrap gap-2 mb-4">${b.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener" class="inline-flex items-center text-xs font-bold text-trinitas-blue bg-blue-50 border border-blue-200 rounded-full px-3 py-1 hover:bg-blue-100">${esc(l.label)}<i class="fas fa-arrow-up-right-from-square text-xs ml-1.5" aria-hidden="true"></i></a>`).join('')}</div>` : ''}
       <div class="flex flex-wrap gap-1.5 mb-3">${stapLabels(b.stappen)}${doelgroepLabels(b.voor)}</div>
       <p class="mt-auto text-xs text-gray-500 flex flex-wrap gap-x-4 gap-y-1">
         <span><i class="fas fa-tag mr-1" aria-hidden="true"></i>${esc(b.kosten || 'Zie website')}</span>
