@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Promptrecepten, tools en betrouwbare bronnen voor AI in het onderwijs, gekoppeld aan de stappen van het KIES-model.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="AI-Vaardigheid Hub | Han Fortmann">
+    <meta property="og:title" content="Toolbox & bronnen | AI-Vaardigheid Hub">
+    <meta property="og:description" content="Promptrecepten, tools en betrouwbare bronnen voor AI in het onderwijs, gekoppeld aan de stappen van het KIES-model.">
+    <meta property="og:url" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/toolbox.html">
+    <meta property="og:image" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Toolbox & bronnen | AI-Vaardigheid Hub</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <header id="site-header"></header>
+
+    <main>
+        <!-- Intro -->
+        <section class="bg-trinitas-blue text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+                <p class="text-trinitas-green font-bold uppercase tracking-wide text-sm mb-3">AI-Vaardigheid Hub</p>
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-5">Toolbox &amp; bronnen</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
+                    AI-tools veranderen snel, de principes van KIES niet. Daarom staan alle concrete tools,
+                    promptrecepten en externe bronnen op deze ene pagina. Bij elk item zie je bij welke KIES-stap
+                    het hoort en voor wie het bedoeld is.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="relative md:sticky md:top-20 z-40 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm" aria-label="Filters">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center gap-3 md:gap-8">
+                <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter op KIES-stap">
+                    <span class="text-xs font-bold uppercase tracking-wide text-gray-500 mr-1">KIES-stap</span>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="alle">Alle</button>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="K"><b>K</b>iezen</button>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="I"><b>I</b>nstrueren</button>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="E"><b>E</b>valueren</button>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="S"><b>S</b>pelregels</button>
+                </div>
+                <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter op doelgroep">
+                    <span class="text-xs font-bold uppercase tracking-wide text-gray-500 mr-1">Voor</span>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="voor" data-waarde="alle">Iedereen</button>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="voor" data-waarde="leerlingen">Leerlingen</button>
+                    <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="voor" data-waarde="docenten">Docenten</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+            <!-- Promptrecepten -->
+            <section id="recepten" data-sectie class="scroll-mt-40">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-trinitas-blue">Promptrecepten <span class="teller text-gray-400 text-xl font-semibold"></span></h2>
+                    <p class="text-gray-600 mt-2 max-w-3xl leading-relaxed">
+                        Onze eigen, kant-en-klare instructies. Ze werken in elke AI-assistent, dus ook als tools of
+                        platforms veranderen.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 mb-8 grid md:grid-cols-3 gap-6">
+                    <div class="flex gap-3">
+                        <span class="step-number">1</span>
+                        <p class="text-sm text-gray-700"><strong class="text-trinitas-blue">Kopieer</strong> het recept met de knop.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="step-number">2</span>
+                        <p class="text-sm text-gray-700"><strong class="text-trinitas-blue">Plak</strong> het in een nieuw gesprek met je AI-assistent. Gebruik je het vaker? Zet het dan in de vaste instructies (bijvoorbeeld een project of eigen assistent).</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="step-number">3</span>
+                        <p class="text-sm text-gray-700"><strong class="text-trinitas-blue">Vul</strong> de delen tussen [vierkante haken] in. Laat namen en andere persoonsgegevens weg.</p>
+                    </div>
+                </div>
+
+                <div id="lijst-recepten" class="grid md:grid-cols-2 gap-6"></div>
+                <p class="leeg-melding text-gray-500 italic" hidden>Geen recepten bij dit filter.</p>
+            </section>
+
+            <!-- Tools -->
+            <section id="tools" data-sectie class="scroll-mt-40">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-trinitas-blue">Tools <span class="teller text-gray-400 text-xl font-semibold"></span></h2>
+                    <p class="text-gray-600 mt-2 max-w-3xl leading-relaxed">
+                        Concrete apps die we nu aanraden. Gebruik ze met leerlingen alleen zonder persoonsgegevens en
+                        volgens de <a href="index.html#spelregels" class="text-trinitas-blue underline">afspraken van de school</a>.
+                    </p>
+                </div>
+                <div id="lijst-tools" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+                <p class="leeg-melding text-gray-500 italic" hidden>Geen tools bij dit filter.</p>
+            </section>
+
+            <!-- Bronnen -->
+            <section id="bronnen" data-sectie class="scroll-mt-40">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-trinitas-blue">Verder leren bij de bron <span class="teller text-gray-400 text-xl font-semibold"></span></h2>
+                    <p class="text-gray-600 mt-2 max-w-3xl leading-relaxed">
+                        Websites die actief worden bijgehouden door hun makers. Zij houden hun eigen tools, cursussen
+                        en promptbibliotheken up-to-date; wij verwijzen er graag naar.
+                    </p>
+                </div>
+                <div id="lijst-bronnen" class="grid md:grid-cols-2 gap-6"></div>
+                <p class="leeg-melding text-gray-500 italic" hidden>Geen bronnen bij dit filter.</p>
+            </section>
+
+            <!-- Disclaimer -->
+            <aside class="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-sm text-gray-700 leading-relaxed">
+                <h2 class="font-bold text-trinitas-blue mb-2"><i class="fas fa-circle-info mr-2" aria-hidden="true"></i>Over deze pagina</h2>
+                <p>
+                    Externe tools en websites worden onderhouden door hun eigen makers; de beschrijvingen hier zijn
+                    in onze eigen woorden. We controleren de links regelmatig (zie de datum bij elk item). Werkt een
+                    link niet meer of mis je iets? Laat het de sectie Informatica weten.
+                </p>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/toolbox-data.js"></script>
+    <script src="assets/js/toolbox.js"></script>
+</body>
+
+</html>

@@ -18,130 +18,14 @@
     <title>AI-kompas | Han Fortmann</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="assets/css/site.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-        :root {
-            --trinitas-blue: #004d91;
-            --trinitas-green: #8cc63f;
-            --trinitas-light-blue: #0072bc;
-            /* Donkerdere groentinten voor tekst op lichte achtergrond (WCAG-contrast) */
-            --trinitas-green-text: #4a7a16;
-            --trinitas-green-large: #5f9324;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .bg-trinitas-blue {
-            background-color: var(--trinitas-blue);
-        }
-
-        .text-trinitas-blue {
-            color: var(--trinitas-blue);
-        }
-
-        .bg-trinitas-green {
-            background-color: var(--trinitas-green);
-        }
-
-        .text-trinitas-green {
-            color: var(--trinitas-green);
-        }
-
-        .text-trinitas-green-text {
-            color: var(--trinitas-green-text);
-        }
-
-        .text-trinitas-green-large {
-            color: var(--trinitas-green-large);
-        }
-
-        .border-trinitas-green {
-            border-color: var(--trinitas-green);
-        }
-
-        .card-gradient {
-            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-        }
-
-        .nav-link:hover {
-            color: var(--trinitas-green);
-            transition: 0.3s;
-        }
-
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/hero-hf.avif');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .logo-blob {
-            background: white;
-            padding: 1rem 2rem;
-            border-radius: 0 0 100px 100px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .wavy-underline {
-            position: relative;
-        }
-
-        .wavy-underline::after {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' fill='none' stroke='%238cc63f' stroke-width='3'/%3E%3C/svg%3E");
-            background-repeat: repeat-x;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navigatie -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md border-b-4 border-trinitas-green">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <div class="flex items-center">
-                <div class="logo-blob flex items-center space-x-3 -mt-4">
-                    <img src="assets/logo-hf.svg" alt="Han Fortmann Logo" class="h-10">
-                    <div class="flex flex-col justify-center -space-y-1">
-                        <span class="text-gray-500 font-bold text-xs uppercase tracking-tight">AI-Vaardigheid</span>
-                        <span class="text-gray-500 font-black text-xs uppercase tracking-tight">Hub</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center space-x-6 font-semibold">
-                <a href="#home" class="nav-link text-trinitas-blue text-sm uppercase">Home</a>
-                <a href="#kies" class="nav-link text-trinitas-blue text-sm uppercase">KIES-Model</a>
-                <a href="#leerlingen" class="nav-link text-trinitas-blue text-sm uppercase">Leerlingen</a>
-                <a href="#docenten" class="nav-link text-trinitas-blue text-sm uppercase">Docenten</a>
-                <a href="#spelregels" class="nav-link text-trinitas-blue text-sm uppercase">Spelregels</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button"
-                    class="bg-trinitas-blue text-white px-4 py-2 rounded-md flex items-center space-x-2 text-sm font-bold shadow-md hover:bg-blue-800 transition">
-                    <i class="fas fa-bars"></i>
-                    <span>Menu</span>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-6 space-y-2 border-t">
-            <a href="#home" class="block py-2 text-trinitas-blue font-semibold">Home</a>
-            <a href="#kies" class="block py-2 text-trinitas-blue font-semibold">KIES-Model</a>
-            <a href="#leerlingen" class="block py-2 text-trinitas-blue font-semibold">Voor Leerlingen</a>
-            <a href="#docenten" class="block py-2 text-trinitas-blue font-semibold">Voor Docenten</a>
-            <a href="#spelregels" class="block py-2 text-trinitas-blue font-semibold">Spelregels</a>
-        </div>
-    </nav>
+    <header id="site-header"></header>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section py-32 text-white relative">
@@ -189,7 +73,7 @@
 
                 <div class="mt-12 text-center max-w-4xl mx-auto space-y-8 text-gray-700">
                     <p class="text-lg leading-relaxed">
-                        Een van de kansen van het gebruik van AI in het onderwijs ligt bij het oplossen van het beroemde <strong>"Twee Sigma-probleem"</strong> van onderwijsonderzoeker Benjamin Bloom (1984). Bloom toonde aan dat leerlingen met 1-op-1 begeleiding twee standaarddeviaties (sigma) beter presteren dan in een klassieke setting; AI maakt deze persoonlijke tutor nu eindelijk schaalbaar en betaalbaar.
+                        Een van de kansen van het gebruik van AI in het onderwijs ligt bij het oplossen van het beroemde <strong>"Twee Sigma-probleem"</strong> van onderwijsonderzoeker Benjamin Bloom (1984). Bloom toonde aan dat leerlingen met 1-op-1 begeleiding twee standaarddeviaties (sigma) beter presteren dan in een klassieke setting; AI kan zo'n persoonlijke tutor schaalbaar en betaalbaar maken. Latere onderzoeken vinden overigens kleinere effecten dan Bloom, maar de richting staat: goede persoonlijke begeleiding loont.
                     </p>
                     
                     <div>
@@ -216,7 +100,11 @@
                     </div>
 
                     <p class="text-lg leading-relaxed">
-                        Het KIES-model dient als navigatie-instrument om deze verrijking te waarborgen. Want hoewel het "Mens-Machine-Mens" principe een goede basis biedt, is het <strong>KIES-model</strong> (een vertaling van het internationale AI Fluency raamwerk) vollediger voor schoolbeleid. KIES borgt ook de cruciale voor- en achterkant: het bewuste keuzeproces (K) en de ethische en wettelijke kaders (S).
+                        Het KIES-model dient als navigatie-instrument om deze verrijking te waarborgen. Want hoewel het "Mens-Machine-Mens" principe een goede basis biedt, is het <strong>KIES-model</strong> vollediger voor schoolbeleid. KIES borgt ook de cruciale voor- en achterkant: het bewuste keuzeproces (K) en de ethische en wettelijke kaders (S).
+                    </p>
+                    <p class="text-sm leading-relaxed text-gray-600">
+                        KIES is een Nederlandse vertaling van het internationale <a href="toolbox.html#bron-aifluency" class="text-trinitas-blue underline font-semibold">AI Fluency-raamwerk</a>, met zijn vier D's:
+                        <em>Delegation</em> (Kiezen), <em>Description</em> (Instrueren), <em>Discernment</em> (Evalueren) en <em>Diligence</em> (Spelregels).
                     </p>
                 </div>
             </div>
@@ -298,6 +186,18 @@
                             Doel: Veilig en ethisch gebruik
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Onderzoek: waarom de E -->
+            <div class="max-w-4xl mx-auto mb-12 bg-orange-50 border border-orange-200 rounded-2xl p-6 flex gap-4">
+                <i class="fas fa-magnifying-glass-chart text-orange-600 text-2xl mt-1" aria-hidden="true"></i>
+                <div class="text-sm text-gray-700 leading-relaxed">
+                    <h3 class="font-bold text-trinitas-blue mb-1">Waarom de E zo belangrijk is</h3>
+                    <p>Anthropic onderzocht in 2026 hoe mensen met AI samenwerken. Wanneer AI iets afgewerkts oplevert, zoals een
+                        net document of een werkende app, controleren gebruikers <strong>minder vaak de feiten</strong> en vragen ze
+                        <strong>minder door naar wat er ontbreekt</strong>. Hoe mooier het resultaat, hoe belangrijker het evalueren.
+                        <a href="https://academy.claude.com/tutorials/the-ai-fluency-index" target="_blank" rel="noopener" class="text-trinitas-blue underline whitespace-nowrap">Lees het onderzoek<i class="fas fa-arrow-up-right-from-square text-xs ml-1" aria-hidden="true"></i></a></p>
                 </div>
             </div>
 
@@ -407,9 +307,9 @@
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
-                            <span><strong>Ethische Grenzen:</strong> Bespreek expliciet de gevaren van laagdrempelige
-                                tools zoals <em>Grok</em> voor het maken van racistische of seksuele beelden
-                                (deepfakes). Maak duidelijk dat techniek nooit een excuus is voor pestgedrag.</span>
+                            <span><strong>Ethische Grenzen:</strong> Met AI maak je in een paar klikken nepbeelden van echte
+                                mensen. Bespreek expliciet de gevaren van racistische of seksuele deepfakes. Techniek is
+                                nooit een excuus voor pestgedrag.</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
@@ -426,25 +326,26 @@
                         </div>
                         <h4 class="font-bold text-trinitas-blue mb-4 flex items-center">
                             <i class="fas fa-robot mr-2 text-trinitas-green"></i>
-                            Best Practices:
+                            Best practices
                         </h4>
                         <ul class="space-y-4 text-sm text-gray-700">
                             <li class="flex gap-3">
-                                <div class="font-bold text-trinitas-blue min-w-[140px]">STARR-Reflectiebot:</div>
+                                <div class="font-bold text-trinitas-blue min-w-[140px]"><a href="toolbox.html#recept-starr" class="underline">STARR-begeleider</a></div>
                                 <div>Gebruik AI niet voor het antwoord, maar als begeleider. Laat een chatbot vragen
                                     stellen over Situatie, Taak, Actie en Resultaat.</div>
                             </li>
                             <li class="flex gap-3">
-                                <div class="font-bold text-trinitas-blue min-w-[140px]">Socratische Tutor:</div>
+                                <div class="font-bold text-trinitas-blue min-w-[140px]"><a href="toolbox.html#recept-tutor" class="underline">Socratische tutor</a></div>
                                 <div>Stel de AI in als tutor die <em>geen</em> antwoorden geeft, maar alleen wedervragen
                                     stelt om je denken te stimuleren.</div>
                             </li>
                             <li class="flex gap-3">
-                                <div class="font-bold text-trinitas-blue min-w-[140px]">AI-Logboek:</div>
+                                <div class="font-bold text-trinitas-blue min-w-[140px]"><a href="toolbox.html#recept-verantwoording" class="underline">AI-logboek</a></div>
                                 <div>Maak bij projecten inzichtelijk: wat is uitbesteed (K), welke prompts (I) en hoe is
                                     gecontroleerd (E)?</div>
                             </li>
                         </ul>
+                        <p class="text-xs text-gray-500 mt-4"><i class="fas fa-scroll mr-1" aria-hidden="true"></i>Klik op een naam voor een kant-en-klaar promptrecept.</p>
                     </div>
 
                     <!-- Voorbeeld Napoleon -->
@@ -478,8 +379,8 @@
                 </div>
             </div>
 
-            <!-- Nieuw Blok: Vervangen, Aanvullen, Verrijken -->
-            <div class="mt-16 pt-12 border-t border-gray-200">
+            <!-- Gradaties: Vervangen, Aanvullen, Verrijken -->
+            <div id="gradaties" class="mt-16 pt-12 border-t border-gray-200 scroll-mt-28">
                 <div class="text-center mb-10">
                     <h3 class="text-2xl font-bold text-trinitas-blue mb-4">Gradaties van AI-gebruik</h3>
                     <div class="flex justify-center mb-4">
@@ -670,8 +571,9 @@
                             <div>
                                 <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Lesvoorbereiding</h4>
                                 <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Gebruik apps (zoals GPT's/Gems of NotebookLM) om lesplannen, instructiekaarten of
-                                    PDF's te genereren op basis van leerdoelen en voorkennis.
+                                    Laat AI lesplannen, instructiekaarten of oefenmateriaal opzetten op basis van je
+                                    leerdoelen en de voorkennis van de klas, bijvoorbeeld met een notebook-tool die alleen
+                                    jouw lesstof gebruikt.
                                 </p>
                             </div>
                         </div>
@@ -686,8 +588,8 @@
                             <div>
                                 <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Analyse & Verbetering</h4>
                                 <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Gebruik AI (zoals Claude) voor diepgaande analyses van eerdere
-                                    beoordelingen voor concrete verbetersuggesties voor je lessenreeks.
+                                    Laat AI geanonimiseerde toetsresultaten of beoordelingen analyseren voor concrete
+                                    verbeterpunten in je lessenreeks.
                                 </p>
                             </div>
                         </div>
@@ -702,8 +604,8 @@
                             <div>
                                 <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Toetsing & Evaluatie</h4>
                                 <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Ontwerp Bloom-gebaseerde toetsvragen of gebruik "Quick Quiz" om op basis van lesstof
-                                    binnen een halve minuut een formatieve quiz te genereren voor je klas.
+                                    Ontwerp toetsvragen op verschillende denkniveaus (Bloom) of genereer binnen een halve
+                                    minuut een formatieve quiz uit je lesstof.
                                 </p>
                             </div>
                         </div>
@@ -735,12 +637,16 @@
                             <div>
                                 <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Content & Kennisdeling</h4>
                                 <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Creëer interactief leermateriaal met AI-visuals. Gebruik vakspecifieke bots als
-                                    inwerk-assistent om kennis razendsnel over te dragen aan (nieuwe) collega's.
+                                    Creëer interactief leermateriaal met AI-visuals. Een eigen sectie-assistent helpt
+                                    nieuwe collega's snel op weg.
                                 </p>
                             </div>
                         </div>
                     </div>
+
+                    <a href="toolbox.html?voor=docenten" class="inline-flex items-center text-sm font-bold text-trinitas-blue hover:underline">
+                        <i class="fas fa-toolbox mr-2" aria-hidden="true"></i>Recepten en tools hiervoor in de Toolbox
+                    </a>
 
                     <!-- De Shift in Toetsing -->
                     <div class="mt-8 bg-green-50 p-8 rounded-[2rem] border border-green-100/50 shadow-sm">
@@ -793,11 +699,11 @@
                     <i class="fas fa-shield-alt text-trinitas-green text-3xl mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">Privacy & Soevereiniteit</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
-                        Gebruik bij voorkeur omgevingen die data binnen de EU/Nederland houden (zoals SURF-initiatieven)
-                        om digitale soevereiniteit te waarborgen. <strong>Wees je echter bewust dat internationale
-                            (Amerikaanse/Chinese) modellen momenteel vaak krachtiger zijn; maak per taak een bewuste
-                            afweging tussen kracht en privacy.</strong><br /><br />Deel nooit persoonlijke gegevens of
-                        beelden van medeleerlingen/docenten in AI-tools, jouw data is van jou.
+                        Gebruik AI bij voorkeur via een schoolaccount en zonder persoonsgegevens; gratis accounts gebruiken
+                        gesprekken vaak om het model te trainen. <strong>Maak per taak een bewuste afweging tussen de kracht
+                            van een model en privacy</strong>, en gebruik met leerlingen alleen tools die de school heeft
+                        goedgekeurd.<br /><br />Deel nooit persoonlijke gegevens of beelden van medeleerlingen of docenten in
+                        AI-tools: jouw data is van jou.
                     </p>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
@@ -814,16 +720,28 @@
                     <i class="fas fa-user-secret text-trinitas-green text-3xl mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">Sociale Veiligheid (Deepfakes)</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
-                        De laagdrempeligheid van tools zoals Grok maakt misbruik eenvoudig. Het genereren van AI-content
-                        van anderen is strikt verboden en geldt als <strong>zwaar wangedrag</strong>.<br /><br />Het
+                        Met AI maak je in een paar klikken nepbeelden, -video's of -stemmen van echte mensen. Het genereren
+                        van AI-content van anderen is strikt verboden en geldt als <strong>zwaar wangedrag</strong>.<br /><br />Het
                         creëren of verspreiden van (seksueel) getinte of racistische AI-gegenereerde beelden van anderen
                         is bij wet verboden.
                     </p>
                 </div>
             </div>
 
-            <div class="mt-16 text-center">
-                <p class="text-blue-300 text-sm">
+            <div class="mt-10 bg-white/5 border border-white/15 rounded-3xl p-6 md:p-8">
+                <h3 class="font-bold text-lg mb-4"><i class="fas fa-scale-balanced text-trinitas-green mr-2" aria-hidden="true"></i>Waarom dit ertoe doet</h3>
+                <ul class="grid md:grid-cols-3 gap-6 text-sm text-blue-100 leading-relaxed">
+                    <li><strong class="text-white block mb-1">AI-geletterdheid is verplicht</strong>Sinds februari 2025 moeten scholen
+                        volgens de Europese AI-verordening zorgen dat medewerkers die met AI werken daar voldoende kennis van hebben.</li>
+                    <li><strong class="text-white block mb-1">Nieuwe kerndoelen</strong>Met de nieuwe kerndoelen (wet aangenomen in juni
+                        2026) wordt digitale geletterdheid, inclusief AI, een verplicht onderdeel van het curriculum.</li>
+                    <li><strong class="text-white block mb-1">Nepbeelden aan banden</strong>Een Nederlandse rechter verbood in maart 2026
+                        de uitkleedfunctie van een bekende chatbot; vanaf december 2026 verbiedt de EU zulke AI-systemen.</li>
+                </ul>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-blue-200 text-sm">
                     <i class="fas fa-leaf mr-2"></i> Denk aan de ecologie: beperk onnodig genereren van zware
                     AI-beelden.
                 </p>
@@ -831,41 +749,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-12 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-trinitas-blue font-bold mb-2">Trinitas College | Han Fortmann</p>
-            <p class="text-gray-500 text-xs mb-4">Ontwikkeld door de sectie Informatica & AI-Werkgroep</p>
-            
-            <p class="text-gray-500 text-xs mb-8 max-w-2xl mx-auto leading-relaxed">
-                Het KIES-model is een door Marcel Mutsaarts ontwikkelde vertaling van het internationale AI Fluency raamwerk en werd besproken in 
-                <a href="https://aivoordocenten.nl/ai-tussenuurtje/" target="_blank" rel="noopener noreferrer" class="text-trinitas-blue hover:underline">S02E26: AI-verrijking versus AI-verarming in het onderwijs met praktische tips voor docenten</a>.
-            </p>
+    <footer id="site-footer"></footer>
 
-            <a href="assets/Analyse KIES model AI Onderwijs.pdf" target="_blank"
-                class="inline-flex items-center text-trinitas-blue hover:text-trinitas-green transition-colors text-sm font-medium">
-                <i class="fas fa-file-pdf mr-2 text-red-500"></i>
-                Bekijk de originele analyse (PDF)
-            </a>
-        </div>
-    </footer>
-
-    <script>
-        // Mobiel Menu Toggle
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Sluit menu bij klik op link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-    </script>
+    <script src="assets/js/layout.js"></script>
 </body>
 
 </html>
