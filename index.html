@@ -4,11 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Het AI-kompas van het Han Fortmann: met het KIES-model (Kiezen, Instrueren, Evalueren, Spelregels) leren leerlingen en docenten AI bewust en verantwoord inzetten.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="AI-Vaardigheid Hub | Han Fortmann">
+    <meta property="og:title" content="AI-kompas | Han Fortmann">
+    <meta property="og:description" content="Het AI-kompas van het Han Fortmann: met het KIES-model (Kiezen, Instrueren, Evalueren, Spelregels) leren leerlingen en docenten AI bewust en verantwoord inzetten.">
+    <meta property="og:url" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/">
+    <meta property="og:image" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <title>AI-kompas | Han Fortmann</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
@@ -16,6 +27,9 @@
             --trinitas-blue: #004d91;
             --trinitas-green: #8cc63f;
             --trinitas-light-blue: #0072bc;
+            /* Donkerdere groentinten voor tekst op lichte achtergrond (WCAG-contrast) */
+            --trinitas-green-text: #4a7a16;
+            --trinitas-green-large: #5f9324;
         }
 
         body {
@@ -37,6 +51,14 @@
 
         .text-trinitas-green {
             color: var(--trinitas-green);
+        }
+
+        .text-trinitas-green-text {
+            color: var(--trinitas-green-text);
+        }
+
+        .text-trinitas-green-large {
+            color: var(--trinitas-green-large);
         }
 
         .border-trinitas-green {
@@ -162,7 +184,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-trinitas-blue mb-2">Het KIES-model</h2>
-                <span class="text-trinitas-green font-bold tracking-wider uppercase text-sm">Van cognitieve verarming
+                <span class="text-trinitas-green-text font-bold tracking-wider uppercase text-sm">Van cognitieve verarming
                     naar educatieve verrijking</span>
 
                 <div class="mt-12 text-center max-w-4xl mx-auto space-y-8 text-gray-700">
@@ -183,7 +205,7 @@
                                 </p>
                             </div>
                             <div class="bg-green-50 border border-green-200 p-5 rounded-xl shadow-sm">
-                                <div class="text-trinitas-green font-bold mb-2 flex items-center">
+                                <div class="text-trinitas-green-text font-bold mb-2 flex items-center">
                                     <i class="fas fa-arrow-up mr-2"></i> Engagement
                                 </div>
                                 <p class="text-sm text-gray-600">
@@ -204,7 +226,7 @@
                 <div
                     class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">K</div>
+                        <div class="text-trinitas-green-large text-4xl font-black">K</div>
                         <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
                             1</span>
                     </div>
@@ -213,7 +235,7 @@
                         AI.</p>
                     <div class="mt-auto">
                         <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
+                            class="bg-green-50 text-trinitas-green-text px-4 py-2 rounded-lg text-xs font-bold flex items-center">
                             <i class="fas fa-bullseye mr-2"></i>
                             Doel: Bewust leerproces
                         </div>
@@ -223,7 +245,7 @@
                 <div
                     class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">I</div>
+                        <div class="text-trinitas-green-large text-4xl font-black">I</div>
                         <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
                             2</span>
                     </div>
@@ -233,7 +255,7 @@
                         (te prompten).</p>
                     <div class="mt-auto">
                         <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
+                            class="bg-green-50 text-trinitas-green-text px-4 py-2 rounded-lg text-xs font-bold flex items-center">
                             <i class="fas fa-bullseye mr-2"></i>
                             Doel: Minder frustratie, betere output
                         </div>
@@ -243,7 +265,7 @@
                 <div
                     class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">E</div>
+                        <div class="text-trinitas-green-large text-4xl font-black">E</div>
                         <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
                             3</span>
                     </div>
@@ -252,7 +274,7 @@
                     </p>
                     <div class="mt-auto">
                         <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
+                            class="bg-green-50 text-trinitas-green-text px-4 py-2 rounded-lg text-xs font-bold flex items-center">
                             <i class="fas fa-bullseye mr-2"></i>
                             Doel: Voorkomen van hallucinaties
                         </div>
@@ -262,7 +284,7 @@
                 <div
                     class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">S</div>
+                        <div class="text-trinitas-green-large text-4xl font-black">S</div>
                         <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
                             4</span>
                     </div>
@@ -271,7 +293,7 @@
                         ethiek.</p>
                     <div class="mt-auto">
                         <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
+                            class="bg-green-50 text-trinitas-green-text px-4 py-2 rounded-lg text-xs font-bold flex items-center">
                             <i class="fas fa-bullseye mr-2"></i>
                             Doel: Veilig en ethisch gebruik
                         </div>
@@ -324,16 +346,16 @@
 
             <!-- KIES Method & Detail Images -->
             <div class="mt-20 grid md:grid-cols-2 gap-8">
-                <a href="assets/kies-method.jpg" target="_blank"
+                <a href="assets/kies-method.webp" target="_blank"
                     class="block group transform transition hover:scale-[1.02]">
-                    <img src="assets/kies-method.jpg" alt="De KIES-methode in beeld"
+                    <img src="assets/kies-method.webp" width="2752" height="1536" loading="lazy" alt="Infographic: De KIES-methode voor AI-vaardigheid, met vier kaarten: meer dan geletterdheid, kritisch en bewust gebruik, voor in de klas en de filosofie &quot;niet bang zijn, gewoon doen&quot;"
                         class="rounded-3xl shadow-xl max-w-full h-auto border-4 border-white">
                     <div class="mt-2 text-center text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition">
                         Klik voor vergroting</div>
                 </a>
-                <a href="assets/kies-detail.jpg" target="_blank"
+                <a href="assets/kies-detail.webp" target="_blank"
                     class="block group transform transition hover:scale-[1.02]">
-                    <img src="assets/kies-detail.jpg" alt="KIES model detail"
+                    <img src="assets/kies-detail.webp" width="2752" height="1536" loading="lazy" alt="Infographic: Word AI-vaardig met de KIES-methode, met uitleg per stap: Kiezen, Instrueren, Evalueren en Spelregels"
                         class="rounded-3xl shadow-xl max-w-full h-auto border-4 border-white">
                     <div class="mt-2 text-center text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition">
                         Klik voor vergroting</div>
@@ -462,7 +484,7 @@
                     <h3 class="text-2xl font-bold text-trinitas-blue mb-4">Gradaties van AI-gebruik</h3>
                     <div class="flex justify-center mb-4">
                         <span
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-xl text-sm font-bold border border-green-200 flex items-center">
+                            class="bg-green-50 text-trinitas-green-text px-4 py-2 rounded-xl text-sm font-bold border border-green-200 flex items-center">
                             <i class="fas fa-bullseye mr-2"></i>De 'K' in actie: Welke keuze maak jij?
                         </span>
                     </div>
@@ -548,7 +570,7 @@
                     <p class="text-lg md:text-xl text-trinitas-blue italic font-medium relative z-10 font-semibold leading-relaxed">
                         "Zie AI niet als concurrent van de docent, maar meer als een extra assistent in de klas."
                     </p>
-                    <cite class="block mt-4 text-xs text-trinitas-green font-bold uppercase tracking-widest">— Tip van onze leerlingen</cite>
+                    <cite class="block mt-4 text-xs text-trinitas-green-text font-bold uppercase tracking-widest">— Tip van onze leerlingen</cite>
                 </div>
             </div>
 

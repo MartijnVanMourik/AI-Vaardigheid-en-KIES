@@ -38,15 +38,28 @@ Het project bestaat uit drie hoofdpagina's:
 
 Dit is een statisch webproject. Om de site lokaal te bekijken:
 1.  Clone de repository.
-2.  Open `index.html` in een moderne webbrower.
+2.  Open `index.html` in een moderne webbrowser.
 3.  Zorg dat de map `assets/` aanwezig is voor afbeeldingen, video's en iconen.
 
 ## Technologie
 
 - **Frontend:** HTML5, CSS3, JavaScript.
 - **Framework:** [Tailwind CSS](https://tailwindcss.com/) (geïmplementeerd via CDN).
-- **Icons:** [Font Awesome](https://fontawesome.com/).
+- **Icons:** [Font Awesome](https://fontawesome.com/) 6.7.2 (via cdnjs).
 - **Fonts:** Google Fonts (Inter).
+- **Afbeeldingen:** infographics als WebP; `assets/og-image.jpg` (1200×630) is het voorbeeldplaatje bij het delen van links.
+- **Video's:** met een posterbeeld (`*-poster.jpg`) en `preload="none"`, zodat de video pas laadt als iemand op afspelen klikt.
+
+## Huisstijl en toegankelijkheid
+
+- `--trinitas-green` (#8cc63f) alleen gebruiken op donkere achtergronden of voor iconen.
+- Voor groene **tekst op een lichte achtergrond** `text-trinitas-green-text` (#4a7a16) gebruiken, voor grote koppen `text-trinitas-green-large` (#5f9324). Zo blijft de tekst ook op een beamer leesbaar.
+- KIES-stappen heten overal: **Kiezen, Instrueren, Evalueren, Spelregels**.
+
+## Versies
+
+- De branch `archief-voorjaar-2026` bevat de site zoals die op 9 april 2026 online stond. Daar kun je altijd naar terug.
+- Wijzigingen worden voorgesteld via een pull request. De live site (GitHub Pages) toont alleen wat in `main` staat.
 
 ---
 *Ontwikkeld voor Han Fortmann | Trinitas College*
