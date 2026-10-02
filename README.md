@@ -44,7 +44,10 @@ Dit is een statisch webproject. Om de site lokaal te bekijken:
 ## Technologie
 
 - **Frontend:** HTML5, CSS3, JavaScript.
-- **Framework:** [Tailwind CSS](https://tailwindcss.com/) (geïmplementeerd via CDN).
+- **Framework:** [Tailwind CSS](https://tailwindcss.com/) v3, als vast CSS-bestand (`assets/css/tailwind.css`).
+  - Dit bestand wordt **automatisch** door GitHub gebouwd bij elke push (zie `.github/workflows/site.yml`). Gewoon HTML aanpassen en pushen is genoeg.
+  - Lokaal zelf bouwen kan ook: `npm install` en daarna `npm run build:css` (of `npm run watch:css` tijdens het werken).
+- **Publiceren:** GitHub Pages via GitHub Actions (Settings > Pages > Source: *GitHub Actions*).
 - **Icons:** [Font Awesome](https://fontawesome.com/) 6.7.2 (via cdnjs).
 - **Fonts:** Google Fonts (Inter).
 - **Afbeeldingen:** infographics als WebP; `assets/og-image.jpg` (1200×630) is het voorbeeldplaatje bij het delen van links.

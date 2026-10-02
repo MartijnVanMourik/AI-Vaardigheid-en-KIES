@@ -1,0 +1,12 @@
+{
+  "name": "ai-vaardigheid-en-kies",
+  "private": true,
+  "description": "AI-Vaardigheid Hub (KIES-model) van het Han Fortmann",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.19"
+  }
+}
