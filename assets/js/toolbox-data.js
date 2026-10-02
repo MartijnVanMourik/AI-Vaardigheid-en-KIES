@@ -9,6 +9,7 @@
  *                  Laat leeg ([]) als een item niet bij een specifieke stap hoort (bijv. een timer).
  *   voor:          'leerlingen', 'docenten' of allebei.
  *   gecontroleerd: datum (JJJJ-MM-DD) waarop de link voor het laatst werkte. Werk deze bij als je hem nakijkt.
+ *   letop:         (optioneel) korte waarschuwing die op de kaart verschijnt, bijv. dat inloggen nodig is.
  *   id:            unieke naam zonder spaties; hiermee kun je vanaf andere pagina's direct naar een item linken
  *                  (bijv. toolbox.html#recept-starr).
  *
@@ -368,8 +369,9 @@ Mijn idee: [beschrijf je app-idee, het vak en het niveau]`,
       wat: 'Spelvorm waarin leerlingen de stof spelenderwijs oefenen (gemaakt met Gemini).',
       voor: ['docenten'],
       stappen: ['K'],
-      kosten: 'Gratis',
-      gecontroleerd: '',
+      kosten: 'Gratis (Google-account)',
+      gecontroleerd: '2026-10-02',
+      letop: 'Alleen zichtbaar als je bent ingelogd met een Google-account; anders zie je een lege pagina.',
     },
     {
       id: 'snapikhetnog',
