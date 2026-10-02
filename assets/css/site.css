@@ -2,7 +2,8 @@
    Huisstijlkleuren staan als Tailwind-kleuren in tailwind.config.js (bijv. text-trinitas-blue)
    en hieronder als CSS-variabelen voor gebruik in eigen CSS. */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+/* Red Hat Display: hetzelfde lettertype als trinitascollege.nl/han-fortmann en de studiedagpresentatie */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     --trinitas-blue: #004d91;
@@ -20,7 +21,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Red Hat Display', Arial, sans-serif;
 }
 
 /* ---------- Menubalk ---------- */

@@ -70,7 +70,7 @@ Dit is een statisch webproject. Om de site lokaal te bekijken:
   - Lokaal zelf bouwen kan ook: `npm install` en daarna `npm run build:css` (of `npm run watch:css` tijdens het werken).
 - **Publiceren:** GitHub Pages via GitHub Actions (Settings > Pages > Source: *GitHub Actions*).
 - **Icons:** [Font Awesome](https://fontawesome.com/) 6.7.2 (via cdnjs).
-- **Fonts:** Google Fonts (Inter).
+- **Lettertype:** Red Hat Display (Google Fonts), net als de website van het Han Fortmann.
 - **Afbeeldingen:** infographics als WebP; `assets/og-image.jpg` (1200×630) is het voorbeeldplaatje bij het delen van links.
 - **Video's:** met een posterbeeld (`*-poster.jpg`) en `preload="none"`, zodat de video pas laadt als iemand op afspelen klikt.
 
