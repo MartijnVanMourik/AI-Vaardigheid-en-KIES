@@ -13,7 +13,11 @@
     E: { naam: 'Evalueren', kleur: 'bg-orange-100 text-orange-900 border-orange-300' },
     S: { naam: 'Spelregels', kleur: 'bg-purple-100 text-purple-900 border-purple-300' },
   };
-  const DOELGROEP = { leerlingen: 'Leerlingen', docenten: 'Docenten' };
+  const DOELGROEP = {
+    leerlingen: { naam: 'Leerlingen', icoon: 'fa-user-graduate' },
+    docenten: { naam: 'Docenten', icoon: 'fa-chalkboard-user' },
+    directie: { naam: 'Directie', icoon: 'fa-school' },
+  };
 
   const esc = (t) =>
     String(t).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -38,7 +42,7 @@
     voor
       .map(
         (v) =>
-          `<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-white text-gray-700 border border-gray-300"><i class="fas ${v === 'leerlingen' ? 'fa-user-graduate' : 'fa-chalkboard-user'} mr-1" aria-hidden="true"></i>${DOELGROEP[v]}</span>`
+          `<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-white text-gray-700 border border-gray-300"><i class="fas ${DOELGROEP[v].icoon} mr-1" aria-hidden="true"></i>${DOELGROEP[v].naam}</span>`
       )
       .join('');
 
