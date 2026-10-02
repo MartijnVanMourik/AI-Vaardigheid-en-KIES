@@ -101,6 +101,11 @@ body {
 }
 
 /* ---------- Toolbox ---------- */
+/* Het hidden-attribuut (gebruikt door de filters) moet altijd winnen van Tailwind-classes als .flex */
+[hidden] {
+    display: none !important;
+}
+
 .prompt-text {
     white-space: pre-wrap;
     word-break: break-word;
