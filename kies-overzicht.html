@@ -27,6 +27,9 @@
         .poster figure > div:first-child { margin-bottom: 18px !important; }
         .poster figure ol + div { margin-top: 18px !important; }
         .poster figcaption { display: none !important; }
+        /* Geen schaduwen: Chrome zet die in een PDF om in grijze plaatjes met transparantie,
+           die sommige PDF-lezers als grijze vlakken tonen. De randen houden de vakken zichtbaar. */
+        .poster, .poster * { box-shadow: none !important; --tw-shadow: 0 0 #0000 !important; text-shadow: none !important; }
         @media screen {
             body { background: #e5e7eb; }
             .poster { padding: 8mm; margin: 24px auto; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
