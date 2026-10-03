@@ -58,6 +58,17 @@ In de HTML staat op een paar plekken het adres van de site (de deelgegevens `og:
 echte adres uit Settings > Pages. Komt de site op een ander adres (bijvoorbeeld een eigen domein), dan hoef je
 alleen nog een nieuwe PDF te maken vanaf het nieuwe adres (zie hierboven), zodat de QR-code klopt.
 
+**Let op: dit werkt alleen zolang de site via GitHub Pages en deze workflow wordt gepubliceerd.** Zet je de
+bestanden ergens anders neer (bijvoorbeeld op een schoolserver of een andere hostingpartij), dan gebeurt het
+invullen niet. Doe dan zelf het volgende:
+1. Zoek in alle `.html`-bestanden op `https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES` en vervang dat
+   door het nieuwe adres (zonder `/` aan het eind). Dit staat in de deelgegevens (`og:url`, `og:image`) en in
+   `STANDAARD_URL` in `kies-overzicht.html`.
+2. Zet alleen de HTML-bestanden en de map `assets/` online; de rest is niet nodig voor de site.
+3. Maak een nieuwe PDF vanaf het nieuwe adres (zie hierboven).
+4. `assets/css/tailwind.css` wordt dan niet meer automatisch gebouwd. Pas je classes aan, bouw de CSS dan zelf
+   met `npm install` en `npm run build:css` voordat je de bestanden uploadt.
+
 ### Gedeelde onderdelen
 
 | Bestand | Wat |
