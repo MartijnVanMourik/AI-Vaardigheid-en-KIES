@@ -53,10 +53,10 @@ automatisch het adres waarop de pagina staat; maak de PDF dus vanaf de echte sit
 
 ### Verhuizen naar een ander adres
 
-Komt de site op een ander adres (bijvoorbeeld een eigen domein), pas dan aan:
-1. De deelgegevens bovenin elke pagina (`og:url` en `og:image`): zoek op `martijnvanmourik.github.io`.
-2. `STANDAARD_URL` in `kies-overzicht.html` (alleen gebruikt in previews).
-3. Maak daarna een nieuwe PDF vanaf het nieuwe adres (zie hierboven), zodat de QR-code klopt.
+In de HTML staat op een paar plekken het adres van de site (de deelgegevens `og:url` en `og:image`, en
+`STANDAARD_URL` in `kies-overzicht.html`). Bij het publiceren vervangt de workflow dat automatisch door het
+echte adres uit Settings > Pages. Komt de site op een ander adres (bijvoorbeeld een eigen domein), dan hoef je
+alleen nog een nieuwe PDF te maken vanaf het nieuwe adres (zie hierboven), zodat de QR-code klopt.
 
 ### Gedeelde onderdelen
 

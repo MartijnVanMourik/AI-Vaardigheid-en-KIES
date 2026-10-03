@@ -63,12 +63,21 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:css
+      - id: pages
+        uses: actions/configure-pages@v5
       - name: Alleen de site-bestanden klaarzetten
         run: |
           mkdir _site
           cp *.html _site/
           cp -r assets _site/
-      - uses: actions/configure-pages@v5
+      - name: Adres van de site invullen
+        # In de HTML staat het ontwikkeladres. Hier wordt dat vervangen door het echte adres van de site
+        # (zoals ingesteld bij Settings > Pages), zodat deellinks en de QR-code ook na een verhuizing kloppen.
+        run: |
+          SITE_URL="${{ steps.pages.outputs.base_url }}"
+          echo "Adres van de site: $SITE_URL"
+          grep -rl --include=*.html "https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES" _site \
+            | xargs -r sed -i "s#https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES#${SITE_URL}#g"
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
