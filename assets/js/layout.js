@@ -24,10 +24,10 @@
     header.className = 'sticky top-0 z-50 bg-white shadow-md border-b-4 border-trinitas-green';
     header.innerHTML = `
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20" aria-label="Hoofdmenu">
-        <a href="index.html" class="logo-blob flex items-center gap-3 -mt-4 shrink-0" aria-label="AI-Vaardigheid Hub, naar de homepage">
+        <a href="index.html" class="logo-blob flex items-center gap-3 -mt-4 shrink-0" aria-label="AI-vaardigheid Hub, naar de homepage">
           <img src="assets/logo-hf.svg" alt="Han Fortmann" class="h-10">
           <span class="flex flex-col justify-center leading-tight">
-            <span class="text-gray-500 font-bold text-xs uppercase tracking-tight">AI-Vaardigheid</span>
+            <span class="text-gray-500 font-bold text-xs uppercase tracking-tight">AI-vaardigheid</span>
             <span class="text-gray-500 font-black text-xs uppercase tracking-tight">Hub</span>
           </span>
         </a>

@@ -1,6 +1,6 @@
-# AI-Vaardigheid Hub & KIES-model
+# AI-vaardigheid Hub & KIES-model
 
-Welkom bij de **AI-Vaardigheid Hub**. Dit project is ontwikkeld voor het **Han Fortmann (Trinitas College)** om leerlingen en docenten te ondersteunen bij het verantwoord, legaal en effectief inzetten van Artificiële Intelligentie in het onderwijs.
+Welkom bij de **AI-vaardigheid Hub**. Dit project is ontwikkeld voor het **Han Fortmann (Trinitas College)** om leerlingen en docenten te ondersteunen bij het verantwoord, legaal en effectief inzetten van Artificiële Intelligentie in het onderwijs.
 
 Centraal in dit project staat het **KIES-model**, een pragmatische aanpak om AI-geletterdheid te vergroten door middel van vier heldere stappen.
 
@@ -15,7 +15,7 @@ Centraal in dit project staat het **KIES-model**, een pragmatische aanpak om AI-
 
 ## Projectoverzicht
 
-De AI-Vaardigheid Hub dient als centrale portal voor informatie over AI-gebruik op school. Het biedt gerichte ondersteuning voor:
+De AI-vaardigheid Hub dient als centrale portal voor informatie over AI-gebruik op school. Het biedt gerichte ondersteuning voor:
 - **Leerlingen:** Hoe gebruik je AI als slimme studiepartner zonder de regels te overtreden?
 - **Docenten:** Hoe zet je AI in voor werkdrukverlichting en verrijking van je lessen?
 
