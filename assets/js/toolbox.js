@@ -186,7 +186,7 @@
         totaal === 0
           ? 'Geen resultaten'
           : gefilterd
-            ? `${totaal} van ${items.length} ${totaal === 1 ? 'resultaat' : 'resultaten'}`
+            ? `${totaal} ${totaal === 1 ? 'resultaat' : 'resultaten'} uit ${items.length}`
             : `${items.length} resultaten`;
     }
     document.querySelectorAll('[data-sectie]').forEach((sectie) => {
