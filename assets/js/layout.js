@@ -67,7 +67,7 @@
         <p class="text-gray-600 text-xs mb-6 max-w-2xl mx-auto leading-relaxed">
           Het KIES-model is ontwikkeld door Marcel Mutsaarts van
           <a href="https://aivoordocenten.nl/" target="_blank" rel="noopener" class="text-trinitas-blue underline hover:text-trinitas-green-text">AI voor Docenten</a>,
-          als Nederlandse vertaling van het internationale AI Fluency-raamwerk. Het model werd besproken in de podcast
+          gebaseerd op het internationale AI Fluency-raamwerk. Het model werd besproken in de podcast
           <a href="https://aivoordocenten.nl/ai-tussenuurtje/" target="_blank" rel="noopener" class="text-trinitas-blue underline hover:text-trinitas-green-text">Het AI-tussenuurtje</a>
           (S02E26: AI-verrijking versus AI-verarming in het onderwijs).
         </p>
