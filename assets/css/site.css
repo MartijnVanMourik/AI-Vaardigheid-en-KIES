@@ -1,0 +1,138 @@
+/* Eigen stijlen van de AI-vaardigheid Hub (naast Tailwind).
+   Huisstijlkleuren staan als Tailwind-kleuren in tailwind.config.js (bijv. text-trinitas-blue)
+   en hieronder als CSS-variabelen voor gebruik in eigen CSS. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --trinitas-blue: #004d91;
+    --trinitas-green: #8cc63f;
+    /* Donkerdere groentint voor tekst op lichte achtergrond (WCAG-contrast) */
+    --trinitas-green-text: #4a7a16;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* ruimte voor de vaste menubalk bij ankerlinks */
+    scroll-padding-top: 6rem;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Vetgedrukt iets steviger, zodat nadruk ook in kleine tekst opvalt */
+strong, b {
+    font-weight: 700;
+}
+
+/* ---------- Menubalk ---------- */
+.logo-blob {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 100px 100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+    color: var(--trinitas-green-text);
+}
+
+.nav-link[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-color: var(--trinitas-green);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+/* ---------- Homepage ---------- */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../hero-hf.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.wavy-underline {
+    position: relative;
+}
+
+.wavy-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' fill='none' stroke='%238cc63f' stroke-width='3'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+}
+
+/* ---------- Detailpagina's (leerlingen/docenten) ---------- */
+.document-container {
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-top: 8px solid var(--trinitas-green);
+}
+
+.header-line {
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.step-number {
+    background-color: var(--trinitas-blue);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* ---------- Toolbox ---------- */
+/* Het hidden-attribuut (gebruikt door de filters) moet altijd winnen van Tailwind-classes als .flex */
+[hidden] {
+    display: none !important;
+}
+
+.prompt-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+}
+
+.filter-chip[aria-pressed="true"] {
+    background-color: var(--trinitas-blue);
+    border-color: var(--trinitas-blue);
+    color: white;
+}
+
+details > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] .chevron {
+    transform: rotate(180deg);
+}
+
+:focus-visible {
+    outline: 3px solid var(--trinitas-green);
+    outline-offset: 2px;
+}

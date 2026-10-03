@@ -1,0 +1,5 @@
+/* Bronbestand voor Tailwind. Niet direct gebruikt door de site:
+   GitHub bouwt hieruit automatisch assets/css/tailwind.css (zie .github/workflows/site.yml). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

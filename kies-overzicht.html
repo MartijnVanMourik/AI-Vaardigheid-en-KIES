@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>KIES-overzicht (printversie) | AI-vaardigheid Hub</title>
+    <!--
+      Printversie van het KIES-overzicht (A4 liggend).
+      De inhoud komt automatisch uit het overzicht op de homepage (index.html#kies-overzicht),
+      dus je hoeft het overzicht maar op één plek aan te passen.
+      Nieuwe PDF maken: open deze pagina in Chrome of Edge, kies Afdrukken > Opslaan als PDF
+      (A4, liggend, marges standaard, achtergrondafbeeldingen aan) en sla op als assets/kies-overzicht.pdf.
+      Doe dat vanaf de echte site: de QR-code en de link gebruiken dan automatisch het juiste adres.
+    -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <style>
+        @page { size: A4 landscape; margin: 8mm; }
+        html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        .poster { box-sizing: content-box; width: 281mm; min-height: 194mm; margin: 0 auto; background: #fff; display: flex; flex-direction: column; }
+        /* Het overzicht van de homepage, compacter gemaakt voor één A4 */
+        .poster figure { margin: 0 !important; box-shadow: none !important; padding: 18px 26px !important; zoom: var(--poster-zoom, 1); }
+        .poster figure > div:first-child { margin-bottom: 18px !important; }
+        .poster figure ol + div { margin-top: 18px !important; }
+        .poster figcaption { display: none !important; }
+        /* Geen schaduwen: Chrome zet die in een PDF om in grijze plaatjes met transparantie,
+           die sommige PDF-lezers als grijze vlakken tonen. De randen houden de vakken zichtbaar. */
+        .poster, .poster * { box-shadow: none !important; --tw-shadow: 0 0 #0000 !important; text-shadow: none !important; }
+        @media screen {
+            body { background: #e5e7eb; }
+            .poster { padding: 8mm; margin: 24px auto; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+        }
+        @media print {
+            .geen-print { display: none !important; }
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <div class="geen-print max-w-[281mm] mx-auto mt-6 px-4 flex flex-wrap items-center gap-3 text-sm">
+        <a href="index.html#kies-overzicht" class="text-trinitas-blue underline font-semibold"><i class="fas fa-arrow-left mr-1" aria-hidden="true"></i>Terug naar de site</a>
+        <span class="text-gray-500">Printversie van het KIES-overzicht (A4 liggend)</span>
+        <button type="button" onclick="window.print()" class="ml-auto inline-flex items-center bg-trinitas-blue hover:bg-blue-800 text-white font-bold px-4 py-2 rounded-full"><i class="fas fa-print mr-2" aria-hidden="true"></i>Afdrukken</button>
+        <a href="assets/kies-overzicht.pdf" target="_blank" rel="noopener" class="inline-flex items-center bg-white border border-blue-200 text-trinitas-blue font-bold px-4 py-2 rounded-full hover:bg-blue-50"><i class="fas fa-file-pdf mr-2" aria-hidden="true"></i>PDF openen</a>
+    </div>
+
+    <main class="poster">
+        <header class="flex items-center justify-between gap-6 mb-3">
+            <div class="flex items-center gap-4">
+                <img src="assets/logo-hf.svg" alt="Han Fortmann" class="h-11">
+                <div class="border-l-2 border-trinitas-green pl-4 leading-tight">
+                    <p class="font-extrabold text-trinitas-blue text-lg">AI-vaardigheid Hub</p>
+                    <p class="text-xs text-gray-600">Bewust en verantwoord AI gebruiken, op school en daarbuiten</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <p class="text-right text-xs text-gray-700 leading-snug">
+                    <strong class="text-trinitas-blue">Meer uitleg, voorbeelden en promptrecepten?</strong><br>
+                    Scan de code of ga naar<br><a id="site-link" href="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/" class="font-semibold text-gray-800">martijnvanmourik.github.io/AI-Vaardigheid-en-KIES</a>
+                </p>
+                <div id="qr" class="w-[22mm] h-[22mm] shrink-0" role="img" aria-label="QR-code naar de AI-vaardigheid Hub"></div>
+            </div>
+        </header>
+
+        <div id="overzicht">
+            <p class="geen-print text-sm text-gray-600 p-6">Het overzicht wordt geladen&hellip; Lukt dat niet? Bekijk het dan op de <a href="index.html#kies-overzicht" class="underline">homepage</a>.</p>
+        </div>
+
+        <footer class="mt-3 pt-2 border-t border-gray-200 flex flex-wrap justify-between gap-x-6 gap-y-1 text-[11px] text-gray-500">
+            <span>Het KIES-model is ontwikkeld door Marcel Mutsaarts van AI voor Docenten, gebaseerd op het internationale AI Fluency-raamwerk.</span>
+            <span>Trinitas College | Han Fortmann &middot; versie <span id="versie">oktober 2026</span></span>
+        </footer>
+    </main>
+
+    <script src="assets/js/vendor/qrcode.js"></script>
+    <script>
+        // Adres van de site voor de QR-code en de link. Op de echte site is dat automatisch het adres
+        // waarop deze pagina staat (dus ook na een verhuizing naar een ander domein). Alleen in een
+        // preview of lokaal gebruiken we het adres hieronder.
+        const STANDAARD_URL = 'https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/';
+        const isPreview = location.protocol === 'file:' || /(^|\.)githack\.com$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
+        const siteUrl = isPreview ? STANDAARD_URL : location.origin + location.pathname.replace(/[^/]*$/, '');
+        const link = document.getElementById('site-link');
+        link.href = siteUrl;
+        link.textContent = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+        if (window.qrcode) {
+            const qr = qrcode(0, 'M');
+            qr.addData(siteUrl);
+            qr.make();
+            document.getElementById('qr').innerHTML = qr
+                .createSvgTag({ cellSize: 4, margin: 0, scalable: true })
+                .replace('fill="black"', 'fill="#004d91"');
+        }
+
+        // Haal het KIES-overzicht op van de homepage, zodat de inhoud altijd gelijk is.
+        fetch('index.html')
+            .then((r) => r.text())
+            .then((html) => {
+                const doc = new DOMParser().parseFromString(html, 'text/html');
+                const figuur = doc.getElementById('kies-overzicht');
+                if (!figuur) return;
+                figuur.removeAttribute('id');
+                figuur.querySelector('figcaption')?.remove();
+                const doel = document.getElementById('overzicht');
+                doel.innerHTML = '';
+                const kopie = document.importNode(figuur, true);
+                doel.appendChild(kopie);
+                // Schaal het overzicht zo dat de hele poster op één A4 (194 mm hoog) past
+                const maxHoogte = (194 * 96) / 25.4 - 2;
+                const nodig = () =>
+                    ['header', '#overzicht', 'footer'].reduce((som, sel) => {
+                        const el = document.querySelector('.poster ' + sel);
+                        const st = getComputedStyle(el);
+                        return som + el.getBoundingClientRect().height + parseFloat(st.marginTop) + parseFloat(st.marginBottom);
+                    }, 0);
+                // Zoek de grootste schaal die nog past (tekst wordt dan zo groot mogelijk)
+                let laag = 0.6, hoog = 1.2;
+                for (let i = 0; i < 14; i++) {
+                    const midden = (laag + hoog) / 2;
+                    kopie.style.setProperty('--poster-zoom', midden.toFixed(4));
+                    if (nodig() <= maxHoogte) laag = midden; else hoog = midden;
+                }
+                kopie.style.setProperty('--poster-zoom', laag.toFixed(4));
+                document.body.dataset.klaar = 'ja';
+            })
+            .catch(() => {});
+    </script>
+</body>
+
+</html>

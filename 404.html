@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Pagina niet gevonden | AI-vaardigheid Hub</title>
+    <script>
+        // GitHub Pages toont deze pagina ook bij diepere adressen (bijv. /AI-Vaardigheid-en-KIES/oud/pagina).
+        // Met een base-tag laden de stijlen, afbeeldingen en links dan toch vanaf de hoofdmap van de site.
+        if (location.hostname.endsWith('github.io')) {
+            const base = document.createElement('base');
+            base.href = '/' + location.pathname.split('/')[1] + '/';
+            document.head.appendChild(base);
+        }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+    <header id="site-header"></header>
+
+    <main class="flex-1 flex items-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
+            <p class="text-trinitas-green-text font-bold uppercase tracking-wide text-sm mb-3">Foutmelding 404</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-trinitas-blue mb-5">Deze pagina bestaat niet (meer)</h1>
+            <p class="text-lg text-gray-700 leading-relaxed mb-10">
+                Misschien is de link verouderd of zit er een typfout in het adres. De site is in oktober 2026
+                vernieuwd; alle tools en promptrecepten staan nu op één plek in de Toolbox.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="index.html" class="inline-flex items-center bg-trinitas-blue hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full transition shadow-md">
+                    <i class="fas fa-house mr-2" aria-hidden="true"></i>Naar de homepage
+                </a>
+                <a href="index.html#kies-overzicht" class="inline-flex items-center bg-white border border-blue-200 text-trinitas-blue font-bold py-3 px-6 rounded-full hover:bg-blue-50 transition">
+                    <i class="fas fa-compass mr-2" aria-hidden="true"></i>Het KIES-model
+                </a>
+                <a href="toolbox.html" class="inline-flex items-center bg-white border border-blue-200 text-trinitas-blue font-bold py-3 px-6 rounded-full hover:bg-blue-50 transition">
+                    <i class="fas fa-toolbox mr-2" aria-hidden="true"></i>Toolbox &amp; bronnen
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="assets/js/layout.js"></script>
+</body>
+
+</html>

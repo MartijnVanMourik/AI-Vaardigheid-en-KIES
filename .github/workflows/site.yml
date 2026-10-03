@@ -1,0 +1,85 @@
+# Bouwt bij elke push automatisch de Tailwind-CSS en publiceert de site.
+#
+# - Elke branch: assets/css/tailwind.css wordt opnieuw gebouwd en (als er iets veranderd is)
+#   automatisch teruggezet in dezelfde branch. Zo klopt de opmaak ook in previews van branches.
+# - Alleen main: de site wordt gebouwd en gepubliceerd op GitHub Pages.
+#   Vereist eenmalig: Settings > Pages > Build and deployment > Source: "GitHub Actions".
+#
+# Je hoeft zelf dus nooit iets te bouwen: gewoon HTML aanpassen en pushen.
+
+name: Site bouwen en publiceren
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  css:
+    name: Tailwind-CSS bijwerken
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:css
+      - name: Gewijzigde CSS terugzetten in de branch
+        run: |
+          if git diff --quiet -- assets/css/tailwind.css; then
+            echo "CSS is al up-to-date."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/css/tailwind.css
+            git commit -m "chore: Tailwind-CSS automatisch bijgewerkt [skip ci]"
+            git push
+          fi
+
+  deploy:
+    name: Publiceren op GitHub Pages
+    if: github.ref == 'refs/heads/main'
+    needs: css
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:css
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Alleen de site-bestanden klaarzetten
+        run: |
+          mkdir _site
+          cp *.html _site/
+          cp -r assets _site/
+      - name: Adres van de site invullen
+        # In de HTML staat het ontwikkeladres. Hier wordt dat vervangen door het echte adres van de site
+        # (zoals ingesteld bij Settings > Pages), zodat deellinks en de QR-code ook na een verhuizing kloppen.
+        run: |
+          SITE_URL="${{ steps.pages.outputs.base_url }}"
+          echo "Adres van de site: $SITE_URL"
+          grep -rl --include=*.html "https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES" _site \
+            | xargs -r sed -i "s#https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES#${SITE_URL}#g"
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

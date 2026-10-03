@@ -4,133 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.I. kompas | Han Fortmann</title>
+    <meta name="description" content="De AI-vaardigheid Hub van het Han Fortmann: met het KIES-model (Kiezen, Instrueren, Evalueren, Spelregels) leren leerlingen en docenten AI bewust en verantwoord inzetten.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="AI-vaardigheid Hub | Han Fortmann">
+    <meta property="og:title" content="AI-vaardigheid Hub | Han Fortmann">
+    <meta property="og:description" content="De AI-vaardigheid Hub van het Han Fortmann: met het KIES-model (Kiezen, Instrueren, Evalueren, Spelregels) leren leerlingen en docenten AI bewust en verantwoord inzetten.">
+    <meta property="og:url" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/">
+    <meta property="og:image" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>AI-vaardigheid Hub | Han Fortmann</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-        :root {
-            --trinitas-blue: #004d91;
-            --trinitas-green: #8cc63f;
-            --trinitas-light-blue: #0072bc;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .bg-trinitas-blue {
-            background-color: var(--trinitas-blue);
-        }
-
-        .text-trinitas-blue {
-            color: var(--trinitas-blue);
-        }
-
-        .bg-trinitas-green {
-            background-color: var(--trinitas-green);
-        }
-
-        .text-trinitas-green {
-            color: var(--trinitas-green);
-        }
-
-        .border-trinitas-green {
-            border-color: var(--trinitas-green);
-        }
-
-        .card-gradient {
-            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-        }
-
-        .nav-link:hover {
-            color: var(--trinitas-green);
-            transition: 0.3s;
-        }
-
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/hero-hf.avif');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .logo-blob {
-            background: white;
-            padding: 1rem 2rem;
-            border-radius: 0 0 100px 100px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .wavy-underline {
-            position: relative;
-        }
-
-        .wavy-underline::after {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' fill='none' stroke='%238cc63f' stroke-width='3'/%3E%3C/svg%3E");
-            background-repeat: repeat-x;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navigatie -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md border-b-4 border-trinitas-green">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <div class="flex items-center">
-                <div class="logo-blob flex items-center space-x-3 -mt-4">
-                    <img src="assets/logo-hf.svg" alt="Han Fortmann Logo" class="h-10">
-                    <div class="flex flex-col justify-center -space-y-1">
-                        <span class="text-gray-500 font-bold text-xs uppercase tracking-tight">AI-Vaardigheid</span>
-                        <span class="text-gray-500 font-black text-xs uppercase tracking-tight">Hub</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center space-x-6 font-semibold">
-                <a href="#home" class="nav-link text-trinitas-blue text-sm uppercase">Home</a>
-                <a href="#kies" class="nav-link text-trinitas-blue text-sm uppercase">KIES-Model</a>
-                <a href="#leerlingen" class="nav-link text-trinitas-blue text-sm uppercase">Leerlingen</a>
-                <a href="#docenten" class="nav-link text-trinitas-blue text-sm uppercase">Docenten</a>
-                <a href="#spelregels" class="nav-link text-trinitas-blue text-sm uppercase">Spelregels</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button"
-                    class="bg-trinitas-blue text-white px-4 py-2 rounded-md flex items-center space-x-2 text-sm font-bold shadow-md hover:bg-blue-800 transition">
-                    <i class="fas fa-bars"></i>
-                    <span>Menu</span>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-6 space-y-2 border-t">
-            <a href="#home" class="block py-2 text-trinitas-blue font-semibold">Home</a>
-            <a href="#kies" class="block py-2 text-trinitas-blue font-semibold">KIES-Model</a>
-            <a href="#leerlingen" class="block py-2 text-trinitas-blue font-semibold">Voor Leerlingen</a>
-            <a href="#docenten" class="block py-2 text-trinitas-blue font-semibold">Voor Docenten</a>
-            <a href="#spelregels" class="block py-2 text-trinitas-blue font-semibold">Spelregels</a>
-        </div>
-    </nav>
+    <header id="site-header"></header>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section py-32 text-white relative">
         <div class="absolute inset-0 bg-trinitas-blue/40"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="text-xl md:text-2xl font-bold text-trinitas-green mb-4 uppercase tracking-wide">A.I. kompas Han Fortmann</div>
+            <div class="text-xl md:text-2xl font-bold text-trinitas-green mb-4 uppercase tracking-wide">AI-vaardigheid Hub · Han Fortmann</div>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
                 KIES bewust, <span class="text-trinitas-green">regie over AI.</span>
             </h1>
             <p class="text-lg md:text-xl max-w-4xl mx-auto mb-16 text-gray-100 font-semibold drop-shadow-md">
-                Op het Han Fortmann leiden we leerlingen op tot AI-vaardige burgers. Geen passieve consumenten, maar bewuste regisseurs van technologie. Met dit kompas geven we zowel richting als kaders aan met betrekking tot het gebruik van A.I. zowel voor leerlingen als docenten.
+                Op het Han Fortmann leiden we leerlingen op tot AI-vaardige burgers. Geen passieve consumenten, maar bewuste regisseurs van technologie. Deze hub werkt als een kompas: hij geeft leerlingen én docenten richting en duidelijke kaders voor het gebruik van AI.
             </p>
             <div class="flex flex-wrap justify-center gap-12">
                 <div class="wavy-underline">
@@ -142,7 +48,7 @@
                 <div class="wavy-underline">
                     <a href="#spelregels"
                         class="bg-white text-trinitas-blue hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition shadow-lg">
-                        Onze afspraken
+                        Onze spelregels
                     </a>
                 </div>
             </div>
@@ -162,366 +68,408 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-trinitas-blue mb-2">Het KIES-model</h2>
-                <span class="text-trinitas-green font-bold tracking-wider uppercase text-sm">Van cognitieve verarming
+                <span class="text-trinitas-green-text font-bold tracking-wider uppercase text-sm">Van cognitieve verarming
                     naar educatieve verrijking</span>
 
                 <div class="mt-12 text-center max-w-4xl mx-auto space-y-8 text-gray-700">
                     <p class="text-lg leading-relaxed">
-                        Een van de kansen van het gebruik van AI in het onderwijs ligt bij het oplossen van het beroemde <strong>"Twee Sigma-probleem"</strong> van onderwijsonderzoeker Benjamin Bloom (1984). Bloom toonde aan dat leerlingen met 1-op-1 begeleiding twee standaarddeviaties (sigma) beter presteren dan in een klassieke setting; AI maakt deze persoonlijke tutor nu eindelijk schaalbaar en betaalbaar.
+                        Een van de kansen van het gebruik van AI in het onderwijs ligt bij het oplossen van het beroemde <strong>"Twee Sigma-probleem"</strong> van onderwijsonderzoeker Benjamin Bloom (1984). Bloom toonde aan dat leerlingen met 1-op-1 begeleiding twee standaarddeviaties (sigma) beter presteren dan in een klassieke setting; AI kan zo'n persoonlijke tutor schaalbaar en betaalbaar maken. Latere meta-analyses vinden overigens kleinere effecten dan Bloom: gemiddeld zo'n 0,3 à 0,4 standaarddeviatie. Nog steeds een flinke winst: goede persoonlijke begeleiding loont.
+                    </p>
+                    <p class="text-xs text-gray-500 leading-relaxed -mt-4">
+                        Bronnen: Bloom, B. S. (1984). <a href="https://doi.org/10.3102/0013189X013006004" target="_blank" rel="noopener" class="underline hover:text-trinitas-blue"><em>The 2 Sigma Problem</em></a>. Educational Researcher, 13(6), 4–16.
+                        Von Hippel, P. T. (2024). <a href="https://www.educationnext.org/two-sigma-tutoring-separating-science-fiction-from-science-fact/" target="_blank" rel="noopener" class="underline hover:text-trinitas-blue"><em>Two-Sigma Tutoring: Separating Science Fiction from Science Fact</em></a>. Education Next.
                     </p>
                     
                     <div>
-                        <h4 class="font-bold text-trinitas-blue mb-4">Echter, een gevaar bij het realiseren hiervan is een cruciaal spanningsveld tussen cognitieve offloading en engagement:</h4>
+                        <h3 class="text-lg font-bold text-trinitas-blue mb-4">Die winst komt alleen niet vanzelf. Het verschil zit in hoe je AI inzet: neemt AI het denkwerk over, of zet het je juist aan het denken?</h3>
                         
                         <div class="grid md:grid-cols-2 gap-6 text-left">
                             <div class="bg-orange-50 border border-orange-200 p-5 rounded-xl shadow-sm">
                                 <div class="text-orange-600 font-bold mb-2 flex items-center">
-                                    <i class="fas fa-arrow-down mr-2"></i> Cognitive Offloading
+                                    <i class="fas fa-arrow-down mr-2" aria-hidden="true"></i> Denkwerk uitbesteden <span class="ml-1 font-normal text-sm text-gray-500">(cognitive offloading)</span>
                                 </div>
                                 <p class="text-sm text-gray-600">
-                                    Wanneer AI onbegeleid wordt ingezet, leunen leerlingen achterover en laten ze de machine het volautomatische denkwerk doen.
+                                    Wordt AI zonder begeleiding ingezet, dan leunen leerlingen achterover en laten ze de machine het denkwerk doen.
                                 </p>
                             </div>
                             <div class="bg-green-50 border border-green-200 p-5 rounded-xl shadow-sm">
-                                <div class="text-trinitas-green font-bold mb-2 flex items-center">
-                                    <i class="fas fa-arrow-up mr-2"></i> Engagement
+                                <div class="text-trinitas-green-text font-bold mb-2 flex items-center">
+                                    <i class="fas fa-arrow-up mr-2" aria-hidden="true"></i> Actief meedenken <span class="ml-1 font-normal text-sm text-gray-500">(engagement)</span>
                                 </div>
                                 <p class="text-sm text-gray-600">
-                                    Wanneer AI juist gestructureerd wordt ingezet, verscherpt het het kritisch denken en vergroot het de actieve betrokkenheid van de leerling.
+                                    Wordt AI juist doelbewust ingezet, dan wordt het kritisch denken scherper en raken leerlingen actiever betrokken.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <p class="text-lg leading-relaxed">
-                        Het KIES-model dient als navigatie-instrument om deze verrijking te waarborgen. Want hoewel het "Mens-Machine-Mens" principe een goede basis biedt, is het <strong>KIES-model</strong> (een vertaling van het internationale AI Fluency raamwerk) vollediger voor schoolbeleid. KIES borgt ook de cruciale voor- en achterkant: het bewuste keuzeproces (K) en de ethische en wettelijke kaders (S).
+                        Het <strong>KIES-model</strong> helpt om AI zo in te zetten dat het leren verrijkt. Het bekende principe Mens-Machine-Mens (zelf beginnen, AI laten ondersteunen, zelf afmaken) is een goede basis, maar KIES gaat verder. Het voegt twee dingen toe: de bewuste keuze vooraf (K) en de ethische en wettelijke kaders (S).
+                    </p>
+                    <p class="text-sm leading-relaxed text-gray-600">
+                        KIES is gebaseerd op het internationale <a href="toolbox.html#bron-aifluency" class="text-trinitas-blue underline font-semibold">AI Fluency-raamwerk</a>, met zijn vier D's:
+                        <em>Delegation</em> (Kiezen), <em>Description</em> (Instrueren), <em>Discernment</em> (Evalueren) en <em>Diligence</em> (Spelregels).
                     </p>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <!-- K -->
-                <div
-                    class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">K</div>
-                        <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
-                            1</span>
+            <!-- KIES in één oogopslag: K, I, E als stappen, S als overkoepelende spelregels -->
+            <figure id="kies-overzicht" class="mt-4 mb-12 scroll-mt-28 rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-green-50 shadow-xl p-6 md:p-10">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <p class="text-trinitas-green-text font-bold uppercase tracking-wide text-sm mb-2">In één oogopslag</p>
+                    <h3 class="text-2xl md:text-4xl font-extrabold text-trinitas-blue mb-3">Word AI-vaardig met het KIES-model</h3>
+                    <p class="text-gray-700 leading-relaxed">Kiezen, Instrueren en Evalueren doorloop je bij elke taak waarbij je AI
+                        overweegt. De Spelregels gelden bij elke stap.</p>
+                </div>
+
+                <ol class="grid lg:grid-cols-3 gap-10 lg:gap-8 relative">
+                    <!-- K -->
+                    <li class="relative bg-white rounded-2xl border-2 border-green-200 shadow-sm p-6 flex flex-col">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-12 h-12 rounded-full bg-green-100 text-green-900 border-2 border-green-300 flex items-center justify-center text-2xl font-black" aria-hidden="true">K</span>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wide text-gray-500">Stap 1 · vooraf</p>
+                                <h4 class="text-xl font-bold text-trinitas-blue">Kiezen</h4>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4">Deel je taak op in deeltaken en kies per deeltaak óf en hoe je AI inzet.</p>
+                        <p class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Vraag jezelf af</p>
+                        <ul class="space-y-2 text-sm text-gray-800">
+                            <li class="flex gap-2"><i class="fas fa-star text-green-700 mt-1" aria-hidden="true"></i>Wordt mijn product beter?</li>
+                            <li class="flex gap-2"><i class="fas fa-book-open text-green-700 mt-1" aria-hidden="true"></i>Leer ik er meer, evenveel of minder van?</li>
+                            <li class="flex gap-2"><i class="fas fa-stopwatch text-green-700 mt-1" aria-hidden="true"></i>Gaat het sneller?</li>
+                        </ul>
+                        <p class="mt-auto pt-5 text-sm font-semibold text-gray-700 flex items-center gap-2"><i class="fas fa-bullseye text-green-700" aria-hidden="true"></i>Doel: een bewust leerproces</p>
+                        <span class="hidden lg:flex absolute -right-7 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 shadow items-center justify-center text-trinitas-blue" aria-hidden="true"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        <span class="lg:hidden absolute left-1/2 -bottom-8 -translate-x-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 shadow flex items-center justify-center text-trinitas-blue" aria-hidden="true"><i class="fas fa-arrow-down" aria-hidden="true"></i></span>
+                    </li>
+                    <!-- I -->
+                    <li class="relative bg-white rounded-2xl border-2 border-blue-200 shadow-sm p-6 flex flex-col">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-12 h-12 rounded-full bg-blue-100 text-blue-900 border-2 border-blue-300 flex items-center justify-center text-2xl font-black" aria-hidden="true">I</span>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wide text-gray-500">Stap 2 · tijdens</p>
+                                <h4 class="text-xl font-bold text-trinitas-blue">Instrueren</h4>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4">Kies je voor AI, geef dan een duidelijke instructie. Dit is jouw inbreng aan de voorkant.</p>
+                        <p class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Een goede prompt heeft</p>
+                        <ul class="grid grid-cols-2 gap-2 text-sm text-gray-800">
+                            <li class="bg-blue-50 rounded-lg px-3 py-2"><strong class="text-trinitas-blue">Rol</strong><br>wie is de AI?</li>
+                            <li class="bg-blue-50 rounded-lg px-3 py-2"><strong class="text-trinitas-blue">Taak</strong><br>wat moet hij doen?</li>
+                            <li class="bg-blue-50 rounded-lg px-3 py-2"><strong class="text-trinitas-blue">Context</strong><br>met welke info?</li>
+                            <li class="bg-blue-50 rounded-lg px-3 py-2"><strong class="text-trinitas-blue">Vorm</strong><br>hoe wil je het?</li>
+                        </ul>
+                        <p class="mt-auto pt-5 text-sm font-semibold text-gray-700 flex items-center gap-2"><i class="fas fa-bullseye text-blue-700" aria-hidden="true"></i>Doel: minder frustratie, betere output</p>
+                        <span class="hidden lg:flex absolute -right-7 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 shadow items-center justify-center text-trinitas-blue" aria-hidden="true"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        <span class="lg:hidden absolute left-1/2 -bottom-8 -translate-x-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 shadow flex items-center justify-center text-trinitas-blue" aria-hidden="true"><i class="fas fa-arrow-down" aria-hidden="true"></i></span>
+                    </li>
+                    <!-- E -->
+                    <li class="relative bg-white rounded-2xl border-2 border-orange-200 shadow-sm p-6 flex flex-col">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-12 h-12 rounded-full bg-orange-100 text-orange-900 border-2 border-orange-300 flex items-center justify-center text-2xl font-black" aria-hidden="true">E</span>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wide text-gray-500">Stap 3 · achteraf</p>
+                                <h4 class="text-xl font-bold text-trinitas-blue">Evalueren</h4>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4">Neem de output niet klakkeloos over. Met AI heb je de eerste 80% snel; de laatste 20% maak je zelf.</p>
+                        <p class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Drie controlevragen</p>
+                        <ul class="space-y-2 text-sm text-gray-800">
+                            <li class="flex gap-2"><i class="fas fa-magnifying-glass text-orange-700 mt-1" aria-hidden="true"></i>Klopt het? Controleer feiten en bronnen.</li>
+                            <li class="flex gap-2"><i class="fas fa-bullseye text-orange-700 mt-1" aria-hidden="true"></i>Is het goed genoeg voor doel en doelgroep?</li>
+                            <li class="flex gap-2"><i class="fas fa-user-pen text-orange-700 mt-1" aria-hidden="true"></i>Is het nog van mij? Kan ik het uitleggen?</li>
+                        </ul>
+                        <p class="mt-auto pt-5 text-sm font-semibold text-gray-700 flex items-center gap-2"><i class="fas fa-bullseye text-orange-700" aria-hidden="true"></i>Doel: fouten en hallucinaties eruit halen</p>
+                    </li>
+                </ol>
+
+                <!-- S: overkoepelend -->
+                <div class="mt-10 rounded-2xl border-2 border-purple-200 bg-purple-50 p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-full bg-purple-100 text-purple-900 border-2 border-purple-300 flex items-center justify-center text-2xl font-black" aria-hidden="true">S</span>
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wide text-gray-500">Stap 4 · altijd</p>
+                            <h4 class="text-xl font-bold text-trinitas-blue">Spelregels gelden bij elke stap</h4>
+                        </div>
+                        <p class="ml-auto hidden sm:flex items-center gap-2 text-sm font-semibold text-gray-700"><i class="fas fa-bullseye text-purple-700" aria-hidden="true"></i>Doel: veilig en ethisch gebruik</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-trinitas-blue">Kiezen</h3>
-                    <p class="text-gray-600 text-sm mb-6">Ontleed een taak in sub-taken en bepaal per stap de inzet van
-                        AI.</p>
-                    <div class="mt-auto">
-                        <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
-                            <i class="fas fa-bullseye mr-2"></i>
-                            Doel: Bewust leerproces
+                    <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm text-gray-800">
+                        <li class="bg-white rounded-xl px-4 py-3 flex gap-3"><i class="fas fa-school text-purple-700 mt-1" aria-hidden="true"></i><span><strong>Ken de spelregels</strong> van school over AI-gebruik.</span></li>
+                        <li class="bg-white rounded-xl px-4 py-3 flex gap-3"><i class="fas fa-lock text-purple-700 mt-1" aria-hidden="true"></i><span><strong>Deel geen persoonsgegevens</strong> of beelden van anderen.</span></li>
+                        <li class="bg-white rounded-xl px-4 py-3 flex gap-3"><i class="fas fa-eye text-purple-700 mt-1" aria-hidden="true"></i><span><strong>Wees open</strong> over waarvoor je AI hebt gebruikt.</span></li>
+                        <li class="bg-white rounded-xl px-4 py-3 flex gap-3"><i class="fas fa-leaf text-purple-700 mt-1" aria-hidden="true"></i><span><strong>Denk aan de ecologische impact</strong>: genereer niet onnodig.</span></li>
+                    </ul>
+                </div>
+
+                <figcaption class="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+                    <a href="kies-leerlingen.html" class="inline-flex items-center font-bold text-trinitas-blue bg-white border border-blue-200 rounded-full px-4 py-2 hover:bg-blue-50"><i class="fas fa-user-graduate mr-2" aria-hidden="true"></i>Uitwerking voor leerlingen</a>
+                    <a href="kies-docenten.html" class="inline-flex items-center font-bold text-trinitas-blue bg-white border border-blue-200 rounded-full px-4 py-2 hover:bg-blue-50"><i class="fas fa-chalkboard-user mr-2" aria-hidden="true"></i>Uitwerking voor docenten</a>
+                    <a href="assets/kies-overzicht.pdf" target="_blank" rel="noopener" class="inline-flex items-center font-bold text-trinitas-blue bg-white border border-blue-200 rounded-full px-4 py-2 hover:bg-blue-50"><i class="fas fa-print mr-2" aria-hidden="true"></i>Printversie A4 (PDF)</a>
+                </figcaption>
+            </figure>
+
+            <!-- Gradaties: Vervangen, Aanvullen, Verrijken (verdieping van de K, voor leerlingen én docenten) -->
+            <div id="gradaties" class="mb-12 scroll-mt-28">
+                <div class="text-center mb-8">
+                    <span class="inline-flex bg-green-50 text-trinitas-green-text px-4 py-2 rounded-xl text-sm font-bold border border-green-200 items-center mb-4">
+                        <i class="fas fa-bullseye mr-2" aria-hidden="true"></i>De K in actie: welke keuze maak jij?
+                    </span>
+                    <h3 class="text-2xl font-bold text-trinitas-blue mb-3">Gradaties van AI-gebruik</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">Bij <strong>Kiezen</strong> bepaal je per deeltaak
+                        <strong>of</strong> en <strong>hoe</strong> je AI inzet. Dat geldt voor leerlingen én docenten. Van uitbesteden
+                        naar actief uitdagen:</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full opacity-50 transition group-hover:bg-red-100" aria-hidden="true"></div>
+                        <i class="fas fa-exchange-alt text-red-600 text-3xl mb-5 relative z-10" aria-hidden="true"></i>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Vervangen</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[3rem]">AI voert de taak uit. Dat hoeft niet fout te zijn, mits het een <strong>bewuste keuze</strong> is.</p>
+                        <div class="bg-red-50 p-4 rounded-xl text-sm text-red-900 relative z-10 space-y-2">
+                            <p><strong>Leerling:</strong> AI maakt een samenvatting die je alleen als geheugensteun gebruikt.</p>
+                            <p><strong>Docent:</strong> AI zet een eerste versie van oefenvragen in elkaar.</p>
+                            <p class="font-semibold pt-1">Vraag jezelf af: wat doe ik met de vrijgekomen tijd? Verdieping, of nog meer productie?</p>
                         </div>
                     </div>
-                </div>
-                <!-- I -->
-                <div
-                    class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">I</div>
-                        <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
-                            2</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-trinitas-blue">Instructie</h3>
-                    <p class="text-gray-600 text-sm mb-6">De technische vaardigheid om AI-agenten effectief aan te
-                        sturen
-                        (te prompten).</p>
-                    <div class="mt-auto">
-                        <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
-                            <i class="fas fa-bullseye mr-2"></i>
-                            Doel: Minder frustratie, betere output
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-50 transition group-hover:bg-blue-100" aria-hidden="true"></div>
+                        <i class="fas fa-puzzle-piece text-blue-600 text-3xl mb-5 relative z-10" aria-hidden="true"></i>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Aanvullen</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[3rem]">Je werkt echt <strong>samen</strong> met AI, maar het denkwerk blijft bij jou.</p>
+                        <div class="bg-blue-50 p-4 rounded-xl text-sm text-blue-900 relative z-10 space-y-2">
+                            <p><strong>Leerling:</strong> je stelt AI verhelderende vragen bij een lastige tekst of theorie.</p>
+                            <p><strong>Docent:</strong> je spart met AI over een lesopzet of een rubric.</p>
                         </div>
                     </div>
-                </div>
-                <!-- E -->
-                <div
-                    class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">E</div>
-                        <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
-                            3</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-trinitas-blue">Evalueer</h3>
-                    <p class="text-gray-600 text-sm mb-6">De menselijke controle op kwaliteit, waarheid en eigenheid.
-                    </p>
-                    <div class="mt-auto">
-                        <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
-                            <i class="fas fa-bullseye mr-2"></i>
-                            Doel: Voorkomen van hallucinaties
-                        </div>
-                    </div>
-                </div>
-                <!-- S -->
-                <div
-                    class="card-gradient p-8 rounded-2xl border-t-4 border-trinitas-green shadow-sm hover:shadow-xl transition relative flex flex-col h-full">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-trinitas-green text-4xl font-black">S</div>
-                        <span class="text-[10px] font-bold text-trinitas-blue uppercase tracking-wider mt-2">Stap
-                            4</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-trinitas-blue">Spelregels</h3>
-                    <p class="text-gray-600 text-sm mb-6">Kaders rondom privacy, sociale veiligheid (deepfakes) en
-                        ethiek.</p>
-                    <div class="mt-auto">
-                        <div
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-lg text-xs font-bold flex items-center">
-                            <i class="fas fa-bullseye mr-2"></i>
-                            Doel: Veilig en ethisch gebruik
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full opacity-50 transition group-hover:bg-green-100" aria-hidden="true"></div>
+                        <i class="fas fa-rocket text-green-600 text-3xl mb-5 relative z-10" aria-hidden="true"></i>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Verrijken</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[3rem]">Je zet AI in om juist <strong>dieper te leren en te denken</strong>.</p>
+                        <div class="bg-green-50 p-4 rounded-xl text-sm text-green-900 relative z-10 space-y-2">
+                            <p><strong>Leerling:</strong> AI laat je redenering kritisch bevragen, of je vergelijkt de antwoorden van verschillende tools.</p>
+                            <p><strong>Docent:</strong> AI simuleert je les, inclusief misconcepties van leerlingen.</p>
+                            <p class="font-semibold pt-1">Klopt dit? Waar zitten de blinde vlekken?</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Voordelen Blok -->
-            <div class="max-w-4xl mx-auto bg-trinitas-blue text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-trinitas-green rounded-bl-full opacity-20">
+            <!-- De E in actie: vuistregel 80/20 (zelfde opmaak als de gradaties) -->
+            <div id="e-in-actie" class="mb-12 scroll-mt-28">
+                <div class="text-center mb-8">
+                    <span class="inline-flex bg-orange-50 text-orange-800 px-4 py-2 rounded-xl text-sm font-bold border border-orange-200 items-center mb-4">
+                        <i class="fas fa-magnifying-glass-chart mr-2" aria-hidden="true"></i>De E in actie: waarom is evalueren zo belangrijk?
+                    </span>
+                    <h3 class="text-2xl font-bold text-trinitas-blue mb-3">Vuistregel 80/20</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">Volgens het Pareto-principe bereik je 80% van het resultaat
+                        in 20% van de tijd; de laatste 20% kost het meeste werk. AI verandert vooral dat eerste deel.</p>
                 </div>
-                <h4 class="text-xl font-bold mb-6 flex items-center">
-                    <i class="fas fa-star text-trinitas-green mr-2"></i>
-                    De voordelen zijn:
-                </h4>
-                <ul class="space-y-4 text-sm">
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-trinitas-green mt-1 mr-3 text-xs"></i>
-                        <span><strong>Bewustwording:</strong> Leerlingen denken na over hun leerproces: "Word ik
-                            hier beter van of alleen mijn product?".</span>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- 80% -->
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-50 transition group-hover:bg-blue-100" aria-hidden="true"></div>
+                        <p class="text-3xl font-black text-blue-700 mb-4 relative z-10">80%</p>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Heb je snel met AI</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[4.5rem]">Een opzet, een eerste versie of een
+                            idee: met AI heb je dat in korte tijd. Gebruik het als <strong>startpunt</strong>, niet als eindproduct.</p>
+                        <div class="bg-blue-50 p-4 rounded-xl text-sm text-blue-900 relative z-10 space-y-2">
+                            <p><strong>Leerling:</strong> AI maakt een eerste opzet voor je betoog.</p>
+                            <p><strong>Docent:</strong> AI zet een eerste versie van een lesbrief in elkaar.</p>
+                            <p class="font-semibold pt-1">Valkuil: met AI blijven schaven rond die 80%. Dat kost veel tijd, en je leert er zelf minder van.</p>
+                        </div>
+                    </div>
+                    <!-- 20% -->
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full opacity-50 transition group-hover:bg-orange-100" aria-hidden="true"></div>
+                        <p class="text-3xl font-black text-orange-700 mb-4 relative z-10">20%</p>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Maak je zelf af</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[4.5rem]">De laatste 20% kost het meeste werk:
+                            <strong>controleren, verbeteren en eigen maken</strong>. Dat doe je zelf, zo blijf je eigenaar van het denkwerk.</p>
+                        <div class="bg-orange-50 p-4 rounded-xl text-sm text-orange-900 relative z-10 space-y-2">
+                            <p><strong>Leerling:</strong> je checkt de feiten in je boek en herschrijft het betoog in je eigen woorden.</p>
+                            <p><strong>Docent:</strong> je controleert de vakinhoud en stemt de lesbrief af op je klas.</p>
+                            <p class="font-semibold pt-1">Klopt het? Is het goed genoeg? Is het nog van mij?</p>
+                        </div>
+                    </div>
+                    <!-- Onderzoek -->
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-bl-full opacity-50 transition group-hover:bg-amber-100" aria-hidden="true"></div>
+                        <p class="text-3xl font-black text-amber-600 mb-4 relative z-10"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></p>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Mooi is nog niet juist</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[4.5rem]">Ziet het resultaat er afgewerkt uit,
+                            zoals een net document of een werkende app? Dan kijken mensen <strong>minder kritisch</strong>.</p>
+                        <div class="bg-amber-50 p-4 rounded-xl text-sm text-amber-900 relative z-10 space-y-2">
+                            <p>Onderzoek van Anthropic (2026): bij afgewerkte AI-output controleren gebruikers minder vaak de feiten en
+                                vragen ze minder door naar wat ontbreekt.</p>
+                            <p class="font-semibold pt-1">Hoe mooier het resultaat, hoe kritischer je moet kijken.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 text-center mt-5 leading-relaxed">
+                    Bronnen: <a href="https://www.youtube.com/watch?v=5Ox2htfboxM&amp;t=1590s" target="_blank" rel="noopener" class="underline hover:text-trinitas-blue">BNR De Technoloog, aflevering 512</a>
+                    (met Bernold Nieuwesteeg, vanaf 26:30) ·
+                    <a href="https://academy.claude.com/tutorials/the-ai-fluency-index" target="_blank" rel="noopener" class="underline hover:text-trinitas-blue">Anthropic, The AI Fluency Index (2026)</a>
+                </p>
+            </div>
+
+            <!-- Wat levert KIES op? -->
+            <div class="max-w-5xl mx-auto bg-trinitas-blue text-white p-8 md:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-trinitas-green rounded-bl-full opacity-20" aria-hidden="true"></div>
+                <h3 class="text-2xl font-bold mb-2 flex items-center relative z-10">
+                    <i class="fas fa-star text-trinitas-green mr-3" aria-hidden="true"></i>Wat levert KIES op?
+                </h3>
+                <p class="text-blue-100 leading-relaxed mb-8 max-w-3xl relative z-10">
+                    Met KIES is AI geen verbod en geen vanzelfsprekendheid, maar een bewuste keuze. Dat levert vier dingen op.
+                </p>
+                <ul class="grid md:grid-cols-2 gap-x-10 gap-y-6 text-sm leading-relaxed relative z-10">
+                    <li class="flex gap-4">
+                        <span class="w-8 shrink-0 flex justify-center pt-0.5" aria-hidden="true"><i class="fas fa-lightbulb text-trinitas-green text-xl" aria-hidden="true"></i></span>
+                        <span><strong class="block text-base text-white mb-1">Bewust leren</strong><span class="text-blue-100">Bij elke taak
+                            vraag je je af: word ik hier beter van, of alleen mijn product? Zo blijft het denkwerk bij de leerling.</span></span>
                     </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-trinitas-green mt-1 mr-3 text-xs"></i>
-                        <span><strong>Efficiency:</strong> Identificeren van taken die sneller kunnen zonder
-                            verlies van leeropbrengst.</span>
+                    <li class="flex gap-4">
+                        <span class="w-8 shrink-0 flex justify-center pt-0.5" aria-hidden="true"><i class="fas fa-stopwatch text-trinitas-green text-xl" aria-hidden="true"></i></span>
+                        <span><strong class="block text-base text-white mb-1">Tijdwinst waar het kan</strong><span class="text-blue-100">Je ziet
+                            welke taken sneller kunnen zonder dat het leren eronder lijdt, en je besteedt de tijd die je overhoudt aan verdieping.</span></span>
                     </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-trinitas-green mt-1 mr-3 text-xs"></i>
-                        <span><strong>Eigenaarschap:</strong> De 'E' voorkomt klakkeloos kopiëren en garandeert
-                            eigen controle.</span>
+                    <li class="flex gap-4">
+                        <span class="w-8 shrink-0 flex justify-center pt-0.5" aria-hidden="true"><i class="fas fa-user-pen text-trinitas-green text-xl" aria-hidden="true"></i></span>
+                        <span><strong class="block text-base text-white mb-1">Eigenaarschap</strong><span class="text-blue-100">Wie zelf
+                            evalueert en de laatste 20% zelf doet, kan het resultaat uitleggen en verdedigen. Het werk blijft van jou.</span></span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="w-8 shrink-0 flex justify-center pt-0.5" aria-hidden="true"><i class="fas fa-comments text-trinitas-green text-xl" aria-hidden="true"></i></span>
+                        <span><strong class="block text-base text-white mb-1">Een gedeelde taal</strong><span class="text-blue-100">Leerlingen,
+                            docenten en schoolleiding gebruiken dezelfde vier stappen. Dat maakt het gesprek over AI makkelijker, in de les én in het beleid.</span></span>
                     </li>
                 </ul>
-                <p
-                    class="mt-8 text-xs italic text-blue-100 bg-white/5 p-4 rounded-xl border border-white/10 leading-relaxed shadow-inner">
-                    Boodschap: Niet bang zijn voor technologie, maar deze juist omarmen door bewuste keuzes
-                    ("niet bang zijn, gewoon doen").
+                <p class="mt-8 text-sm font-semibold text-white bg-white/10 p-4 rounded-xl border border-white/15 leading-relaxed relative z-10">
+                    <i class="fas fa-compass text-trinitas-green mr-2" aria-hidden="true"></i>Kies bewust: wees niet bang voor AI, maar vertrouw er ook niet blind op. Houd altijd zelf de regie.
                 </p>
 
-                <!-- Student Quote -->
-                <div class="mt-6 pt-6 border-t border-white/10">
+                <!-- Citaat leerling -->
+                <figure class="mt-6 pt-6 border-t border-white/10 relative z-10">
                     <blockquote class="text-sm italic text-blue-100">
                         "Leerlingen die AI inzetten om goedkoop aan een hoog cijfer te komen, zullen zichzelf tegenkomen
                         in het vervolg. Dat is je eigen verantwoordelijkheid."
                     </blockquote>
-                    <cite
-                        class="block mt-2 text-[10px] text-trinitas-green font-bold uppercase tracking-widest">—
-                        Leerling (tijdens brainstormsessie)</cite>
-                </div>
+                    <figcaption class="mt-2 text-xs text-trinitas-green font-bold uppercase tracking-widest">— Leerling (tijdens brainstormsessie)</figcaption>
+                </figure>
             </div>
 
-            <!-- KIES Method & Detail Images -->
-            <div class="mt-20 grid md:grid-cols-2 gap-8">
-                <a href="assets/kies-method.jpg" target="_blank"
-                    class="block group transform transition hover:scale-[1.02]">
-                    <img src="assets/kies-method.jpg" alt="De KIES-methode in beeld"
-                        class="rounded-3xl shadow-xl max-w-full h-auto border-4 border-white">
-                    <div class="mt-2 text-center text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition">
-                        Klik voor vergroting</div>
-                </a>
-                <a href="assets/kies-detail.jpg" target="_blank"
-                    class="block group transform transition hover:scale-[1.02]">
-                    <img src="assets/kies-detail.jpg" alt="KIES model detail"
-                        class="rounded-3xl shadow-xl max-w-full h-auto border-4 border-white">
-                    <div class="mt-2 text-center text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition">
-                        Klik voor vergroting</div>
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- Voor Leerlingen Section -->
+    <!-- Voor leerlingen: samenvatting van de gids voor leerlingen -->
     <section id="leerlingen" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-trinitas-blue mb-4 tracking-tight">De Leerling als
-                    Regisseur</h2>
-                <div class="h-1 w-24 bg-trinitas-green mx-auto"></div>
+            <div class="text-center mb-14">
+                <h2 class="text-3xl font-bold text-trinitas-blue mb-4 tracking-tight">De leerling als regisseur</h2>
+                <div class="h-1 w-24 bg-trinitas-green mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">De kern van de gids voor leerlingen: zo zet je AI in
+                    zodat je er zelf beter van wordt.</p>
             </div>
-            <div class="flex flex-col lg:flex-row items-start gap-12">
-                <div class="lg:w-1/2">
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-trinitas-blue mb-2">Richtlijnen voor
-                            leerlingen</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Verantwoord gebruik berust op de volgende principes:
-                        </p>
-                    </div>
-
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
-                            <span><strong>Mens-Machine-Mens principe:</strong> Start altijd zelf (denkwerk), zet de
-                                machine in voor ondersteuning, en eindig altijd zelf met een kritische controle.</span>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h3 class="text-2xl font-bold text-trinitas-blue mb-6">KIES in het kort</h3>
+                    <ol class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-green-100 text-green-900 border-2 border-green-300 flex items-center justify-center text-lg font-black" aria-hidden="true">K</span>
+                            <div>
+                                <h4 class="font-bold text-trinitas-blue">Kiezen: word ik hier beter van?</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">Deel je opdracht op in deeltaken en kies per deeltaak of AI je
+                                    helpt leren of het leren overneemt. Gebruik AI om je werk beter te maken, niet alleen om sneller klaar
+                                    te zijn. Begin zelf: bedenk eerst je eigen ideeën en laat AI daarna meedenken.</p>
+                                <a href="kies-leerlingen.html#kiezen" class="text-sm font-semibold text-trinitas-blue underline">Meer over Kiezen</a>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
-                            <span><strong>Kritisch Denken (De 'E'):</strong> Leerlingen moeten snappen dat ook AI fouten
-                                kan maken (of hallucineren). De 'E' uit KIES is de belangrijkste stap om eigenaarschap
-                                te behouden.</span>
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-blue-100 text-blue-900 border-2 border-blue-300 flex items-center justify-center text-lg font-black" aria-hidden="true">I</span>
+                            <div>
+                                <h4 class="font-bold text-trinitas-blue">Instrueren: zeg wat je nodig hebt</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">Vertel wie de AI is, wat hij moet doen, met welke informatie
+                                    en hoe je het antwoord wilt. Wil je iets leren? Vraag dan om vragen en hints in plaats van antwoorden.</p>
+                                <a href="kies-leerlingen.html#instrueren" class="text-sm font-semibold text-trinitas-blue underline">Meer over Instrueren</a>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
-                            <span><strong>Transparantie:</strong> Wees eerlijk over welke delen van het werk zijn
-                                uitbesteed. Maak afspraken dat AI-gebruik altijd vermeld wordt. Dit voorkomt de 'angst'
-                                voor AI en stimuleert open discussie.</span>
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-orange-100 text-orange-900 border-2 border-orange-300 flex items-center justify-center text-lg font-black" aria-hidden="true">E</span>
+                            <div>
+                                <h4 class="font-bold text-trinitas-blue">Evalueren: maak het zelf af</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">AI kan fouten maken en bronnen verzinnen. Zie wat AI maakt
+                                    als een eerste opzet: daarmee heb je de eerste 80% snel. De laatste 20% doe je zelf: feiten en bronnen
+                                    controleren, verbeteren en in je eigen woorden zetten. Dat kost de meeste moeite, maar daar leer je het
+                                    meest van. Neem ook een mening
+                                    van AI nooit zomaar over.</p>
+                                <a href="kies-leerlingen.html#evalueren" class="text-sm font-semibold text-trinitas-blue underline">Meer over Evalueren</a>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
-                            <span><strong>Privacy:</strong> Deel nooit persoonlijke gegevens of beelden van anderen in
-                                AI-tools.</span>
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-purple-100 text-purple-900 border-2 border-purple-300 flex items-center justify-center text-lg font-black" aria-hidden="true">S</span>
+                            <div>
+                                <h4 class="font-bold text-trinitas-blue">Spelregels: eerlijk en veilig</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">Laat AI je werk niet voor je maken en wees open over je
+                                    AI-gebruik. Deel geen gegevens of beelden van anderen, en maak geen nepbeelden van echte mensen: techniek
+                                    is nooit een excuus voor pesten.</p>
+                                <a href="kies-leerlingen.html#spelregels" class="text-sm font-semibold text-trinitas-blue underline">Meer over Spelregels</a>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
-                            <span><strong>Ethische Grenzen:</strong> Bespreek expliciet de gevaren van laagdrempelige
-                                tools zoals <em>Grok</em> voor het maken van racistische of seksuele beelden
-                                (deepfakes). Maak duidelijk dat techniek nooit een excuus is voor pestgedrag.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-trinitas-green mt-1 mr-3"></i>
-                            <span><strong>Kwaliteit boven Snelheid:</strong> Gebruik AI om je product beter te maken,
-                                niet alleen om sneller klaar te zijn.</span>
-                        </li>
-                    </ul>
+                    </ol>
                 </div>
 
-                <div class="lg:w-1/2 space-y-8">
-                    <!-- Best Practices -->
+                <div class="space-y-8">
+                    <!-- Zo gebruik je AI als leerhulp -->
                     <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-16 h-16 bg-trinitas-green opacity-10 rounded-bl-full">
-                        </div>
-                        <h4 class="font-bold text-trinitas-blue mb-4 flex items-center">
-                            <i class="fas fa-robot mr-2 text-trinitas-green"></i>
-                            Best Practices:
-                        </h4>
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-trinitas-green opacity-10 rounded-bl-full" aria-hidden="true"></div>
+                        <h3 class="font-bold text-lg text-trinitas-blue mb-4 flex items-center">
+                            <i class="fas fa-robot mr-2 text-trinitas-green" aria-hidden="true"></i>Zo gebruik je AI als leerhulp
+                        </h3>
                         <ul class="space-y-4 text-sm text-gray-700">
-                            <li class="flex gap-3">
-                                <div class="font-bold text-trinitas-blue min-w-[140px]">STARR-Reflectiebot:</div>
-                                <div>Gebruik AI niet voor het antwoord, maar als begeleider. Laat een chatbot vragen
-                                    stellen over Situatie, Taak, Actie en Resultaat.</div>
+                            <li class="flex flex-col sm:flex-row gap-1 sm:gap-3">
+                                <div class="font-bold text-trinitas-blue sm:min-w-[140px]"><a href="toolbox.html#recept-tutor" class="underline">Socratische tutor</a></div>
+                                <div>De AI geeft geen antwoorden, maar stelt vragen en geeft hints, zodat je zelf nadenkt.</div>
                             </li>
-                            <li class="flex gap-3">
-                                <div class="font-bold text-trinitas-blue min-w-[140px]">Socratische Tutor:</div>
-                                <div>Stel de AI in als tutor die <em>geen</em> antwoorden geeft, maar alleen wedervragen
-                                    stelt om je denken te stimuleren.</div>
+                            <li class="flex flex-col sm:flex-row gap-1 sm:gap-3">
+                                <div class="font-bold text-trinitas-blue sm:min-w-[140px]"><a href="toolbox.html#recept-starr" class="underline">STARR-begeleider</a></div>
+                                <div>De AI leidt je met vragen door Situatie, Taak, Actie, Resultaat en Reflectie. Jij schrijft.</div>
                             </li>
-                            <li class="flex gap-3">
-                                <div class="font-bold text-trinitas-blue min-w-[140px]">AI-Logboek:</div>
-                                <div>Maak bij projecten inzichtelijk: wat is uitbesteed (K), welke prompts (I) en hoe is
-                                    gecontroleerd (E)?</div>
+                            <li class="flex flex-col sm:flex-row gap-1 sm:gap-3">
+                                <div class="font-bold text-trinitas-blue sm:min-w-[140px]"><a href="toolbox.html#recept-verantwoording" class="underline">AI-logboek</a></div>
+                                <div>Je houdt bij wat je hebt uitbesteed (K), welke prompts je gebruikte (I) en hoe je het hebt gecontroleerd (E).</div>
                             </li>
                         </ul>
+                        <p class="text-xs text-gray-500 mt-4"><i class="fas fa-scroll mr-1" aria-hidden="true"></i>Klik op een naam voor een kant-en-klaar promptrecept.</p>
                     </div>
 
                     <!-- Voorbeeld Napoleon -->
-                    <div class="bg-trinitas-blue text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-trinitas-green rounded-bl-full opacity-20">
-                        </div>
-                        <h4 class="text-xl font-bold mb-6 flex items-center">
-                            <i class="fas fa-graduation-cap text-trinitas-green mr-2"></i>
-                            Voorbeeld: Essay over Napoleon
-                        </h4>
-                        <div class="space-y-4 text-sm leading-relaxed">
+                    <div class="bg-trinitas-blue text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-trinitas-green rounded-bl-full opacity-20" aria-hidden="true"></div>
+                        <h3 class="text-xl font-bold mb-6 flex items-center relative z-10">
+                            <i class="fas fa-graduation-cap text-trinitas-green mr-2" aria-hidden="true"></i>Voorbeeld: essay over Napoleon
+                        </h3>
+                        <div class="space-y-4 text-sm leading-relaxed relative z-10">
                             <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
-                                <strong>1. Kiezen:</strong> Je gebruikt AI om te brainstormen over invalshoeken voor
-                                Napoleon, maar je schrijft de hoofdtekst zelf om je schrijfstijl te trainen.
+                                <strong>1. Kiezen:</strong> je laat AI meedenken over invalshoeken voor je essay. De tekst
+                                schrijf je zelf, want daarmee train je je schrijfvaardigheid.
+                            </p>
+                            <div class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
+                                <p><strong>2. Instrueren:</strong> "Je bent een geschiedenisdocent. Ik schrijf voor havo 4 een
+                                    essay van 800 woorden over de veldtocht van Napoleon naar Rusland in 1812. Geef vijf
+                                    mogelijke invalshoeken, elk met een onderzoeksvraag en het soort bron waarmee ik die kan
+                                    onderbouwen. Geef een korte lijst en schrijf geen tekst voor me."</p>
+                                <p class="text-xs text-blue-100 mt-2">Rol, context, taak en vorm zitten er allemaal in.</p>
+                            </div>
+                            <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
+                                <strong>3. Evalueren:</strong> je kiest de invalshoek die het best bij je opdracht past en zoekt
+                                de feiten zelf op in je geschiedenisboek en betrouwbare bronnen. Noemt AI een bron? Check of
+                                die echt bestaat.
                             </p>
                             <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
-                                <strong>2. Instructie:</strong> "Geef me 5 onbekende feiten over Napoleon's veldtocht
-                                naar
-                                Rusland vanuit het oogpunt van een historicus."
+                                <strong>4. Spelregels:</strong> je vermeldt in je verantwoording waarvoor je AI hebt
+                                gebruikt en deelt de chatlink met je docent. Persoonlijke gegevens laat je erbuiten.
                             </p>
-                            <p class="bg-blue-900/30 p-3 rounded border-l-4 border-trinitas-green">
-                                <strong>3. Evalueer:</strong> Je checkt in je geschiedenisboek of online of deze feiten
-                                kloppen
-                                (geen
-                                hallucinaties!) en verwerkt ze in je eigen woorden.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nieuw Blok: Vervangen, Aanvullen, Verrijken -->
-            <div class="mt-16 pt-12 border-t border-gray-200">
-                <div class="text-center mb-10">
-                    <h3 class="text-2xl font-bold text-trinitas-blue mb-4">Gradaties van AI-gebruik</h3>
-                    <div class="flex justify-center mb-4">
-                        <span
-                            class="bg-green-50 text-trinitas-green px-4 py-2 rounded-xl text-sm font-bold border border-green-200 flex items-center">
-                            <i class="fas fa-bullseye mr-2"></i>De 'K' in actie: Welke keuze maak jij?
-                        </span>
-                    </div>
-                    <p class="text-gray-600 text-sm max-w-2xl mx-auto">Tijdens stap 1 van het KIES-model
-                        (<strong>K</strong>iezen) bepaal je <strong>of</strong> en <strong>hoe</strong> je AI inzet voor
-                        een deeltaak. Van passief uitbesteden
-                        naar actief uitdagen: hieronder staan drie gradaties beschreven.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Vervangen -->
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group">
-                        <div
-                            class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full opacity-50 transition group-hover:bg-red-100">
-                        </div>
-                        <i class="fas fa-exchange-alt text-red-500 text-3xl mb-6 relative z-10"></i>
-                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Vervangen</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4 relative z-10">
-                            GenAI voert de taak uit. Dat hoeft niet fout te zijn, mits het een <strong>bewuste
-                                keuze</strong> is.
-                        </p>
-                        <div class="bg-red-50 p-4 rounded-xl text-xs text-red-800 font-medium relative z-10">
-                            Vraag jezelf af: wat doe ik met de vrijgekomen tijd? Gebruik ik die voor verdieping, of voor
-                            nog meer productie?
-                        </div>
-                    </div>
-
-                    <!-- Aanvullen -->
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group">
-                        <div
-                            class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-50 transition group-hover:bg-blue-100">
-                        </div>
-                        <i class="fas fa-puzzle-piece text-blue-500 text-3xl mb-6 relative z-10"></i>
-                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Aanvullen</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4 relative z-10">
-                            De student werkt echt <strong>samen</strong> met GenAI.
-                        </p>
-                        <div class="bg-blue-50 p-4 rounded-xl text-xs text-blue-800 font-medium relative z-10">
-                            Bijvoorbeeld door het stellen van verhelderende vragen tijdens het bestuderen van theorie of
-                            een lastig artikel.
-                        </div>
-                    </div>
-
-                    <!-- Verrijken -->
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group overflow-hidden">
-                        <div
-                            class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full opacity-50 transition group-hover:bg-green-100">
-                        </div>
-                        <i class="fas fa-rocket text-trinitas-green text-3xl mb-6 relative z-10"></i>
-                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Verrijken</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4 relative z-10">
-                            De student zet GenAI in om juist <strong>dieper te leren</strong>.
-                        </p>
-                        <div
-                            class="bg-green-50 p-4 rounded-xl text-xs text-green-800 font-medium relative z-10 space-y-2">
-                            <p>Laat kritische vragen stellen die je redenering uitdagen, of leg dezelfde vraag voor aan
-                                verschillende tools en vergelijk de outputs.</p>
-                            <p class="font-bold">Klopt dit? Waar zitten de blinde vlekken?</p>
                         </div>
                     </div>
                 </div>
@@ -530,227 +478,146 @@
             <div class="mt-16 text-center">
                 <a href="kies-leerlingen.html"
                     class="inline-flex items-center justify-center bg-trinitas-blue hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full transition shadow-md text-lg">
-                    <i class="fas fa-user-graduate mr-2"></i> Bekijk de complete KIES gids voor leerlingen
+                    <i class="fas fa-user-graduate mr-2" aria-hidden="true"></i> Bekijk de complete KIES-gids voor leerlingen
                 </a>
             </div>
+        </div>
     </section>
 
-    <!-- Voor Docenten Section -->
+    <!-- Voor docenten: samenvatting van de gids voor docenten -->
     <section id="docenten" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-trinitas-blue mb-4">De Docent als Regisseur</h2>
-                <div class="h-1 w-24 bg-trinitas-green mx-auto mb-12"></div>
+            <div class="text-center mb-14">
+                <h2 class="text-3xl font-bold text-trinitas-blue mb-4">De docent als regisseur</h2>
+                <div class="h-1 w-24 bg-trinitas-green mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10">De kern van de gids voor docenten: KIES in je
+                    les, en KIES voor je eigen werk.</p>
                 <div class="max-w-3xl mx-auto bg-green-50 p-8 rounded-3xl border border-trinitas-green/20 shadow-sm relative">
-                    <i class="fas fa-quote-left text-trinitas-green/20 text-4xl absolute top-6 left-6"></i>
-                    <p class="text-lg md:text-xl text-trinitas-blue italic font-medium relative z-10 font-semibold leading-relaxed">
-                        "Zie A.I. niet als concurrent van de docent, maar meer als een extra assistent in de klas."
+                    <i class="fas fa-quote-left text-trinitas-green/20 text-4xl absolute top-6 left-6" aria-hidden="true"></i>
+                    <p class="text-lg md:text-xl text-trinitas-blue italic font-semibold relative z-10 leading-relaxed">
+                        "Zie AI niet als concurrent van de docent, maar meer als een extra assistent in de klas."
                     </p>
-                    <cite class="block mt-4 text-xs text-trinitas-green font-bold uppercase tracking-widest">— Tip van onze leerlingen</cite>
+                    <p class="mt-4 text-xs text-trinitas-green-text font-bold uppercase tracking-widest">— Tip van onze leerlingen</p>
                 </div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- KIES in je les -->
                 <div class="space-y-8">
                     <div>
-                        <h3 class="text-2xl font-bold text-trinitas-blue mb-2">Het Model Onderwijzen</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Docenten kunnen het KIES-model gebruiken om AI-gebruik in de klas te structureren:
-                        </p>
+                        <h3 class="text-2xl font-bold text-trinitas-blue mb-2">KIES in je les</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Zo leer je leerlingen bewust met AI werken.</p>
                     </div>
 
-                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-3xl space-y-6">
-                        <ul class="space-y-4 text-sm">
-                            <li class="flex items-start">
-                                <i class="fas fa-layer-group text-trinitas-green mt-1 mr-3"></i>
-                                <span><strong>Deeltaken Ontleden:</strong> Leer leerlingen dat een opdracht bestaat uit
-                                    sub-taken (brainstormen, structureren, schrijven). Laat ze per stap 'Kiezen'
-                                    (K).</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-comment-dots text-trinitas-green mt-1 mr-3"></i>
-                                <span><strong>Reflectie-instrument:</strong> Gebruik het model voor het gesprek: "Waarom
-                                    heb je dit uitbesteed aan de AI?". Focus op de leeropbrengst.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-keyboard text-trinitas-green mt-1 mr-3"></i>
-                                <span><strong>Prompting als Vaardigheid:</strong> Besteed aandacht aan de 'I'
-                                    (Instructie). Een slecht resultaat komt vaak door gebrekkige instructie.</span>
-                            </li>
-                        </ul>
-
-                        <div class="pt-6 border-t border-gray-200">
-                            <h4 class="font-bold text-trinitas-blue mb-4 text-sm uppercase tracking-wider">Belangrijke
-                                aanbevelingen:</h4>
-                            <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-xl border-l-4 border-trinitas-green shadow-sm">
-                                    <p class="text-xs"><strong>Focus op Proces, niet Product:</strong> Beoordeel niet
-                                        alleen het verslag, maar ook de 'K'-fase: waarom koos de leerling voor AI bij de
-                                        brainstorm?</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border-l-4 border-trinitas-blue shadow-sm">
-                                    <p class="text-xs"><strong>Leerverrijking vs. Uitbesteding:</strong> AI als
-                                        brainstormpartner is een <strong>verrijking</strong>; zonder controle laten
-                                        schrijven is pure <strong>uitbesteding</strong>.</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border-l-4 border-orange-400 shadow-sm">
-                                    <p class="text-xs"><strong>Leercultuur:</strong> Maak AI-gebruik "normaal" zonder
-                                        het eigen denkwerk te verliezen. Stimuleer actieve leerlingen door ze eerst zelf
-                                        te laten zoeken. AI kan daarbij helpend zijn. Een reflectievraag wordt dan:
-                                        "Wat heb je m.b.v. AI ontdekt?"</p>
+                    <ul class="space-y-6 text-sm text-gray-700 leading-relaxed">
+                        <li class="flex gap-4">
+                            <span class="w-8 shrink-0 flex justify-center pt-0.5" aria-hidden="true"><i class="fas fa-layer-group text-trinitas-green text-lg" aria-hidden="true"></i></span>
+                            <div>
+                                <h4 class="font-bold text-trinitas-blue text-base mb-1">Deeltaken ontleden</h4>
+                                <p>Laat leerlingen een opdracht opdelen (oriënteren, structureren, schrijven, controleren) en per
+                                    deeltaak kiezen of AI helpt.</p>
+                                <div class="mt-3 bg-blue-50 border border-blue-100 rounded-2xl p-4">
+                                    <p class="font-bold text-trinitas-blue mb-2"><i class="fas fa-table-list mr-2" aria-hidden="true"></i>Werkvorm: de deeltaken-matrix</p>
+                                    <p class="mb-3">Leerlingen maken bij een verslag een tabel en vinken per deeltaak aan:</p>
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <span class="font-bold px-3 py-1.5 bg-white rounded-lg border border-blue-200 text-trinitas-blue">Zelf gedaan</span>
+                                        <span class="text-gray-500 italic">of</span>
+                                        <span class="font-bold px-3 py-1.5 bg-white rounded-lg border border-blue-200 text-trinitas-blue">AI-assistentie</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-8 shrink-0 flex justify-center pt-0.5" aria-hidden="true"><i class="fas fa-comment-dots text-trinitas-green text-lg" aria-hidden="true"></i></span>
+                            <div>
+                                <h4 class="font-bold text-trinitas-blue text-base mb-1">Het gesprek over de keuze</h4>
+                                <p>Vraag niet alleen óf een leerling AI heeft gebruikt, maar ook waarom bij die deeltaak, en wat hij
+                                    of zij ermee heeft ontdekt. Zo gaat het over de leeropbrengst.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-8 shrink-0 flex justify-center pt-0.5" aria-hidden="true"><i class="fas fa-keyboard text-trinitas-green text-lg" aria-hidden="true"></i></span>
+                            <div>
+                                <h4 class="font-bold text-trinitas-blue text-base mb-1">Instrueren als vaardigheid</h4>
+                                <p>Een slecht resultaat komt vaak door een vage instructie. Oefen met rol, taak, context en vorm.</p>
+                            </div>
+                        </li>
+                    </ul>
 
-                    <!-- Werkvorm: De Deeltaken-Matrix -->
-                    <div class="mt-8 bg-blue-50 p-8 rounded-[2rem] border border-blue-100/50 shadow-sm">
-                        <h4 class="text-xl font-bold text-trinitas-blue mb-6 flex items-center">
-                            <i class="fas fa-tools mr-3 text-blue-500"></i>
-                            <span class="bg-blue-200/50 px-2 py-1 rounded">Werkvorm: De Deeltaken-Matrix</span>
+                    <!-- Toetsen: van product naar proces -->
+                    <div class="bg-green-50 p-6 md:p-8 rounded-[2rem] border border-green-100 shadow-sm">
+                        <h4 class="text-lg font-bold text-trinitas-blue mb-4 flex items-center">
+                            <i class="fas fa-graduation-cap mr-3 text-trinitas-green-text text-xl" aria-hidden="true"></i>Toetsen: van product naar proces
                         </h4>
-                        <div class="text-gray-700 space-y-4 text-sm leading-relaxed">
-                            <p>Laat leerlingen bij een verslag een tabel maken. Per deeltaak (onderzoek, structuur,
-                                tekst, nakijken) vinken ze aan:</p>
-                            <div class="flex flex-wrap items-center gap-3 py-2">
-                                <span
-                                    class="font-bold px-4 py-2 bg-white rounded-xl border border-blue-200 shadow-sm text-trinitas-blue">Zelf
-                                    gedaan</span>
-                                <span class="text-gray-400 font-medium italic">of</span>
-                                <span
-                                    class="font-bold px-4 py-2 bg-white rounded-xl border border-blue-200 shadow-sm text-trinitas-blue">AI-Assistentie</span>
-                            </div>
-                            <p class="pt-2">Beoordeel niet alleen het verslag, maar ga het gesprek aan over de
-                                <strong>K-keuze</strong>.
-                            </p>
-                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-4 text-sm">
+                            Een grote open opdracht die thuis wordt gemaakt, zegt steeds minder over wat een leerling zelf kan.
+                            Bouw daarom procesmomenten in: tussenproducten, feedback in de les en een gesprek over de K-keuze.
+                        </p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="mr-2 text-trinitas-green-text font-bold" aria-hidden="true">•</span><span>AI kan producten maken die de leerdoelen omzeilen.</span></li>
+                            <li class="flex items-start"><span class="mr-2 text-trinitas-green-text font-bold" aria-hidden="true">•</span><span>In het proces zie je de échte groei.</span></li>
+                            <li class="flex items-start"><span class="mr-2 text-trinitas-green-text font-bold" aria-hidden="true">•</span><span>Feedbackmomenten in de les zijn waardevoller dan één eindcijfer.</span></li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="space-y-8">
+                <!-- KIES voor je eigen werk -->
+                <div class="space-y-6">
                     <div>
-                        <h3 class="text-2xl font-bold text-trinitas-blue mb-2">AI als Assistent voor de Docent</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Docenten kunnen zelf AI-vaardig worden om de eigen werkdruk te verlichten:
-                        </p>
+                        <h3 class="text-2xl font-bold text-trinitas-blue mb-2">KIES voor je eigen werk</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">AI kan je werk lichter of beter maken, als je dezelfde vier stappen volgt.</p>
                     </div>
-
-                    <div class="grid grid-cols-1 gap-4 text-sm">
-                        <!-- Lesvoorbereiding -->
-                        <div
-                            class="p-5 border rounded-2xl hover:bg-gray-50 transition flex gap-4 items-start bg-white shadow-sm">
-                            <div
-                                class="bg-orange-100 w-12 h-12 rounded-xl text-orange-600 shrink-0 flex items-center justify-center">
-                                <i class="fas fa-file-invoice text-xl"></i>
-                            </div>
+                    <ol class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-green-100 text-green-900 border-2 border-green-300 flex items-center justify-center text-lg font-black" aria-hidden="true">K</span>
                             <div>
-                                <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Lesvoorbereiding</h4>
-                                <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Gebruik apps (zoals GPT's/Gems of NotebookLM) om lesplannen, instructiekaarten of
-                                    PDF's te genereren op basis van leerdoelen en voorkennis.
-                                </p>
+                                <h4 class="font-bold text-trinitas-blue">Kiezen: begin bij de taak, niet bij de tool</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">Waar kost je werk de meeste tijd? Laat AI tijdrovende klussen
+                                    opzetten, zoals een formatieve quiz uit je lesstof of oefenmateriaal op verschillende niveaus.</p>
+                                <a href="kies-docenten.html#kiezen" class="text-sm font-semibold text-trinitas-blue underline">Meer over Kiezen</a>
                             </div>
-                        </div>
-
-                        <!-- Analyse & Verbetering -->
-                        <div
-                            class="p-5 border rounded-2xl hover:bg-gray-50 transition flex gap-4 items-start bg-white shadow-sm">
-                            <div
-                                class="bg-red-100 w-12 h-12 rounded-xl text-red-600 shrink-0 flex items-center justify-center">
-                                <i class="fas fa-chart-line text-xl"></i>
-                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-blue-100 text-blue-900 border-2 border-blue-300 flex items-center justify-center text-lg font-black" aria-hidden="true">I</span>
                             <div>
-                                <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Analyse & Verbetering</h4>
-                                <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Gebruik AI (zoals Claude Co-worker) voor diepgaande analyses van eerdere
-                                    beoordelingen voor concrete verbetersuggesties voor je lessenreeks.
-                                </p>
+                                <h4 class="font-bold text-trinitas-blue">Instrueren: geef AI een didactische rol</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">Leg in de vaste instructies vast hoe de AI zich gedraagt,
+                                    bijvoorbeeld als tutor die geen antwoorden voorzegt. Schrijf zo'n instructie één keer goed en bewaar
+                                    hem zelf: dan werkt hij in elk platform. Bij de
+                                    <a href="toolbox.html?voor=docenten#recepten" class="text-trinitas-blue underline">promptrecepten in de Toolbox</a>
+                                    vind je kant-en-klare instructies hiervoor.</p>
+                                <a href="kies-docenten.html#instrueren" class="text-sm font-semibold text-trinitas-blue underline">Meer over Instrueren</a>
                             </div>
-                        </div>
-
-                        <!-- Toetsing & Evaluatie -->
-                        <div
-                            class="p-5 border rounded-2xl hover:bg-gray-50 transition flex gap-4 items-start bg-white shadow-sm">
-                            <div
-                                class="bg-blue-100 w-12 h-12 rounded-xl text-trinitas-blue shrink-0 flex items-center justify-center">
-                                <i class="fas fa-clipboard-check text-xl"></i>
-                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-orange-100 text-orange-900 border-2 border-orange-300 flex items-center justify-center text-lg font-black" aria-hidden="true">E</span>
                             <div>
-                                <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Toetsing & Evaluatie</h4>
-                                <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Ontwerp Bloom-gebaseerde toetsvragen of gebruik "Quick Quiz" om op basis van lesstof
-                                    binnen 20 seconden een formatieve quiz te genereren voor je klas.
-                                </p>
+                                <h4 class="font-bold text-trinitas-blue">Evalueren: jij doet de laatste 20%</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">Gebruik wat AI maakt als opzet: controleer de vakinhoud en
+                                    stem het af op je klas. Laat AI niet zowel maken als beoordelen.</p>
+                                <a href="kies-docenten.html#evalueren" class="text-sm font-semibold text-trinitas-blue underline">Meer over Evalueren</a>
                             </div>
-                        </div>
-
-                        <!-- Didactische Coaches & Reflectie -->
-                        <div
-                            class="p-5 border rounded-2xl hover:bg-gray-50 transition flex gap-4 items-start bg-white shadow-sm">
-                            <div
-                                class="bg-green-100 w-12 h-12 rounded-xl text-trinitas-green shrink-0 flex items-center justify-center">
-                                <i class="fas fa-user-graduate text-xl"></i>
-                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-full bg-purple-100 text-purple-900 border-2 border-purple-300 flex items-center justify-center text-lg font-black" aria-hidden="true">S</span>
                             <div>
-                                <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Didactische Coaches & Reflectie
-                                </h4>
-                                <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Zet AI didactisch in als socratische tutor of procesbegeleider die leerlingen
-                                    stapsgewijs door een STARR-reflectie leidt in plaats van een leeg formulier.
-                                </p>
+                                <h4 class="font-bold text-trinitas-blue">Spelregels: privacy voorop</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed">Werk via een schoolaccount, zonder persoonsgegevens, en
+                                    gebruik met leerlingen alleen tools die de school heeft goedgekeurd. Anonimiseer leerlingwerk vooraf.</p>
+                                <a href="kies-docenten.html#spelregels" class="text-sm font-semibold text-trinitas-blue underline">Meer over Spelregels</a>
                             </div>
-                        </div>
-
-                        <!-- Content & Kennisdeling -->
-                        <div
-                            class="p-5 border rounded-2xl hover:bg-gray-50 transition flex gap-4 items-start bg-white shadow-sm">
-                            <div
-                                class="bg-purple-100 w-12 h-12 rounded-xl text-purple-600 shrink-0 flex items-center justify-center">
-                                <i class="fas fa-share-nodes text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-trinitas-blue mb-1 text-sm">Content & Kennisdeling</h4>
-                                <p class="text-gray-600 text-[11px] leading-relaxed">
-                                    Creëer interactief leermateriaal met AI-visuals. Gebruik vakspecifieke bots als
-                                    inwerk-assistent om kennis razendsnel over te dragen aan (nieuwe) collega's.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- De Shift in Toetsing -->
-                    <div class="mt-8 bg-green-50 p-8 rounded-[2rem] border border-green-100/50 shadow-sm">
-                        <h4 class="text-xl font-bold text-trinitas-blue mb-6 flex items-center">
-                            <i class="fas fa-graduation-cap mr-3 text-trinitas-green text-2xl"></i>
-                            De Shift in Toetsing
-                        </h4>
-                        <p class="text-gray-700 leading-relaxed mb-6 text-sm">
-                            Op het Han Fortmann verschuiven we de focus van <strong>product</strong> naar
-                            <strong>proces</strong>. Een grote open opdracht thuis laten maken zonder controle kan niet
-                            meer. Waarom?
-                        </p>
-                        <ul class="text-sm space-y-3 text-gray-600">
-                            <li class="flex items-start">
-                                <span class="mr-2 text-trinitas-green font-bold">•</span>
-                                <span>Al kan producten genereren die leerdoelen omzeilen.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2 text-trinitas-green font-bold">•</span>
-                                <span>Alleen door procesbewaking zien we de échte groei.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2 text-trinitas-green font-bold">•</span>
-                                <span>Feedbackmomenten in de les zijn waardevoller dan één eindcijfer.</span>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ol>
+                    <a href="toolbox.html?voor=docenten" class="inline-flex items-center text-sm font-bold text-trinitas-blue hover:underline">
+                        <i class="fas fa-toolbox mr-2" aria-hidden="true"></i>Recepten en tools hiervoor in de Toolbox
+                    </a>
                 </div>
             </div>
 
             <div class="mt-16 text-center">
                 <a href="kies-docenten.html"
                     class="inline-flex items-center justify-center bg-trinitas-blue hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full transition shadow-md text-lg">
-                    <i class="fas fa-chalkboard-teacher mr-2"></i> Bekijk de complete KIES gids voor docenten
+                    <i class="fas fa-chalkboard-teacher mr-2" aria-hidden="true"></i> Bekijk de complete KIES-gids voor docenten
                 </a>
             </div>
         </div>
@@ -760,88 +627,76 @@
     <section id="spelregels" class="py-24 bg-trinitas-blue text-white overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Afspraken op het Han Fortmann</h2>
-                <p class="text-blue-200">Veiligheid, Privacy en Ethiek</p>
+                <h2 class="text-3xl font-bold mb-4">Spelregels voor AI op het Han Fortmann</h2>
+                <p class="text-blue-200">Veiligheid, privacy en ethiek</p>
+                <p class="mt-6 inline-flex items-start gap-3 text-left text-sm text-blue-100 bg-white/10 border border-white/20 rounded-2xl px-5 py-3 max-w-2xl">
+                    <i class="fas fa-circle-info text-trinitas-green mt-0.5" aria-hidden="true"></i>
+                    <span>Het AI-beleid van de school wordt op dit moment vastgesteld. Deze spelregels zijn de uitgangspunten waar we nu mee werken.</span>
+                </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                    <i class="fas fa-shield-alt text-trinitas-green text-3xl mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Privacy & Soevereiniteit</h3>
+                    <i class="fas fa-shield-alt text-trinitas-green text-3xl mb-6" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-4">Privacy en gegevens</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
-                        Gebruik bij voorkeur omgevingen die data binnen de EU/Nederland houden (zoals SURF-initiatieven)
-                        om digitale soevereiniteit te waarborgen. <strong>Wees je echter bewust dat internationale
-                            (Amerikaanse/Chinese) modellen momenteel vaak krachtiger zijn; maak per taak een bewuste
-                            afweging tussen kracht en privacy.</strong><br /><br />Deel nooit persoonlijke gegevens of
-                        beelden van medeleerlingen/docenten in AI-tools, jouw data is van jou.
+                        Gebruik AI bij voorkeur via een schoolaccount en zonder persoonsgegevens; gratis accounts gebruiken
+                        gesprekken vaak om het model te trainen. <strong>Maak per taak een bewuste afweging tussen de kracht
+                            van een model en privacy</strong>, en gebruik met leerlingen alleen tools die de school heeft
+                        goedgekeurd.<br /><br />Deel nooit persoonlijke gegevens of beelden van medeleerlingen of docenten in
+                        AI-tools: jouw data is van jou.
                     </p>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                    <i class="fas fa-gavel text-trinitas-green text-3xl mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Transparantie & Fraude</h3>
+                    <i class="fas fa-gavel text-trinitas-green text-3xl mb-6" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-4">Transparantie</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
-                        Het onvermeld gebruiken van AI bij taken waarbij 'eigen denkwerk' vereist is, wordt beschouwd
-                        als fraude. We controleren op procesverloop, niet alleen het eindresultaat. <br /><br />Maak
-                        heldere afspraken over plagiaat: voorkom onterechte 'opnieuw-opdrachten' bij twijfel; laat een
-                        leerling liever ter plekke aantonen dat de inhoud begrepen is.
+                        Vermeld altijd waarvoor je AI hebt gebruikt. Onvermeld AI-gebruik waar eigen denkwerk wordt
+                        gevraagd, is niet eerlijk tegenover je docent en medeleerlingen. Daarom telt het proces mee, niet
+                        alleen het eindresultaat.<br /><br />Twijfel je als docent of een leerling het werk zelf heeft
+                        gedaan? Vraag de leerling dan liever om ter plekke te laten zien dat hij of zij de inhoud begrijpt,
+                        in plaats van meteen een nieuwe opdracht te geven.
                     </p>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                    <i class="fas fa-user-secret text-trinitas-green text-3xl mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Sociale Veiligheid (Deepfakes)</h3>
+                    <i class="fas fa-user-secret text-trinitas-green text-3xl mb-6" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-4">Sociale veiligheid (deepfakes)</h3>
                     <p class="text-sm text-blue-100 leading-relaxed">
-                        De laagdrempeligheid van tools zoals Grok maakt misbruik eenvoudig. Het genereren van AI-content
-                        van anderen is strikt verboden en geldt als <strong>zwaar wangedrag</strong>.<br /><br />Het
-                        creëren of verspreiden van (seksueel) getinte of racistische AI-gegenereerde beelden van anderen
-                        is bij wet verboden en leidt op het H.F. dan ook tot directe schorsing.
+                        Met AI maak je in een paar klikken nepbeelden, -video's of -stemmen van echte mensen. Doe dat
+                        nooit zonder hun toestemming: dat geldt als <strong>zwaar wangedrag</strong>.<br /><br />Seksueel
+                        getinte of racistische nepbeelden van anderen maken of verspreiden is bij wet verboden.
                     </p>
                 </div>
             </div>
 
-            <div class="mt-16 text-center">
-                <p class="text-blue-300 text-sm">
-                    <i class="fas fa-leaf mr-2"></i> Denk aan de ecologie: beperk onnodig genereren van zware
+            <div class="mt-10 bg-white/5 border border-white/15 rounded-3xl p-6 md:p-8">
+                <h3 class="font-bold text-lg mb-4"><i class="fas fa-scale-balanced text-trinitas-green mr-2" aria-hidden="true"></i>Waarom dit ertoe doet</h3>
+                <ul class="grid md:grid-cols-3 gap-6 text-sm text-blue-100 leading-relaxed">
+                    <li><strong class="text-white block mb-1">AI-geletterdheid is verplicht</strong>Sinds februari 2025 vraagt de Europese
+                        AI-verordening van scholen dat ze werken aan de AI-kennis van medewerkers die met AI werken. Sinds juli 2026
+                        is dat een inspanningsverplichting: de school moet aantoonbaar maatregelen nemen.</li>
+                    <li><strong class="text-white block mb-1">Nieuwe kerndoelen</strong>In juni 2026 stemde de
+                        <a href="https://www.eerstekamer.nl/nieuws/20260602/senaat_stemt_in_met_nieuwe" target="_blank" rel="noopener" class="underline hover:text-white">Eerste Kamer</a> in met
+                        de wet voor nieuwe kerndoelen. Vanaf 1 augustus 2027 is digitale geletterdheid, inclusief AI, een verplicht
+                        onderdeel van het curriculum in het basisonderwijs en de onderbouw.</li>
+                    <li><strong class="text-white block mb-1">Nepbeelden aan banden</strong>Een
+                        <a href="https://www.villamedia.nl/artikel/rechter-verbiedt-uitkleedfunctie-van-chatbot-grok-in-nederland" target="_blank" rel="noopener" class="underline hover:text-white">Nederlandse rechter</a>
+                        verbood in maart 2026 de uitkleedfunctie van een bekende chatbot; vanaf 2 december 2026 verbiedt de EU zulke AI-systemen.</li>
+                </ul>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-blue-200 text-sm">
+                    <i class="fas fa-leaf mr-2" aria-hidden="true"></i> Denk aan de ecologie: beperk onnodig genereren van zware
                     AI-beelden.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-12 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-trinitas-blue font-bold mb-2">Trinitas College | Han Fortmann</p>
-            <p class="text-gray-500 text-xs mb-4">Ontwikkeld door de sectie Informatica & AI-Werkgroep</p>
-            
-            <p class="text-gray-500 text-xs mb-8 max-w-2xl mx-auto leading-relaxed">
-                Het KIES-model is een door Marcel Mutsaarts ontwikkelde vertaling van het internationale AI Fluency raamwerk en werd besproken in 
-                <a href="https://aivoordocenten.nl/ai-tussenuurtje/" target="_blank" rel="noopener noreferrer" class="text-trinitas-blue hover:underline">S02E26: AI-verrijking versus AI-verarming in het onderwijs met praktische tips voor docenten</a>.
-            </p>
+    <footer id="site-footer"></footer>
 
-            <a href="assets/Analyse KIES model AI Onderwijs.pdf" target="_blank"
-                class="inline-flex items-center text-trinitas-blue hover:text-trinitas-green transition-colors text-sm font-medium">
-                <i class="fas fa-file-pdf mr-2 text-red-500"></i>
-                Bekijk de originele analyse (PDF)
-            </a>
-        </div>
-    </footer>
-
-    <script>
-        // Mobiel Menu Toggle
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Sluit menu bij klik op link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-    </script>
+    <script src="assets/js/layout.js"></script>
 </body>
 
 </html>
