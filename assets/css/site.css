@@ -7,10 +7,8 @@
 :root {
     --trinitas-blue: #004d91;
     --trinitas-green: #8cc63f;
-    --trinitas-light-blue: #0072bc;
-    /* Donkerdere groentinten voor tekst op lichte achtergrond (WCAG-contrast) */
+    /* Donkerdere groentint voor tekst op lichte achtergrond (WCAG-contrast) */
     --trinitas-green-text: #4a7a16;
-    --trinitas-green-large: #5f9324;
 }
 
 html {
@@ -53,10 +51,6 @@ strong, b {
 }
 
 /* ---------- Homepage ---------- */
-.card-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-}
-
 .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../hero-hf.avif');
     background-size: cover;

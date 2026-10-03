@@ -60,7 +60,7 @@
       </div>
       <p class="text-sm text-gray-700 leading-relaxed mb-4">${esc(r.samenvatting)}</p>
       ${r.origineel ? `<p class="text-xs text-gray-600 -mt-2 mb-4"><i class="fas fa-lightbulb text-trinitas-green-text mr-1" aria-hidden="true"></i>Geïnspireerd op de chatbot <a href="${esc(r.origineel.url)}" target="_blank" rel="noopener" class="text-trinitas-blue underline">${esc(r.origineel.naam)}</a> van AI voor Docenten<span class="sr-only"> (opent in nieuw tabblad)</span></p>` : ''}
-      <details class="mt-auto group rounded-xl border border-gray-200 bg-gray-50">
+      <details class="mt-auto rounded-xl border border-gray-200 bg-gray-50">
         <summary class="flex items-center justify-between px-4 py-3 font-semibold text-sm text-trinitas-blue">
           <span><i class="fas fa-scroll mr-2" aria-hidden="true"></i>Bekijk het recept</span>
           <i class="fas fa-chevron-down chevron transition-transform" aria-hidden="true"></i>

@@ -63,11 +63,14 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:css
-      - name: Bouwbestanden opruimen
-        run: rm -rf node_modules
+      - name: Alleen de site-bestanden klaarzetten
+        run: |
+          mkdir _site
+          cp *.html _site/
+          cp -r assets _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
