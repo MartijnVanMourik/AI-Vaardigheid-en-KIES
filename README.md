@@ -48,7 +48,15 @@ Pas je het KIES-overzicht op de homepage aan, maak dan ook een nieuwe PDF:
 2. Kies **Afdrukken** > **Opslaan als PDF**. Controleer: A4, liggend, standaardmarges, *achtergrondafbeeldingen* aan.
 3. Sla op als `assets/kies-overzicht.pdf` en push.
 
-De pagina schaalt het overzicht zelf zo dat alles op één A4 past.
+De pagina schaalt het overzicht zelf zo dat alles op één A4 past. De QR-code en de link bovenaan gebruiken
+automatisch het adres waarop de pagina staat; maak de PDF dus vanaf de echte site, niet vanuit een preview.
+
+### Verhuizen naar een ander adres
+
+Komt de site op een ander adres (bijvoorbeeld een eigen domein), pas dan aan:
+1. De deelgegevens bovenin elke pagina (`og:url` en `og:image`): zoek op `martijnvanmourik.github.io`.
+2. `STANDAARD_URL` in `kies-overzicht.html` (alleen gebruikt in previews).
+3. Maak daarna een nieuwe PDF vanaf het nieuwe adres (zie hierboven), zodat de QR-code klopt.
 
 ### Gedeelde onderdelen
 

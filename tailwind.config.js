@@ -1,6 +1,6 @@
 /** Tailwind scant alle HTML-pagina's én de scripts (die ook HTML opbouwen) op gebruikte classes. */
 module.exports = {
-  content: ['./*.html', './assets/js/**/*.js'],
+  content: ['./*.html', './assets/js/*.js'],
   theme: {
     extend: {
       colors: {
