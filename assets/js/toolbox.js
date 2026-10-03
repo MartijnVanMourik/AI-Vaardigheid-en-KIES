@@ -181,12 +181,13 @@
       if (!item.hidden) totaal++;
     });
     if (zoekStatus) {
-      zoekStatus.hidden = !woorden.length;
-      zoekStatus.textContent = !woorden.length
-        ? ''
-        : totaal === 0
+      const gefilterd = woorden.length || filter.stap !== 'alle' || filter.voor !== 'alle';
+      zoekStatus.textContent =
+        totaal === 0
           ? 'Geen resultaten'
-          : `${totaal} ${totaal === 1 ? 'resultaat' : 'resultaten'}${filter.stap !== 'alle' || filter.voor !== 'alle' ? ' (met filter)' : ''}`;
+          : gefilterd
+            ? `${totaal} van ${items.length} ${totaal === 1 ? 'resultaat' : 'resultaten'}`
+            : `${items.length} resultaten`;
     }
     document.querySelectorAll('[data-sectie]').forEach((sectie) => {
       const zichtbaar = sectie.querySelectorAll('.toolbox-item:not([hidden])').length;
