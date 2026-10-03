@@ -83,6 +83,7 @@ Dit is een statisch webproject. Om de site lokaal te bekijken:
 ## Versies
 
 - De branch `archief-voorjaar-2026` bevat de site zoals die op 9 april 2026 online stond. Daar kun je altijd naar terug.
+- De oorspronkelijke analyse (`assets/Analyse KIES model AI Onderwijs.pdf`) staat niet meer op de site, omdat er een voorbeeld-beleid met sancties in stond terwijl het schoolbeleid nog wordt vastgesteld. Het bestand is nog te vinden in de branch `archief-voorjaar-2026`.
 - Wijzigingen worden voorgesteld via een pull request. De live site (GitHub Pages) toont alleen wat in `main` staat.
 
 ---

@@ -5,7 +5,7 @@
  *                               <script src="assets/js/layout.js"></script>
  */
 (function () {
-  const LAATST_BIJGEWERKT = '2 oktober 2026';
+  const LAATST_BIJGEWERKT = '3 oktober 2026';
 
   const MENU = [
     { label: 'Home', href: 'index.html', page: 'index.html' },
@@ -13,7 +13,7 @@
     { label: 'Leerlingen', href: 'kies-leerlingen.html', page: 'kies-leerlingen.html' },
     { label: 'Docenten', href: 'kies-docenten.html', page: 'kies-docenten.html' },
     { label: 'Toolbox & bronnen', href: 'toolbox.html', page: 'toolbox.html' },
-    { label: 'Afspraken', href: 'index.html#spelregels' },
+    { label: 'Spelregels', href: 'index.html#spelregels' },
   ];
 
   const huidigePagina = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -72,9 +72,6 @@
           (S02E26: AI-verrijking versus AI-verarming in het onderwijs).
         </p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm mb-6">
-          <a href="assets/Analyse KIES model AI Onderwijs.pdf" target="_blank" class="inline-flex items-center text-trinitas-blue hover:text-trinitas-green-text font-medium">
-            <i class="fas fa-file-pdf mr-2 text-red-600" aria-hidden="true"></i>Originele analyse (PDF)
-          </a>
           <a href="toolbox.html" class="inline-flex items-center text-trinitas-blue hover:text-trinitas-green-text font-medium">
             <i class="fas fa-toolbox mr-2" aria-hidden="true"></i>Toolbox &amp; bronnen
           </a>
