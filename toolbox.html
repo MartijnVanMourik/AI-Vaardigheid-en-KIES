@@ -43,7 +43,7 @@
 
         <!-- Filters -->
         <section class="relative md:sticky md:top-20 z-40 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm" aria-label="Filters">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center gap-3 md:gap-8">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:flex-wrap md:items-center gap-3 md:gap-x-8">
                 <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter op KIES-stap">
                     <span class="text-xs font-bold uppercase tracking-wide text-gray-500 mr-1">KIES-stap</span>
                     <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="alle">Alle</button>
@@ -52,13 +52,20 @@
                     <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="E"><b>E</b>valueren</button>
                     <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="stap" data-waarde="S"><b>S</b>pelregels</button>
                 </div>
-                <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter op doelgroep">
+                <div class="relative w-full md:w-64 md:ml-auto" role="search">
+                    <label for="zoek" class="sr-only">Zoek in de toolbox</label>
+                    <i class="fas fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true"></i>
+                    <input id="zoek" type="search" placeholder="Zoek, bijv. quiz of privacy" autocomplete="off"
+                        class="w-full text-sm pl-9 pr-3 py-1.5 rounded-full border border-gray-300 focus:border-trinitas-blue bg-white">
+                </div>
+                <div class="flex flex-wrap items-center gap-2 md:w-full" role="group" aria-label="Filter op doelgroep">
                     <span class="text-xs font-bold uppercase tracking-wide text-gray-500 mr-1">Voor</span>
                     <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="voor" data-waarde="alle">Iedereen</button>
                     <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="voor" data-waarde="leerlingen">Leerlingen</button>
                     <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="voor" data-waarde="docenten">Docenten</button>
                     <button type="button" class="filter-chip text-sm font-semibold px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:border-trinitas-blue" data-filter="voor" data-waarde="directie">Directie</button>
                 </div>
+                <p id="zoek-status" class="sr-only" aria-live="polite"></p>
             </div>
         </section>
 
@@ -94,7 +101,7 @@
                 </div>
 
                 <div id="lijst-recepten" class="grid md:grid-cols-2 gap-6"></div>
-                <p class="leeg-melding text-gray-500 italic" hidden>Geen recepten bij dit filter.</p>
+                <p class="leeg-melding text-gray-500 italic" hidden>Geen recepten bij dit filter of deze zoekterm.</p>
             </section>
 
             <!-- Tools -->
@@ -107,7 +114,7 @@
                     </p>
                 </div>
                 <div id="lijst-tools" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-                <p class="leeg-melding text-gray-500 italic" hidden>Geen tools bij dit filter.</p>
+                <p class="leeg-melding text-gray-500 italic" hidden>Geen tools bij dit filter of deze zoekterm.</p>
             </section>
 
             <!-- Bronnen -->
@@ -120,7 +127,7 @@
                     </p>
                 </div>
                 <div id="lijst-bronnen" class="grid md:grid-cols-2 gap-6"></div>
-                <p class="leeg-melding text-gray-500 italic" hidden>Geen bronnen bij dit filter.</p>
+                <p class="leeg-melding text-gray-500 italic" hidden>Geen bronnen bij dit filter of deze zoekterm.</p>
             </section>
 
             <!-- Disclaimer -->
@@ -129,7 +136,8 @@
                 <p>
                     Externe tools en websites worden onderhouden door hun eigen makers; de beschrijvingen hier zijn
                     in onze eigen woorden. We controleren de links regelmatig (zie de datum bij elk item). Werkt een
-                    link niet meer of mis je iets? Laat het de sectie Informatica weten.
+                    link niet meer of mis je iets? Mail de sectie Informatica:
+                    <a href="mailto:m.vanmourik@trinitascollege.nl?subject=Toolbox%20AI-Vaardigheid%20Hub" class="text-trinitas-blue underline font-semibold">m.vanmourik@trinitascollege.nl</a>.
                 </p>
             </aside>
         </div>

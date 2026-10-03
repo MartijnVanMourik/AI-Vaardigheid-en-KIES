@@ -35,7 +35,7 @@ De site bestaat uit twee lagen:
   - **`index.html`**: homepage met het KIES-model, de gradaties (vervangen, aanvullen, verrijken) en de afspraken.
   - **`kies-leerlingen.html`** en **`kies-docenten.html`**: de gidsen per doelgroep, per KIES-stap.
 - **Vluchtig (tools en links):** alles wat snel verandert staat op één plek.
-  - **`toolbox.html`**: promptrecepten, tools en externe bronnen, met filters op KIES-stap en doelgroep.
+  - **`toolbox.html`**: promptrecepten, tools en externe bronnen, met filters op KIES-stap en doelgroep en een zoekveld.
 
 ### Gedeelde onderdelen
 
@@ -43,13 +43,14 @@ De site bestaat uit twee lagen:
 |---|---|
 | `assets/js/layout.js` | Menubalk en voettekst voor alle pagina's, inclusief de datum **"laatst bijgewerkt"**. |
 | `assets/js/toolbox-data.js` | **De inhoud van de Toolbox.** Hier voeg je recepten, tools en bronnen toe of pas je ze aan (uitleg staat bovenin het bestand). |
-| `assets/js/toolbox.js` | Bouwt de Toolbox-pagina op en regelt filters en kopieerknoppen. Hoef je normaal niet aan te passen. |
+| `assets/js/toolbox.js` | Bouwt de Toolbox-pagina op en regelt filters, het zoekveld en de kopieerknoppen. Hoef je normaal niet aan te passen. |
 | `assets/css/site.css` | Eigen stijlen naast Tailwind (huisstijl, menubalk, detailpagina's). |
 
 ### Linken naar de Toolbox
 
 - Naar één item: `toolbox.html#recept-starr`, `toolbox.html#tool-notebooklm`, `toolbox.html#bron-tintara` (het deel na `#` is `recept-`, `tool-` of `bron-` plus de `id` uit `toolbox-data.js`).
 - Gefilterd: `toolbox.html?stap=E` of `toolbox.html?voor=docenten` (combineren kan: `?stap=K&voor=leerlingen`).
+- Met zoekterm: `toolbox.html?zoek=quiz` (ook te combineren met de filters).
 
 ### Links nalopen
 

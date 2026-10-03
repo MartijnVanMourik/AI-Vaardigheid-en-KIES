@@ -1,6 +1,6 @@
 /*
  * Bouwt de Toolbox & bronnen-pagina op uit assets/js/toolbox-data.js
- * en regelt de filters (KIES-stap en doelgroep) en de kopieerknoppen.
+ * en regelt de filters (KIES-stap en doelgroep), het zoekveld en de kopieerknoppen.
  * Inhoud aanpassen? Dat doe je in toolbox-data.js, niet hier.
  */
 (function () {
@@ -154,18 +154,33 @@
     });
   });
 
-  // ---------- Filters ----------
-  const filter = { stap: 'alle', voor: 'alle' };
+  // ---------- Filters en zoeken ----------
+  const filter = { stap: 'alle', voor: 'alle', zoek: '' };
   const params = new URLSearchParams(location.search);
   if (STAPPEN[(params.get('stap') || '').toUpperCase()]) filter.stap = params.get('stap').toUpperCase();
   if (DOELGROEP[(params.get('voor') || '').toLowerCase()]) filter.voor = params.get('voor').toLowerCase();
+  filter.zoek = (params.get('zoek') || '').trim();
+
+  // Zoeken zonder hoofdletters en accenten: "creeer" vindt ook "creëer"
+  const normaal = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const items = Array.from(document.querySelectorAll('.toolbox-item'));
+  items.forEach((item) => (item.dataset.zoektekst = normaal(item.textContent)));
+
+  const zoekveld = document.getElementById('zoek');
+  const zoekStatus = document.getElementById('zoek-status');
+  if (zoekveld) zoekveld.value = filter.zoek;
 
   const toepassen = () => {
-    document.querySelectorAll('.toolbox-item').forEach((item) => {
+    const woorden = normaal(filter.zoek).split(/\s+/).filter(Boolean);
+    let totaal = 0;
+    items.forEach((item) => {
       const okStap = filter.stap === 'alle' || item.dataset.stappen.split(' ').includes(filter.stap);
       const okVoor = filter.voor === 'alle' || item.dataset.voor.split(' ').includes(filter.voor);
-      item.hidden = !(okStap && okVoor);
+      const okZoek = woorden.every((w) => item.dataset.zoektekst.includes(w));
+      item.hidden = !(okStap && okVoor && okZoek);
+      if (!item.hidden) totaal++;
     });
+    if (zoekStatus) zoekStatus.textContent = woorden.length ? `${totaal} ${totaal === 1 ? 'resultaat' : 'resultaten'} voor "${filter.zoek}"` : '';
     document.querySelectorAll('[data-sectie]').forEach((sectie) => {
       const zichtbaar = sectie.querySelectorAll('.toolbox-item:not([hidden])').length;
       sectie.querySelector('.leeg-melding').hidden = zichtbaar > 0;
@@ -179,6 +194,7 @@
     const p = new URLSearchParams();
     if (filter.stap !== 'alle') p.set('stap', filter.stap);
     if (filter.voor !== 'alle') p.set('voor', filter.voor);
+    if (filter.zoek) p.set('zoek', filter.zoek);
     const qs = p.toString();
     history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
   };
@@ -189,6 +205,12 @@
       toepassen();
     })
   );
+  if (zoekveld) {
+    zoekveld.addEventListener('input', () => {
+      filter.zoek = zoekveld.value.trim();
+      toepassen();
+    });
+  }
   toepassen();
 
   // Direct naar een item springen (bijv. toolbox.html#recept-starr) en het recept openklappen
