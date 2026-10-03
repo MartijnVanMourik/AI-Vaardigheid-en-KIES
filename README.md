@@ -106,6 +106,8 @@ Dit is een statisch webproject. Om de site lokaal te bekijken:
 - **Lettertype:** Inter (Google Fonts).
 - **Afbeeldingen:** `assets/hero-hf.avif` (homepage) en `assets/og-image.jpg` (1200×630), het voorbeeldplaatje bij het delen van links.
 - **Video's:** met een posterbeeld (`*-poster.jpg`) en `preload="none"`, zodat de video pas laadt als iemand op afspelen klikt.
+  Nieuwe video's (bijv. uit NotebookLM) eerst comprimeren; dat scheelt zo'n 80% zonder zichtbaar kwaliteitsverlies:
+  `ffmpeg -i invoer.mp4 -c:v libx264 -preset slow -crf 28 -tune animation -pix_fmt yuv420p -c:a aac -b:a 64k -ac 1 -movflags +faststart uitvoer.mp4`
 
 ## Huisstijl en toegankelijkheid
 
