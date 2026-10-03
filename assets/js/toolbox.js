@@ -180,7 +180,14 @@
       item.hidden = !(okStap && okVoor && okZoek);
       if (!item.hidden) totaal++;
     });
-    if (zoekStatus) zoekStatus.textContent = woorden.length ? `${totaal} ${totaal === 1 ? 'resultaat' : 'resultaten'} voor "${filter.zoek}"` : '';
+    if (zoekStatus) {
+      zoekStatus.hidden = !woorden.length;
+      zoekStatus.textContent = !woorden.length
+        ? ''
+        : totaal === 0
+          ? 'Geen resultaten'
+          : `${totaal} ${totaal === 1 ? 'resultaat' : 'resultaten'}${filter.stap !== 'alle' || filter.voor !== 'alle' ? ' (met filter)' : ''}`;
+    }
     document.querySelectorAll('[data-sectie]').forEach((sectie) => {
       const zichtbaar = sectie.querySelectorAll('.toolbox-item:not([hidden])').length;
       sectie.querySelector('.leeg-melding').hidden = zichtbaar > 0;
