@@ -224,8 +224,8 @@
                         <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full opacity-50 transition group-hover:bg-red-100" aria-hidden="true"></div>
                         <i class="fas fa-exchange-alt text-red-600 text-3xl mb-5 relative z-10" aria-hidden="true"></i>
                         <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Vervangen</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10">AI voert de taak uit. Dat hoeft niet fout te zijn, mits het een <strong>bewuste keuze</strong> is.</p>
-                        <div class="mt-auto bg-red-50 p-4 rounded-xl text-sm text-red-900 relative z-10 space-y-2">
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[3rem]">AI voert de taak uit. Dat hoeft niet fout te zijn, mits het een <strong>bewuste keuze</strong> is.</p>
+                        <div class="bg-red-50 p-4 rounded-xl text-sm text-red-900 relative z-10 space-y-2">
                             <p><strong>Leerling:</strong> AI maakt een samenvatting die je alleen als geheugensteun gebruikt.</p>
                             <p><strong>Docent:</strong> AI zet een eerste versie van oefenvragen in elkaar.</p>
                             <p class="font-semibold pt-1">Vraag jezelf af: wat doe ik met de vrijgekomen tijd? Verdieping, of nog meer productie?</p>
@@ -235,8 +235,8 @@
                         <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-50 transition group-hover:bg-blue-100" aria-hidden="true"></div>
                         <i class="fas fa-puzzle-piece text-blue-600 text-3xl mb-5 relative z-10" aria-hidden="true"></i>
                         <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Aanvullen</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10">Je werkt echt <strong>samen</strong> met AI, maar het denkwerk blijft bij jou.</p>
-                        <div class="mt-auto bg-blue-50 p-4 rounded-xl text-sm text-blue-900 relative z-10 space-y-2">
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[3rem]">Je werkt echt <strong>samen</strong> met AI, maar het denkwerk blijft bij jou.</p>
+                        <div class="bg-blue-50 p-4 rounded-xl text-sm text-blue-900 relative z-10 space-y-2">
                             <p><strong>Leerling:</strong> je stelt AI verhelderende vragen bij een lastige tekst of theorie.</p>
                             <p><strong>Docent:</strong> je spart met AI over een lesopzet of een rubric.</p>
                         </div>
@@ -245,8 +245,8 @@
                         <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full opacity-50 transition group-hover:bg-green-100" aria-hidden="true"></div>
                         <i class="fas fa-rocket text-green-600 text-3xl mb-5 relative z-10" aria-hidden="true"></i>
                         <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Verrijken</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10">Je zet AI in om juist <strong>dieper te leren en te denken</strong>.</p>
-                        <div class="mt-auto bg-green-50 p-4 rounded-xl text-sm text-green-900 relative z-10 space-y-2">
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[3rem]">Je zet AI in om juist <strong>dieper te leren en te denken</strong>.</p>
+                        <div class="bg-green-50 p-4 rounded-xl text-sm text-green-900 relative z-10 space-y-2">
                             <p><strong>Leerling:</strong> AI laat je redenering kritisch bevragen, of je vergelijkt de antwoorden van verschillende tools.</p>
                             <p><strong>Docent:</strong> AI simuleert je les, inclusief misconcepties van leerlingen.</p>
                             <p class="font-semibold pt-1">Klopt dit? Waar zitten de blinde vlekken?</p>
@@ -255,31 +255,63 @@
                 </div>
             </div>
 
-            <!-- Verdieping: waarom de E (in- en uitklapbaar) -->
-            <details class="group max-w-4xl mx-auto mb-12 bg-orange-50 border border-orange-200 rounded-2xl">
-                <summary class="flex items-center gap-4 p-5 rounded-2xl hover:bg-orange-100/60 transition">
-                    <i class="fas fa-magnifying-glass-chart text-orange-600 text-2xl" aria-hidden="true"></i>
-                    <span class="flex-1">
-                        <span class="block font-bold text-trinitas-blue">Verdieping: waarom de E zo belangrijk is</span>
-                        <span class="block text-sm text-gray-600 group-open:hidden">De vuistregel 80/20 en wat onderzoek zegt. Klik om te lezen.</span>
-                        <span class="hidden text-sm text-gray-600 group-open:block">Klik om in te klappen.</span>
+            <!-- De E in actie: vuistregel 80/20 (zelfde opmaak als de gradaties) -->
+            <div id="e-in-actie" class="mb-12 scroll-mt-28">
+                <div class="text-center mb-8">
+                    <span class="inline-flex bg-orange-50 text-orange-800 px-4 py-2 rounded-xl text-sm font-bold border border-orange-200 items-center mb-4">
+                        <i class="fas fa-magnifying-glass-chart mr-2" aria-hidden="true"></i>De E in actie: waarom is evalueren zo belangrijk?
                     </span>
-                    <span class="relative inline-flex shrink-0 w-12 h-7 rounded-full bg-gray-300 group-open:bg-trinitas-blue transition-colors" aria-hidden="true">
-                        <span class="absolute left-1 top-1 w-5 h-5 rounded-full bg-white shadow transition-transform group-open:translate-x-5"></span>
-                    </span>
-                </summary>
-                <div class="px-5 pb-6 sm:pl-[4.25rem] text-sm text-gray-700 leading-relaxed">
-                    <p class="mb-2"><strong>Vuistregel 80/20:</strong> volgens het Pareto-principe bereik je 80% van het resultaat in
-                        20% van de tijd; de laatste 20% kost het meeste werk. Met AI heb je die eerste 80% snel. Het risico: je blijft met
-                        AI heen en weer gaan rond die 80%. Dat kost veel tijd, en je leert er zelf minder van. Gebruik wat AI maakt dus als
-                        opzet en maak het zelf af.
-                        <span class="text-xs text-gray-500">(Bron: <a href="https://www.youtube.com/watch?v=5Ox2htfboxM&amp;t=1590s" target="_blank" rel="noopener" class="underline hover:text-trinitas-blue">BNR De Technoloog, aflevering 512</a>, met Bernold Nieuwesteeg, vanaf 26:30.)</span></p>
-                    <p>Anthropic onderzocht in 2026 hoe mensen met AI samenwerken. Wanneer AI iets afgewerkts oplevert, zoals een
-                        net document of een werkende app, controleren gebruikers <strong>minder vaak de feiten</strong> en vragen ze
-                        <strong>minder door naar wat er ontbreekt</strong>. Hoe mooier het resultaat, hoe belangrijker het evalueren.
-                        <a href="https://academy.claude.com/tutorials/the-ai-fluency-index" target="_blank" rel="noopener" class="text-trinitas-blue underline whitespace-nowrap">Lees het onderzoek<i class="fas fa-arrow-up-right-from-square text-xs ml-1" aria-hidden="true"></i></a></p>
+                    <h3 class="text-2xl font-bold text-trinitas-blue mb-3">Vuistregel 80/20</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">Volgens het Pareto-principe bereik je 80% van het resultaat
+                        in 20% van de tijd; de laatste 20% kost het meeste werk. AI verandert vooral dat eerste deel.</p>
                 </div>
-            </details>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- 80% -->
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-50 transition group-hover:bg-blue-100" aria-hidden="true"></div>
+                        <p class="text-3xl font-black text-blue-700 mb-4 relative z-10">80%</p>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Heb je snel met AI</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[4.5rem]">Een opzet, een eerste versie of een
+                            idee: met AI heb je dat in korte tijd. Gebruik het als <strong>startpunt</strong>, niet als eindproduct.</p>
+                        <div class="bg-blue-50 p-4 rounded-xl text-sm text-blue-900 relative z-10 space-y-2">
+                            <p><strong>Leerling:</strong> AI maakt een eerste opzet voor je betoog.</p>
+                            <p><strong>Docent:</strong> AI zet een eerste versie van een lesbrief in elkaar.</p>
+                            <p class="font-semibold pt-1">Valkuil: met AI blijven schaven rond die 80%. Dat kost veel tijd, en je leert er zelf minder van.</p>
+                        </div>
+                    </div>
+                    <!-- 20% -->
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full opacity-50 transition group-hover:bg-orange-100" aria-hidden="true"></div>
+                        <p class="text-3xl font-black text-orange-700 mb-4 relative z-10">20%</p>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Maak je zelf af</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[4.5rem]">De laatste 20% kost het meeste werk:
+                            <strong>controleren, verbeteren en eigen maken</strong>. Dat doe je zelf, zo blijf je eigenaar van het denkwerk.</p>
+                        <div class="bg-orange-50 p-4 rounded-xl text-sm text-orange-900 relative z-10 space-y-2">
+                            <p><strong>Leerling:</strong> je checkt de feiten in je boek en herschrijft het betoog in je eigen woorden.</p>
+                            <p><strong>Docent:</strong> je controleert de vakinhoud en stemt de lesbrief af op je klas.</p>
+                            <p class="font-semibold pt-1">Klopt het? Is het goed genoeg? Is het nog van mij?</p>
+                        </div>
+                    </div>
+                    <!-- Onderzoek -->
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition relative group flex flex-col">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-bl-full opacity-50 transition group-hover:bg-amber-100" aria-hidden="true"></div>
+                        <p class="text-3xl font-black text-amber-600 mb-4 relative z-10"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></p>
+                        <h4 class="text-xl font-bold mb-3 text-gray-800 relative z-10">Mooi is nog niet juist</h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-4 relative z-10 md:min-h-[4.5rem]">Ziet het resultaat er afgewerkt uit,
+                            zoals een net document of een werkende app? Dan kijken mensen <strong>minder kritisch</strong>.</p>
+                        <div class="bg-amber-50 p-4 rounded-xl text-sm text-amber-900 relative z-10 space-y-2">
+                            <p>Onderzoek van Anthropic (2026): bij afgewerkte AI-output controleren gebruikers minder vaak de feiten en
+                                vragen ze minder door naar wat ontbreekt.</p>
+                            <p class="font-semibold pt-1">Hoe mooier het resultaat, hoe kritischer je moet kijken.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 text-center mt-5 leading-relaxed">
+                    Bronnen: <a href="https://www.youtube.com/watch?v=5Ox2htfboxM&amp;t=1590s" target="_blank" rel="noopener" class="underline hover:text-trinitas-blue">BNR De Technoloog, aflevering 512</a>
+                    (met Bernold Nieuwesteeg, vanaf 26:30) ·
+                    <a href="https://academy.claude.com/tutorials/the-ai-fluency-index" target="_blank" rel="noopener" class="underline hover:text-trinitas-blue">Anthropic, The AI Fluency Index (2026)</a>
+                </p>
+            </div>
 
             <!-- Voordelen Blok -->
             <div class="max-w-4xl mx-auto bg-trinitas-blue text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
