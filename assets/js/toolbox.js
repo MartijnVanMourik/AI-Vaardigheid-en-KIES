@@ -161,7 +161,8 @@
   });
 
   // ---------- Filters en zoeken ----------
-  const filter = { stap: 'alle', voor: 'alle', zoek: '' };
+  // item: als je via een link naar één item komt (bijv. #tool-kiesapp), tonen we alleen dat item
+  const filter = { stap: 'alle', voor: 'alle', zoek: '', item: null };
   const params = new URLSearchParams(location.search);
   if (STAPPEN[(params.get('stap') || '').toUpperCase()]) filter.stap = params.get('stap').toUpperCase();
   if (DOELGROEP[(params.get('voor') || '').toLowerCase()]) filter.voor = params.get('voor').toLowerCase();
@@ -174,7 +175,23 @@
 
   const zoekveld = document.getElementById('zoek');
   const zoekStatus = document.getElementById('zoek-status');
+  const itemMelding = document.getElementById('item-melding');
   if (zoekveld) zoekveld.value = filter.zoek;
+
+  // Hoort de #... in het adres bij één item (recept-, tool- of bron-)? Een sectie zoals #tools telt niet.
+  const itemUitHash = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    return id && items.some((i) => i.id === id) ? id : null;
+  };
+
+  // Scroll zo dat het element niet onder de vaste menubalk en filterbalk valt
+  const scrollNaar = (el) => {
+    const header = document.getElementById('site-header');
+    const balk = document.querySelector('section[aria-label="Filters"]');
+    const balkVast = balk && getComputedStyle(balk).position === 'sticky';
+    const marge = (header ? header.offsetHeight : 0) + (balkVast ? balk.offsetHeight : 0) + 16;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - marge, behavior: 'instant' });
+  };
 
   const toepassen = () => {
     const woorden = normaal(filter.zoek).split(/\s+/).filter(Boolean);
@@ -183,11 +200,12 @@
       const okStap = filter.stap === 'alle' || item.dataset.stappen.split(' ').includes(filter.stap);
       const okVoor = filter.voor === 'alle' || item.dataset.voor.split(' ').includes(filter.voor);
       const okZoek = woorden.every((w) => item.dataset.zoektekst.includes(w));
-      item.hidden = !(okStap && okVoor && okZoek);
+      const okItem = !filter.item || item.id === filter.item;
+      item.hidden = !(okStap && okVoor && okZoek && okItem);
       if (!item.hidden) totaal++;
     });
     if (zoekStatus) {
-      const gefilterd = woorden.length || filter.stap !== 'alle' || filter.voor !== 'alle';
+      const gefilterd = woorden.length || filter.stap !== 'alle' || filter.voor !== 'alle' || filter.item;
       zoekStatus.textContent =
         totaal === 0
           ? 'Geen resultaten'
@@ -197,10 +215,13 @@
     }
     document.querySelectorAll('[data-sectie]').forEach((sectie) => {
       const zichtbaar = sectie.querySelectorAll('.toolbox-item:not([hidden])').length;
+      // Bij één item verbergen we de lege secties helemaal
+      sectie.hidden = Boolean(filter.item) && zichtbaar === 0;
       sectie.querySelector('.leeg-melding').hidden = zichtbaar > 0;
       const teller = sectie.querySelector('.teller');
       if (teller) teller.textContent = `(${zichtbaar})`;
     });
+    if (itemMelding) itemMelding.hidden = !filter.item;
     document.querySelectorAll('.filter-chip').forEach((chip) => {
       chip.setAttribute('aria-pressed', String(filter[chip.dataset.filter] === chip.dataset.waarde));
     });
@@ -213,28 +234,43 @@
     history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
   };
 
+  // Terug naar de hele toolbox: het item blijft in beeld, nu tussen de rest
+  const toonAlles = (scrollen = true) => {
+    const vorig = filter.item && document.getElementById(filter.item);
+    filter.item = null;
+    history.replaceState(null, '', location.pathname + location.search);
+    toepassen();
+    if (scrollen && vorig && !vorig.hidden) scrollNaar(vorig);
+  };
+
   document.querySelectorAll('.filter-chip').forEach((chip) =>
     chip.addEventListener('click', () => {
       filter[chip.dataset.filter] = chip.dataset.waarde;
-      toepassen();
+      if (filter.item) toonAlles(false);
+      else toepassen();
     })
   );
   if (zoekveld) {
     zoekveld.addEventListener('input', () => {
       filter.zoek = zoekveld.value.trim();
-      toepassen();
+      if (filter.item) toonAlles(false);
+      else toepassen();
     });
   }
-  toepassen();
+  document.getElementById('toon-alles')?.addEventListener('click', () => toonAlles());
 
-  // Direct naar een item springen (bijv. toolbox.html#recept-starr) en het recept openklappen
-  if (location.hash) {
-    const doel = document.querySelector(location.hash);
-    if (doel) {
-      doel.hidden = false;
-      const details = doel.querySelector('details');
-      if (details) details.open = true;
-      setTimeout(() => doel.scrollIntoView({ block: 'start' }), 50);
-    }
-  }
+  // Via een link naar één item (bijv. toolbox.html#tool-kiesapp): toon alleen dat item en klap een recept open
+  const openItem = () => {
+    filter.item = itemUitHash();
+    toepassen();
+    if (!filter.item) return;
+    const doel = document.getElementById(filter.item);
+    const details = doel.querySelector('details');
+    if (details) details.open = true;
+    // Wacht tot lettertypes geladen zijn, anders verspringt de pagina nog
+    const ga = () => requestAnimationFrame(() => scrollNaar(itemMelding || doel));
+    (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(ga);
+  };
+  window.addEventListener('hashchange', openItem);
+  openItem();
 })();

@@ -81,7 +81,7 @@ invullen niet. Doe dan zelf het volgende:
 
 ### Linken naar de Toolbox
 
-- Naar één item: `toolbox.html#recept-starr`, `toolbox.html#tool-notebooklm`, `toolbox.html#bron-tintara` (het deel na `#` is `recept-`, `tool-` of `bron-` plus de `id` uit `toolbox-data.js`).
+- Naar één item: `toolbox.html#recept-starr`, `toolbox.html#tool-notebooklm`, `toolbox.html#bron-tintara` (het deel na `#` is `recept-`, `tool-` of `bron-` plus de `id` uit `toolbox-data.js`). De Toolbox toont dan alleen dat item (een recept staat meteen open), met een knop om de hele toolbox te tonen.
 - Gefilterd: `toolbox.html?stap=E` of `toolbox.html?voor=docenten` (combineren kan: `?stap=K&voor=leerlingen`).
 - Met zoekterm: `toolbox.html?zoek=quiz` (ook te combineren met de filters).
 
