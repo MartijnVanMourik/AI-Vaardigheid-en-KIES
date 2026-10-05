@@ -37,6 +37,7 @@ De site bestaat uit twee lagen:
 - **Vluchtig (tools en links):** alles wat snel verandert staat op één plek.
   - **`toolbox.html`**: promptrecepten, tools en externe bronnen, met filters op KIES-stap en doelgroep en een zoekveld.
 - **Overig:**
+  - **`vibecoden.html`**: werkblad om met AI een eerste lesapp te bouwen (bouwidee invullen, bouwprompt, testen en verbeteren, voorbeeldideeën). Hoort bij de workshop vibecoden voor docenten; de code staat in `assets/js/vibecoden.js`.
   - **`kies-overzicht.html`**: printversie (A4 liggend) van het KIES-overzicht, met QR-code naar de site. Haalt de inhoud automatisch uit het overzicht op de homepage.
   - **`assets/kies-overzicht.pdf`**: de PDF van die printversie, gelinkt bij het overzicht op de homepage en in de voettekst.
   - **`404.html`**: de pagina die GitHub Pages toont bij een adres dat niet bestaat.

@@ -75,13 +75,19 @@
     </article>`;
 
   // ---------- Tools ----------
+  // Een pagina van deze site (zonder http) opent in hetzelfde tabblad; een externe site in een nieuw tabblad.
+  const toolLink = (t) =>
+    /^https?:\/\//.test(t.url)
+      ? `<a href="${esc(t.url)}" target="_blank" rel="noopener" class="hover:underline">${esc(t.naam)}<i class="fas fa-arrow-up-right-from-square text-xs ml-1.5 text-gray-400" aria-hidden="true"></i><span class="sr-only"> (opent in nieuw tabblad)</span></a>`
+      : `<a href="${esc(t.url)}" class="hover:underline">${esc(t.naam)}<i class="fas fa-arrow-right text-xs ml-1.5 text-gray-400" aria-hidden="true"></i></a>`;
+
   const toolKaart = (t) => `
     <article id="tool-${esc(t.id)}" class="toolbox-item bg-white rounded-2xl border border-gray-200 shadow-sm p-5 flex flex-col scroll-mt-28" ${dataAttrs(t)}>
       <div class="flex items-start gap-3 mb-2">
         <div class="bg-green-50 text-trinitas-green-text w-10 h-10 rounded-xl shrink-0 flex items-center justify-center"><i class="fas ${esc(t.icoon || 'fa-toolbox')}" aria-hidden="true"></i></div>
         <div class="min-w-0">
           <h3 class="font-bold text-trinitas-blue leading-snug">
-            <a href="${esc(t.url)}" target="_blank" rel="noopener" class="hover:underline">${esc(t.naam)}<i class="fas fa-arrow-up-right-from-square text-xs ml-1.5 text-gray-400" aria-hidden="true"></i><span class="sr-only"> (opent in nieuw tabblad)</span></a>
+            ${toolLink(t)}
           </h3>
           ${t.maker ? `<p class="text-xs text-gray-500">${esc(t.maker)}</p>` : ''}
         </div>

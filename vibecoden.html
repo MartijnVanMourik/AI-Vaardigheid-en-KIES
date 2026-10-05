@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Werkblad om met AI je eerste kleine lesapp te bouwen: maak je idee klein, kopieer de bouwprompt, test als een leerling en verbeter één ding.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="AI-vaardigheid Hub | Han Fortmann">
+    <meta property="og:title" content="Je eerste lesapp vibecoden | AI-vaardigheid Hub">
+    <meta property="og:description" content="Werkblad om met AI je eerste kleine lesapp te bouwen: maak je idee klein, kopieer de bouwprompt, test als een leerling en verbeter één ding.">
+    <meta property="og:url" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/vibecoden.html">
+    <meta property="og:image" content="https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Je eerste lesapp vibecoden | AI-vaardigheid Hub</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <header id="site-header"></header>
+
+    <main>
+        <!-- Intro -->
+        <section class="bg-trinitas-blue text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+                <p class="text-trinitas-green font-bold uppercase tracking-wide text-sm mb-3">Werkblad vibecoden</p>
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-5">Bouw je eerste lesapp</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed mb-6">
+                    Beschrijf in gewoon Nederlands wat je wilt. De AI schrijft de code, jij test of het werkt voor je
+                    leerlingen. Je hoeft niet te kunnen programmeren: jouw vakkennis en didactiek maken de app goed.
+                </p>
+                <ol class="flex flex-wrap items-center gap-2 text-sm font-semibold" aria-label="De werkwijze in vier stappen">
+                    <li class="bg-white/10 border border-white/30 rounded-full px-3 py-1">1. Jij beschrijft</li>
+                    <li aria-hidden="true" class="text-trinitas-green"><i class="fas fa-arrow-right"></i></li>
+                    <li class="bg-white/10 border border-white/30 rounded-full px-3 py-1">2. AI bouwt</li>
+                    <li aria-hidden="true" class="text-trinitas-green"><i class="fas fa-arrow-right"></i></li>
+                    <li class="bg-white/10 border border-white/30 rounded-full px-3 py-1">3. Jij test</li>
+                    <li aria-hidden="true" class="text-trinitas-green"><i class="fas fa-arrow-right"></i></li>
+                    <li class="bg-white/10 border border-white/30 rounded-full px-3 py-1">4. Eén ding verbeteren <i class="fas fa-rotate ml-1" aria-hidden="true"></i></li>
+                </ol>
+            </div>
+        </section>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+
+            <!-- Stap 1 -->
+            <section id="idee" class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 scroll-mt-28">
+                <h2 class="text-2xl font-bold text-trinitas-blue mb-2 flex items-center">
+                    <span class="step-number">1</span>Maak je idee klein
+                </h2>
+                <p class="text-gray-600 mb-6">Vul de drie vakjes in, of kies verderop een <a href="#ideeen" class="text-trinitas-blue underline font-semibold">voorbeeldidee</a>. Je bouwidee komt dan meteen in de bouwprompt van stap 2.</p>
+
+                <div class="grid gap-4 mb-6">
+                    <div>
+                        <label for="f-wie" class="block font-semibold text-gray-800 mb-1">Voor wie? <span class="font-normal text-gray-500 text-sm">bijv. havo 3 Frans</span></label>
+                        <input type="text" id="f-wie" autocomplete="off" placeholder="mijn havo 3-klas Frans"
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-trinitas-blue bg-white">
+                    </div>
+                    <div>
+                        <label for="f-wat" class="block font-semibold text-gray-800 mb-1">Wat moet het appje doen? <span class="font-normal text-gray-500 text-sm">één duidelijke actie</span></label>
+                        <input type="text" id="f-wat" autocomplete="off" placeholder="woordjes overhoort met flitskaarten die je kunt omdraaien"
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-trinitas-blue bg-white">
+                    </div>
+                    <div>
+                        <label for="f-waarom" class="block font-semibold text-gray-800 mb-1">Waarom helpt dit bij leren?</label>
+                        <input type="text" id="f-waarom" autocomplete="off" placeholder="ze zelfstandig oefenen en zien welke woorden ze nog niet kennen"
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-trinitas-blue bg-white">
+                    </div>
+                </div>
+
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Jouw bouwidee</p>
+                <p id="idea-out" class="bg-gray-50 border-l-4 border-trinitas-green rounded-r-lg px-4 py-3 text-lg leading-relaxed mb-6" aria-live="polite"></p>
+
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-2"><i class="fas fa-square-check text-trinitas-green-text mt-0.5" aria-hidden="true"></i>Snapt je buurman binnen 10 seconden wat je app doet?</li>
+                    <li class="flex gap-2"><i class="fas fa-square-check text-trinitas-green-text mt-0.5" aria-hidden="true"></i>Werkt het zonder inloggen, database of opgeslagen leerlinggegevens?</li>
+                    <li class="flex gap-2"><i class="fas fa-square-check text-trinitas-green-text mt-0.5" aria-hidden="true"></i>Is het één lesmoment, geen heel platform?</li>
+                </ul>
+
+                <p class="text-sm text-gray-600 mt-6 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3">
+                    <i class="fas fa-lightbulb text-trinitas-blue mr-1" aria-hidden="true"></i>
+                    Tip: begin bij een werkvorm die je al in de klas gebruikt. Groter idee? Toets het eerst met het recept
+                    <a href="toolbox.html#recept-vibecoden" class="text-trinitas-blue underline font-semibold">Didactische check vóór het vibecoden</a>.
+                </p>
+            </section>
+
+            <!-- Stap 2 -->
+            <section id="bouwen" class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 scroll-mt-28">
+                <h2 class="text-2xl font-bold text-trinitas-blue mb-2 flex items-center">
+                    <span class="step-number">2</span>Laat de AI bouwen
+                </h2>
+                <p class="text-gray-600 mb-6">Je bouwidee staat er al in. Kopieer de prompt en plak hem in een nieuw gesprek met je AI-assistent (gebruik je schoolaccount).</p>
+
+                <h3 class="font-bold text-trinitas-blue mb-2">Bouwprompt</h3>
+                <pre id="p-bouw" class="prompt-text bg-gray-50 border border-gray-200 rounded-lg p-4 text-gray-800"></pre>
+                <button type="button" class="copy-btn mt-3 inline-flex items-center gap-2 bg-trinitas-blue hover:bg-blue-800 text-white text-sm font-bold px-4 py-2 rounded-full transition" data-copy="p-bouw">
+                    <i class="fas fa-copy" aria-hidden="true"></i><span>Kopieer bouwprompt</span>
+                </button>
+
+                <h3 class="font-bold text-trinitas-blue mt-8 mb-2">Noodprompt: je ziet alleen code</h3>
+                <pre id="p-nood" class="prompt-text bg-gray-50 border border-gray-200 rounded-lg p-4 text-gray-800">Maak hier alsnog een downloadbaar HTML-bestand van dat ik direct kan openen in mijn browser. Zet alle HTML, CSS en JavaScript in hetzelfde bestand.</pre>
+                <button type="button" class="copy-btn mt-3 inline-flex items-center gap-2 bg-trinitas-blue hover:bg-blue-800 text-white text-sm font-bold px-4 py-2 rounded-full transition" data-copy="p-nood">
+                    <i class="fas fa-copy" aria-hidden="true"></i><span>Kopieer noodprompt</span>
+                </button>
+
+                <p class="text-sm text-gray-700 mt-6"><strong>Je hoeft de code niet te lezen.</strong> Kijk alleen of het appje doet wat je bedoelde. Download het bestand en dubbelklik erop, of bekijk het voorbeeld dat de AI-assistent zelf laat zien. De eerste versie hoeft niet mooi te zijn.</p>
+            </section>
+
+            <!-- Stap 3 -->
+            <section id="testen" class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 scroll-mt-28">
+                <h2 class="text-2xl font-bold text-trinitas-blue mb-2 flex items-center">
+                    <span class="step-number">3</span>Test als een leerling, verbeter één ding
+                </h2>
+                <p class="text-gray-600 mb-6">Hoe minder je tegelijk vraagt, hoe beter de nieuwe versie wordt.</p>
+
+                <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                    <li class="flex gap-2"><i class="fas fa-circle-check text-trinitas-blue mt-0.5" aria-hidden="true"></i>Is meteen duidelijk wat je moet doen, zonder uitleg?</li>
+                    <li class="flex gap-2"><i class="fas fa-circle-check text-trinitas-blue mt-0.5" aria-hidden="true"></i>Werkt het ook op je telefoon?</li>
+                    <li class="flex gap-2"><i class="fas fa-circle-check text-trinitas-blue mt-0.5" aria-hidden="true"></i>Klopt de inhoud? Jij bent de vakexpert, de AI niet.</li>
+                </ul>
+
+                <h3 class="font-bold text-trinitas-blue mb-2">Verbeterprompt</h3>
+                <pre id="p-verbeter" class="prompt-text bg-gray-50 border border-gray-200 rounded-lg p-4 text-gray-800">Ik heb de app getest alsof ik een leerling ben.
+
+Dit werkt goed: [WAT GING GOED]
+Dit moet beter: [ÉÉN CONCREET PROBLEEM, bijv. "de knop Volgende valt niet op" of "vraag 3 heeft een fout antwoord"]
+
+Pas alleen dit ene punt aan en laat de rest precies zoals het is. Geef daarna het volledige, bijgewerkte HTML-bestand.</pre>
+                <button type="button" class="copy-btn mt-3 inline-flex items-center gap-2 bg-trinitas-blue hover:bg-blue-800 text-white text-sm font-bold px-4 py-2 rounded-full transition" data-copy="p-verbeter">
+                    <i class="fas fa-copy" aria-hidden="true"></i><span>Kopieer verbeterprompt</span>
+                </button>
+
+                <p class="text-sm text-gray-700 mt-6"><strong>Tip:</strong> een screenshot erbij plakken werkt vaak beter dan drie zinnen uitleg. Zeg dan: “Zie screenshot, maak deze knop duidelijker.”</p>
+            </section>
+
+            <!-- Ideeën -->
+            <section id="ideeen" class="scroll-mt-28">
+                <h2 class="text-2xl md:text-3xl font-bold text-trinitas-blue mb-2">Geen idee? Pak er een</h2>
+                <p class="text-gray-600 mb-6">Klein genoeg om in tien minuten te bouwen. Klik op een idee om stap 1 in te vullen.</p>
+                <div id="ideas" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </section>
+
+            <!-- Spelregels -->
+            <aside id="spelregels-vibecoden" class="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-sm text-gray-700 leading-relaxed">
+                <h2 class="font-bold text-trinitas-blue text-lg mb-3"><i class="fas fa-scale-balanced mr-2" aria-hidden="true"></i>Spelregels bij het bouwen</h2>
+                <ul class="space-y-2">
+                    <li class="flex gap-2"><i class="fas fa-check text-trinitas-green-text mt-1 text-xs" aria-hidden="true"></i><span>Werk met je <strong>schoolaccount</strong>.</span></li>
+                    <li class="flex gap-2"><i class="fas fa-check text-trinitas-green-text mt-1 text-xs" aria-hidden="true"></i><span>Zet <strong>geen leerlinggegevens</strong> in je prompt of in de app: geen namen, cijfers of e-mailadressen.</span></li>
+                    <li class="flex gap-2"><i class="fas fa-check text-trinitas-green-text mt-1 text-xs" aria-hidden="true"></i><span><strong>Meld dat de app met AI is gemaakt</strong>, bijvoorbeeld met een regel onderaan de app.</span></li>
+                    <li class="flex gap-2"><i class="fas fa-check text-trinitas-green-text mt-1 text-xs" aria-hidden="true"></i><span>Controleer de <strong>inhoud</strong> zelf. De AI bouwt snel, maar maakt ook vakinhoudelijke fouten.</span></li>
+                </ul>
+                <p class="mt-3">Dit zijn de <a href="index.html#spelregels" class="text-trinitas-blue underline font-semibold">spelregels van de school</a>, toegepast op het bouwen van een app.</p>
+            </aside>
+
+            <!-- Verder -->
+            <section id="verder" class="scroll-mt-28">
+                <h2 class="text-2xl md:text-3xl font-bold text-trinitas-blue mb-2">Zo ga je verder</h2>
+                <p class="text-gray-600 mb-6">De gratis cursus Vibe Coden voor Docenten en het BOUW-raamwerk van AI voor Docenten nemen je stap voor stap mee.</p>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <a href="https://vibecodenvoordocenten.vercel.app/basiscursus/les-5" target="_blank" rel="noopener" class="group bg-white rounded-2xl border border-gray-200 shadow-sm p-5 hover:border-trinitas-blue transition">
+                        <p class="font-bold text-trinitas-blue group-hover:underline">Zet je app online <i class="fas fa-arrow-up-right-from-square text-xs ml-1 text-gray-400" aria-hidden="true"></i><span class="sr-only"> (opent in nieuw tabblad)</span></p>
+                        <p class="text-sm text-gray-600 mt-1">Basiscursus, les 5: een echte link via Netlify of Vercel.</p>
+                    </a>
+                    <a href="https://vibecodenvoordocenten.vercel.app/basiscursus" target="_blank" rel="noopener" class="group bg-white rounded-2xl border border-gray-200 shadow-sm p-5 hover:border-trinitas-blue transition">
+                        <p class="font-bold text-trinitas-blue group-hover:underline">De hele basiscursus <i class="fas fa-arrow-up-right-from-square text-xs ml-1 text-gray-400" aria-hidden="true"></i><span class="sr-only"> (opent in nieuw tabblad)</span></p>
+                        <p class="text-sm text-gray-600 mt-1">Tien korte lessen, van idee tot gedeelde app. Ook huisstijl, afbeeldingen en downloads.</p>
+                    </a>
+                    <a href="https://aivoordocenten.nl/bouw-raamwerk/" target="_blank" rel="noopener" class="group bg-white rounded-2xl border border-gray-200 shadow-sm p-5 hover:border-trinitas-blue transition">
+                        <p class="font-bold text-trinitas-blue group-hover:underline">Ontwerp eerst, bouw daarna <i class="fas fa-arrow-up-right-from-square text-xs ml-1 text-gray-400" aria-hidden="true"></i><span class="sr-only"> (opent in nieuw tabblad)</span></p>
+                        <p class="text-sm text-gray-600 mt-1">BOUW-raamwerk: van leerdoel naar een didactisch goed ontwerp.</p>
+                    </a>
+                    <a href="https://vibecodenvoordocenten.vercel.app/best-practices" target="_blank" rel="noopener" class="group bg-white rounded-2xl border border-gray-200 shadow-sm p-5 hover:border-trinitas-blue transition">
+                        <p class="font-bold text-trinitas-blue group-hover:underline">Inspiratie van andere docenten <i class="fas fa-arrow-up-right-from-square text-xs ml-1 text-gray-400" aria-hidden="true"></i><span class="sr-only"> (opent in nieuw tabblad)</span></p>
+                        <p class="text-sm text-gray-600 mt-1">Apps die al in de klas gebruikt worden.</p>
+                    </a>
+                </div>
+                <p class="text-sm text-gray-600 mt-6">Meer tools en recepten voor docenten staan in de <a href="toolbox.html?voor=docenten" class="text-trinitas-blue underline font-semibold">Toolbox</a>.</p>
+                <p class="text-xs text-gray-500 mt-4">Prompts gebaseerd op <a href="https://vibecodenvoordocenten.vercel.app/basiscursus" target="_blank" rel="noopener" class="underline">Vibe Coden voor Docenten</a> van Tom Naberink (AI voor Docenten).</p>
+            </section>
+        </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/vibecoden.js"></script>
+</body>
+
+</html>

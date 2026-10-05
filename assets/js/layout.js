@@ -5,7 +5,7 @@
  *                               <script src="assets/js/layout.js"></script>
  */
 (function () {
-  const LAATST_BIJGEWERKT = '3 oktober 2026';
+  const LAATST_BIJGEWERKT = '5 oktober 2026';
 
   const MENU = [
     { label: 'Home', href: 'index.html', page: 'index.html' },

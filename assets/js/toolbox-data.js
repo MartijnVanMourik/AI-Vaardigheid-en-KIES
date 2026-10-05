@@ -12,6 +12,7 @@
  *   letop:         (optioneel) korte waarschuwing die op de kaart verschijnt, bijv. dat inloggen nodig is.
  *   origineel:     (optioneel, recepten) { naam, url } van de chatbot waarop het recept is geïnspireerd.
  *   links:         (optioneel, bronnen) lijst van { label, url } met handige ingangen op die website.
+ *   url:           (tools) een webadres, of een pagina van deze site (bijv. 'vibecoden.html'); die opent dan in hetzelfde tabblad.
  *   id:            unieke naam zonder spaties; hiermee kun je vanaf andere pagina's direct naar een item linken
  *                  (bijv. toolbox.html#recept-starr).
  *
@@ -521,6 +522,18 @@ Mijn idee: [beschrijf je app-idee, het vak en het niveau]`,
       letop: 'Zoek in de chatbotbibliotheek van AI voor Docenten op Advocaat van de duivel.',
     },
     {
+      id: 'werkblad-vibecoden',
+      naam: 'Werkblad: je eerste lesapp vibecoden',
+      url: 'vibecoden.html',
+      maker: 'AI-vaardigheid Hub',
+      icoon: 'fa-hammer',
+      wat: 'Maak je idee klein, kopieer een bouwprompt waar je idee al in staat, en test en verbeter je app stap voor stap. Met voorbeeldideeën per vak. Gebruikt in de workshop vibecoden voor docenten.',
+      voor: ['docenten'],
+      stappen: ['I', 'E'],
+      kosten: 'Gratis',
+      gecontroleerd: '2026-10-05',
+    },
+    {
       id: 'vibeleeromgeving',
       naam: 'Leeromgeving vibecoden voor docenten',
       url: 'https://aivoordocenten.nl/vibe-coding-in-het-onderwijs/',
@@ -544,6 +557,7 @@ Mijn idee: [beschrijf je app-idee, het vak en het niveau]`,
         { label: 'Onderwijsapps', url: 'https://aivoordocenten.nl/onderwijsapps/' },
         { label: 'Chatbotbibliotheek', url: 'https://aivoordocenten.nl/custom-chatbots-voor-het-onderwijs/' },
         { label: 'Promptbibliotheek', url: 'https://aivoordocenten.nl/promptbibliotheek-voor-docenten/' },
+        { label: 'BOUW-raamwerk', url: 'https://aivoordocenten.nl/bouw-raamwerk/' },
         { label: 'Nieuwsbrief AI-spiekbriefje', url: 'https://aivoordocenten.nl/ai-spiekbriefje/' },
       ],
       icoon: 'fa-chalkboard-teacher',
