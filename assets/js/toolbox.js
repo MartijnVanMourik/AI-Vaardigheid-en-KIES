@@ -267,9 +267,12 @@
     const doel = document.getElementById(filter.item);
     const details = doel.querySelector('details');
     if (details) details.open = true;
-    // Wacht tot lettertypes geladen zijn, anders verspringt de pagina nog
-    const ga = () => requestAnimationFrame(() => scrollNaar(itemMelding || doel));
-    (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(ga);
+    // Wacht tot de pagina en de lettertypes geladen zijn: daarna springt de browser zelf nog naar #...,
+    // en dat willen we overschrijven, zodat de melding met 'Toon de hele toolbox' in beeld blijft.
+    const ga = () => setTimeout(() => requestAnimationFrame(() => scrollNaar(itemMelding || doel)), 0);
+    const naFonts = () => (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(ga);
+    if (document.readyState === 'complete') naFonts();
+    else window.addEventListener('load', naFonts, { once: true });
   };
   window.addEventListener('hashchange', openItem);
   openItem();
