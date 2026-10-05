@@ -103,6 +103,7 @@ Dit is een statisch webproject. Om de site lokaal te bekijken:
   - Dit bestand wordt **automatisch** door GitHub gebouwd bij elke push (zie `.github/workflows/site.yml`). Gewoon HTML aanpassen en pushen is genoeg.
   - Lokaal zelf bouwen kan ook: `npm install` en daarna `npm run build:css` (of `npm run watch:css` tijdens het werken).
 - **Publiceren:** GitHub Pages via GitHub Actions (Settings > Pages > Source: *GitHub Actions*).
+  Bij het publiceren krijgen de CSS- en JS-bestanden automatisch een versienummer (`?v=<commit>`), zodat browsers na een update meteen de nieuwe versie ophalen.
 - **Icons:** [Font Awesome](https://fontawesome.com/) 6.7.2 (via cdnjs).
 - **Lettertype:** Inter (Google Fonts).
 - **Afbeeldingen:** `assets/hero-hf.avif` (homepage) en `assets/og-image.jpg` (1200×630), het voorbeeldplaatje bij het delen van links.

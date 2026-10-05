@@ -78,6 +78,13 @@ jobs:
           echo "Adres van de site: $SITE_URL"
           grep -rl --include=*.html "https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES" _site \
             | xargs -r sed -i "s#https://martijnvanmourik.github.io/AI-Vaardigheid-en-KIES#${SITE_URL}#g"
+      - name: Versienummer achter CSS en JS zetten
+        # GitHub Pages laat browsers bestanden 10 minuten bewaren. Met ?v=<commit> halen browsers na elke
+        # publicatie meteen de nieuwe CSS en JS op, zodat pagina en scripts altijd bij elkaar passen.
+        run: |
+          VERSIE="${GITHUB_SHA::7}"
+          sed -i -E "s#(href|src)=\"(assets/(css|js)/[^\"?]+\.(css|js))\"#\1=\"\2?v=${VERSIE}\"#g" _site/*.html
+          grep -ho 'assets/[^"]*?v=[a-f0-9]*' _site/*.html | sort -u
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
