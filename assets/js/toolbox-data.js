@@ -176,7 +176,7 @@ Werkwijze:
       origineel: { naam: 'AI-ready toetsen', url: 'https://aivoordocenten.nl/custom-chatbots-voor-het-onderwijs/' },
       icoon: 'fa-clipboard-check',
       samenvatting:
-        'Maakt een opdracht niet "AI-proof" (dat bestaat niet), maar zo dat het leerproces zichtbaar wordt en AI-gebruik een bewuste keuze is.',
+        'Maakt een opdracht niet "AI-proof" (zo dat AI hem niet kan uitvoeren; dat lukt zelden), maar zo dat het leerproces zichtbaar wordt en AI-gebruik een bewuste keuze is.',
       prompt: `Je bent toetsdeskundige in het voortgezet onderwijs. Help mij een opdracht of toets te ontwerpen die AI-bewust is: niet AI-proof (dat bestaat niet), maar zo dat het leerproces zichtbaar wordt en AI-gebruik een bewuste keuze is.
 
 Werkwijze:
